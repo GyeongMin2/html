@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container{
+      width: 700px;
+      background-color: antiquewhite;
+      border: 1px solid black;
+      margin-bottom: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    }
+    .grid-i{
+      padding: 10px;
+      color: black;
+      font-weight: bold;
+      text-align: center;
+    }
+    .grid-i:nth-child(odd){
+      background-color: yellowgreen
+    }
+    .grid-i1{
+      background-color: aqua;
+      grid-column: 1/4;
+    }
+    .grid-i2{
+      background-color: rgb(0, 81, 255);
+      grid-column: 2/4;
+    }
+    .grid-i3{
+      background-color: rgb(76, 0, 255);
+      grid-column: 3/4;
+    }
+    .grid-i4{
+      background-color: rgb(162, 0, 255);
+      grid-column-start: 3;
+
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container" id="container1">
+    <div class="grid-i grid-i1">Ecma International의 프로토타입 기반의 프로그래밍 언어로, 스크립트 언어에 해당된다. 특수한 목적이 아닌 이상 모든 웹 브라우저에 인터프리터가 내장되어 있다. 오늘날 HTML, CSS와 함께 웹을 구성하는 요소 중 하나다. HTML이 웹 페이지의 기본 구조를 담당하고, CSS가 디자인을 담당한다면 JavaScript는 클라이언트 단에서 웹 페이지가 동작하는 것을 담당한다.</div>
+    <div class="grid-i grid-i2">Ecma International의 프로토타입 기반의 프로그래밍 언어로, 스크립트 언어에 해당된다. 특수한 목적이 아닌 이상 모든 웹 브라우저에 인터프리터가 내장되어 있다. 오늘날 HTML, CSS와 함께 웹을 구성하는 요소 중 하나다. HTML이 웹 페이지의 기본 구조를 담당하고, CSS가 디자인을 담당한다면 JavaScript는 클라이언트 단에서 웹 페이지가 동작하는 것을 담당한다.</div>
+    <div class="grid-i grid-i3">Ecma International의 프로토타입 기반의 프로그래밍 언어로, 스크립트 언어에 해당된다. 특수한 목적이 아닌 이상 모든 웹 브라우저에 인터프리터가 내장되어 있다. 오늘날 HTML, CSS와 함께 웹을 구성하는 요소 중 하나다. HTML이 웹 페이지의 기본 구조를 담당하고, CSS가 디자인을 담당한다면 JavaScript는 클라이언트 단에서 웹 페이지가 동작하는 것을 담당한다.</div>
+    <div class="grid-i grid-i4">Ecma International의 프로토타입 기반의 프로그래밍 언어로, 스크립트 언어에 해당된다. 특수한 목적이 아닌 이상 모든 웹 브라우저에 인터프리터가 내장되어 있다. 오늘날 HTML, CSS와 함께 웹을 구성하는 요소 중 하나다. HTML이 웹 페이지의 기본 구조를 담당하고, CSS가 디자인을 담당한다면 JavaScript는 클라이언트 단에서 웹 페이지가 동작하는 것을 담당한다.</div>
+  </div>
+</body>
+</html>
