@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>radial-gradient</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
+        margin: 10px;
+        border: 1px black;
+      }
+      .grad1 {
+        background: red;
+        background: radial-gradient();
+      }
+      .grad2{
+        background-color: red;
+        background: radial-gradient(circle, white);
+      }
+      ul>li{
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        border: 1px solid blue;
+        margin: 10px;
+      }
+      #li1{
+        background: green;
+        background: radial-gradient(circle closest-side at 30px)
+      }
+      .div3{
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
+        margin: 10px;
+        background: yellow;
+        background: radial-gradient(white,orange,blue);
+        
+      }
+      .div4{
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
+        margin: 10px;
+        background: gray;
+        background: repeating-liner-gradient(yellow,yellow 1px,red,red 1px);
+        
+      }
+    </style>
+  </head>
+  <body>
+    <ol>
+      <li>
+        원형 그라데이션
+        <ol>
+          <li>
+            radial-gradient(<모양> <크기> at 위치, <색상 중지점>,
+            [<중지점>,,,....])
+          </li>
+          <li>
+            원이나, 타원 중심부터 동심원을 그리면서 바깥 방향으로 색상이바뀌는
+            그라데이션
+          </li>
+          <li>색상 시작하는 점 원 중심, 모양 지정</li>
+          <li>모양 : circle(원형), ellipse(타원형) <- default</li>
+          
+        </ol>
+      </li>
+    </ol>
+    <div class="div3">
+    </div>
+    <div class="div4"></div>
+  </body>
+</html>

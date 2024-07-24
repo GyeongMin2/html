@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    ul{ list-style: none;}
+    li{
+      display: inline-block;
+      margin: 4px;
+    }
+    li a {
+      padding: 4px;
+      font-size: 16px;
+      font-weight: bold;
+      color: blue;
+      text-decoration: none;
+    }
+    .selector1{
+      background-color: skyblue;
+      border:2px dashed #f50000;
+    }
+    a[class~="selector2"]{
+      box-shadow: rgba(0,0,0,0.5) 5px 5px;
+      border-radius: 5px;
+      border:1px solid #0fffff;
+    }
+  </style>
+</head>
+<body>
+  <h1>[속성~=값] 선택자</h1>
+  <ul>
+    <li><a href="#" class="selector1">menu1</a></li>
+    <li><a href="#" class="selector1">menu2</a></li>
+    <li><a href="#" class="selector2">menu3</a></li>
+    <li><a href="#" class="selector1 selector222">menu4</a></li>
+  </ul>
+</body>
+</html>

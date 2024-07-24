@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    li.new::after{
+      content:"NEW!";
+      font-size:x-small;
+      padding: 2px 4px;
+      margin: 0 10px;
+      border-radius: 2px;
+      background: red;
+      color: white;
+    }
+
+    input:disabled, 
+    button:disabled{
+      background-color: blue;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>과일 목록</h1>
+    <ul>
+      <li class="new">사과</li>
+      <li>딸기</li>
+      <li>바나나</li>
+      <li>파인애플</li>
+    </ul>
+
+    <form class="frm">
+      <fieldset>
+        <legend>상품 등록</legend>
+        <input type="text" disabled>
+      </fieldset>
+      <button disabled>버튼</button>
+    </form>
+  </div>
+</body>
+</html>

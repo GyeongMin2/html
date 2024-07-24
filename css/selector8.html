@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+  .container{
+    width: 1024px;
+    margin: 0 auto;
+  }
+  .navi{
+    width: 960px;
+    height: 80px;
+    border-bottom: 2px solid #ddd;
+  }
+  .navi ul{
+    list-style: none;
+    padding-top: 10px;
+    padding-bottom: 4px;
+  }
+  .navi ul li{
+    display: inline-block;
+    width: 150px;
+    padding: 8px;
+  }
+  .navi a:link, .navi a:visited{
+    font-size: 18px;
+    padding : 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+  }
+  .navi a:hover, .navi a:focus{
+    background-color: #333;
+    color: #fff;
+  }
+  .navi a:active{
+    background-color: red;
+  }
+  .contents{
+    margin: 20px auto;
+    width:400px;
+    padding: 20px;
+    border:1px solid #333;
+    border-radius: 5px;
+  }
+  #home:target{
+    background-color : blue;
+    color: #fff;
+  }
+  #about:target{
+    background-color: orange;
+  }
+  #contact:target{
+    background-color: burlywood;
+  }
+  /*
+  .contents ul :first-child {
+    background-color: red;
+  }
+  .contents ul :last-child{
+    background-color: blue;
+  }
+  */
+  .contents ul li:nth-child(odd){
+    background-color: rgb(119, 119, 119);
+  }
+  .contents ul li:nth-child(even){
+    background-color: aqua;
+  }
+  .contents ul li:hover{
+    background-color: violet;
+  }
+</style>
+</head>
+<body>
+<h1>가상 클래스</h1>
+<div class="container">
+  <nav class="navi">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">ContacUs</a></li>
+    </ul>
+  </nav>
+  <h2>가상 클래스 요소의 위치별 확인</h2>
+  <div class="contents">
+    <h3>상품목록</h3>
+    <ul>
+      <li>사과</li>
+      <li>바나나</li>
+      <li>딸기</li>
+      <li>파인애플</li>
+    </ul>
+  </div>
+  </body>
+</html>

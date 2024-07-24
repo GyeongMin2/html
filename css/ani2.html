@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      width:100px; height: 100px;
+      background-color: coral;
+      animation-name: bgc;
+      animation-duration: 3s;
+      animation-fill-mode: forwards;
+    }
+    @keyframes bgc {
+      0% {
+          background-color: red;
+        }
+        25% {
+          background-color: orange;
+        }
+        50% {
+          background-color: yellow;
+        }
+        75% {
+          background-color: green;
+        }
+        100% {
+          background-color: navy;
+        }
+    }
+  </style>
+</head>
+<body>
+  <h1>fill-mode</h1>
+  <div></div>
+</body>
+</html>

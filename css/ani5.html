@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      width:100px;
+      height: 100px;
+      background-color: coral;
+      position: relative;
+      animation-name: left, move;
+      animation-duration: 10s;
+      animation-fill-mode: forwards;
+      animation-play-state: paused;
+    }
+    @keyframes move{
+      from{
+        left:0px;
+      }to{
+        left: 300px;
+      }
+    }
+    @keyframes left{
+      from{
+        left:300px;
+      }to{
+        left:0px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+  <button id="start">START</button>
+  <button id="paused">PAUSED</button>
+  <button id="left">GO LEFT</button>
+  <script>
+    const box = document.querySelector("div");
+    document.getElementById("start").addEventListener("click",function(){
+      box.style.animationPlayState = "running";
+    });
+    document.getElementById("paused").addEventListener("click",function(){
+      box.style.animationPlayState = "paused";
+    });
+    document.getElementById("left").addEventListener("click",function(){
+      box.style.animationPlayState = "running";
+    })
+  </script>
+</body>
+</html>

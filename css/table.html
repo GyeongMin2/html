@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>table</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        border: 1px solid red;
+        margin: 20px;
+        /*
+        margin-top: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        margin-left: 20px;
+        */
+        width: 100%;
+        caption-side: bottom;
+      }
+      th{
+        border: 1px solid red;
+      }
+      tr,td{
+        border : 1px solid blue;
+        text-align: center;
+        width:150px;
+        height:40px;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>번호</th>
+          <th>상품명</th>
+          <th>개수</th>
+          <th>가격</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <!--
+          <% 
+            for(int i=0; i<raws.count; i++){
+              for(int j=0; j<cols.cont; i++){
+              }
+            } 
+          -->
+          <td>1</td>
+          <td>사이다</td>
+          <td>2</td>
+          <td>1000원</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>콜라</td>
+          <td>3</td>
+          <td rowspan="2">1500원</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>쥬스</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>합계</td>
+          <td colspan="3" style="text-align: center;">9500원</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4">&copy;copyright asdf since2024</td>
+        </tr>
+      </tfoot>
+      <caption><span style="font-weight: bold;">상품Table</span></caption>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .test0 {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        transition-property: background-color, width, height;
+        transition-duration: 2s, 1.5s, 1s, 0.5s;
+        transition-delay: 0.5;
+      }
+      .test0:hover {
+        width: 150px;
+        height: 150px;
+        background-color: blue;
+      }
+      .test1 {
+        width: 200px;
+        height: 200px;
+        margin: 20px;
+        background-color: aqua;
+        border: 1px solid black;
+        transition-property: background-color, width, height;
+        transition-duration: 0.5s;
+        transition-delay: 0.5;
+        transition-timing-function: ease-in-out;
+        /* transition: background-color,1s,ease-in,1s; */
+      }
+      .test1:hover {
+        background-color: yellowgreen;
+        width: 400px;
+        height: 600px;
+      }
+      .container {
+        padding: 10px;
+        color: white;
+        border: 1px solid black;
+      }
+      .bar {
+        width: 100px;
+        background-color: red;
+        transition: width, 1s;
+        margin: 1px;
+      }
+      .container > div:hover .bar {
+        width: 200px;
+      }
+      .bar:nth-child(1) {
+        transition-timing-function: linear;
+      }
+      .bar:nth-child(2) {
+        transition-timing-function: ease;
+      }
+      .bar:nth-child(3) {
+        transition-timing-function: ease-in;
+      }
+      .bar:nth-child(4) {
+        transition-timing-function: ease-out;
+      }
+      .bar:nth-child(5) {
+        transition-timing-function: ease-in-out;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        margin: 50px auto;
+        background-color: greenyellow;
+        border: 1px solid #000;
+        transition: 1.1s ease-in;
+        text-align: center;
+      }
+      .box:hover {
+        width: 200px;
+        height: 200px;
+        transform: rotate(360deg);
+        border-radius: 110px;
+        background-image: url(./20210712314686.jpg);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>transition</h1>
+    <div class="test0"></div>
+    <div class="test1"></div>
+    <div class="container">
+      <div>
+        <div class="bar">linear</div>
+        <div class="bar">ease</div>
+        <div class="bar">ease-in</div>
+        <div class="bar">ease-out</div>
+        <div class="bar">ease-in-out</div>
+      </div>
+      <div class="box">BOX</div>
+    </div>
+  </body>
+</html>

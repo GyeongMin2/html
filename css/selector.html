@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>selector</title>
+    <style>
+      .selectortype{
+        color: blue;
+        font-weight: bold;
+      }
+      .title{
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <ol>
+      <li>
+        기본 선택자
+        <ol>
+          <li>
+            전체 선택자
+            <ul>
+              <li class="selectortype">-형식 : *{ /*css 코드*/ }</li>
+            </ul>
+          </li>
+          <li>
+            태그 선택자
+            <ul>
+              <li>태그명으로 선택자 지정</li>
+              <li class="selectortype">-형식 : 태그명 { /*css 코드*/ }</li>
+            </ul>
+          </li>
+          <li>
+            ID 선택자
+            <ul>
+              <li>id 속성값(아이디명)으로 선택자 지정</li>
+              <li class="selectortype">-형식 : #id명 { /*css 코드*/ }</li>
+            </ul>
+          </li>
+          <li>
+            Class 선택자
+            <ul>
+              <li>class 속성값(클래스명)으로 선택자 지정</li>
+              <li class="selectortype">-형식 : .class명 { /*css 코드*/ }</li>
+            </ul>
+          </li>
+        </ol>
+      </li>
+      <li>
+        기본 속성 선택자
+          <ul>
+            <li>HTML 태그에서 사용할 수 있는 속성과 값으로 선택</li>
+            <li>[속성=값] 선택자
+              <ol>
+                <li class="selectortype">형식 : [속성] { /*css 코드*/ }</li>
+                <li><strong>ex)</strong> a[href"#"]</li>
+              </ol>
+            </li>
+            <li>[속성~=값] 선택자
+                <ol>
+                  <li></li>
+                  <li class="selectortype">-형식 : [속성~=값] { /*css 코드*/ }</li>
+                </ol>
+            </li>
+            <li>[속성^=값] 선택자
+              <ol>
+                <li>특정 값으로 시작하는 속성을 가진 요소에 적용</li>
+                <li class="selectortype">-형식 : [속성^=값] { /*css 코드*/ }</li>
+              </ol>
+            </li>
+            <li>[속성$=값] 선택자
+              <ol>
+                <li>속성 값이 특정 값으로 끝나면 선택</li>
+                <li class="selectortype">-형식 : [속성$=값] { /*css 코드*/ }</li>
+              </ol>
+            </li>
+            <li>[속성*=값] 선택자
+              <ol>
+                <li>속성값에 해당 문자열이 포함되면 적용</li>
+                <li class="selectortype">-형식 : 태그[속성*=값] { /*css 코드*/ }</li>
+              </ol>
+            </li>
+          </ul>
+      </li>
+      <li>
+        조합(연결) 선택자
+        <ul>
+          <li>선택자와 선택자를 연결해 적용하여 대상을 제한</li>
+          <li>combination selector(조합선택자)</li>
+        </ul>
+      </li>
+      <li>
+        그룹 선택자
+        <ul>
+          <li>여러 선택자를 콤마(,)를 사용하여 그룹으로 묶어서 지정</li>
+          <li class="selectortype">-형식 : 선택자, 선택자, ,,,{ /*css 코드*/ }</li>
+        </ul>
+      </li>
+      <li>
+        자식 선택자
+        <ul>
+          <li>자식 요소에 스타일을 적용</li>
+          <li>선택자 범위를 자식 관계로 제한</li>
+          <li>두 요소 사이에 >(부등호)를 이용하여 부모와 자식을 구분</li>
+          <li>child selector(자식선택자)</li>
+          <li class="selectortype">-형식 : 부모선택자>자식선택자{ /*css 코드*/ }</li>
+        </ul>
+      </li>
+      <li>
+        하위 서택자(decendant selector)
+        <ul>
+          <li>선택자 범위를 자식 및 자손 관계로 제한</li>
+          <li>부모 요소에 포함된 모둔 하위 요소에 스타일 적용</li>
+          <li class="selectortype">-형식 : 상위선택자 하위선택자 (중간에 공백)</li>
+          <li class="selectortype">-형식 : 선택자1 선택자2 선택자3 선택자4,,,{ /*css 코드*/ }</li>
+        </ul>
+      </li>
+      <li>
+        인접 형제 선택자(adjacent selector)
+        <ul>
+          <li>특정 태그와 가장 인접한 형제 관계 태그를 선택자로 지정</li>
+          <li>같은 부모를 가진 형제 요소중에서 첫 번째 동생 요소에만 적용</li>
+          <li>요소1과 요소2는 같은 레벨이면서 요수1 이후 첫 번째 요소</li>
+          <li>구분자 : +</li>
+          <li class="selectortype">-형식 : 이전선택자 + 대상선택자 { /*css 코드*/ }</li>
+        </ul>
+        <li>
+          일반 형제 선택자(sibling selector)
+          <ul>
+            <li>특정 태그와 형제 관계에 있는 모든 태그를 선택</li>
+            <li>형제 요소들에 스타일 적용</li>
+            <li>구분자 : ~</li>
+            <li class="selectortype">-형식 : 이전 선택자 ~ 대상 선택자{ /*css 코드*/ }</li>
+          </ul>
+        </li>
+      </li>
+      <li>가상 클래스
+        <ul>
+          <li>실제로 존재하지 않는 요소</li>
+          <li>존재한다고 가정하고 선택하는 방법</li>
+          <li>요소의 상태를 이용하여 선택자를 지정</li>
+          <li>가상 클래스 앞에 : 기호를 붙여서 사용</li>
+          <li>사용자의 동작에 반응하는 가상 클래스 선택자
+            <ol>
+              <li>-링크 가상클래스 선택자</li>
+            <ul>
+              <li>:link - 링크를 한 번도 방문한 적이 없는 상태</li>
+              <li>:visited - 링크를 한 번 이상 방문한 적이 있는 상태</li>
+            </ul>
+            <li>
+              
+            </li>
+          </li>
+        </ul>
+      </li>
+      <li>가상 요소
+        <ul>
+          <li>실제로 존재하지 않는 요소</li>
+          <li>존재한다고 가정하고 선택하는 방법</li>
+          <li>화면 꾸미기용, 웹 문서에는 포함되지 않음</li>
+          <li><div class="selectortype">-형식 : 기준선택자 : 가상요소선택자  :: { /*css 코드*/ }</div>
+            <ul>
+              <li>::befor - 기준 선택자의 요소 앞 선택</li>
+              <li>::after - 기준 선택자의 요소의 뒤 선택</li>
+              <li>::first-line - 특정 요소의 첫번째 줄에 스타일 적용</li>
+              <li>::first-letter - 특정 요소의 첫번째 글자에 스타일 스타일 </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>문서 구조에 따른 가상 클래스 선택자
+        <ul>
+          <li>:only-child → 부모 안에 자식 요소가 하나뿐일 때 자식요소 선택</li>
+          <li>A:only-type-of → 부모안에 A요소가 하나뿐일때</li>
+          <li>:first-child → 보무의 자식 요소중 첫 번째</li>
+          <li>:last-child → 부모의 자식 요소중 마지막</li>
+          <li>A:first-of-type → 부모 안에 있는 A요소중 첫번째 요소</li>
+          <li>A:last-of-type → 부모 안에 있는 A요소 중에서 마지막 요소</li>
+          <li>:nth-child(n) → 부모 안에 있는 모든 자식 요소 중 n번째</li>
+          <li>:nth-last-child → 부모 안에 있는 모든 자식 요소 중 뒤에서 n번째</li>
+          <li>A:nth-of-type(n) → 부모 안에 있는 A 요소 중에서 n번째 요소</li>
+          <li>A:nth-last-of-type(n) → 부모 안에 있는 A요소 중에서 끝에서 n번째 요소</li>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </body>
+</html>

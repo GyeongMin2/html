@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form 요소</title>
+    <style>
+        input{
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+    <!--
+    get방식은 url에 정보표기 post방식 
+    form 요소의 속성값
+        id : 펭지 내에서 유일한 값
+        name : 요소이름 (페이지 내에서 중복 가능)
+        method : 전송방식 -get (기본값),post
+        action : 데이터를 전송받을 대상url
+
+    form 요소 하위 엘리먼트 종류
+        -input 태그 : 한줄짜리 입력 요소에 사용
+            -type : input 태그에서 처리할 데이터의 종류
+            -id : 페이지 내에서 유일한 값 - 주로 스크립트나, css에서 사용
+            -name : 입력 요소의 이름, 데이터 전송시 필슈
+            -value : 입력 요소의 값
+
+        -text : 한줄짜리 문자값을 전송
+            -maxlength : 입력 가능한 최대값
+            -minlength : 입력 가능한 최소값
+            << 중요
+
+        
+-->
+<body>
+    <form id="idpwform" name="idform" action="https://www.naver.com">
+                <!--type="tel","number" 모바일에서 번호자판만 나옴-->
+        <input type="text" value="text">
+        <!-- 
+        <input type="password" value="password">
+        <input type="tel" value="telnum"> 
+        <input type="number" value="number">
+        <input type="url" value="url">
+        <input type="email" value="email">
+        <input type="radio">radio button
+        <input type="checkbox">checkbox
+        <input type="file">select file
+        <input type="date">date
+        <input type="datetime-local">datetime
+        <input type="time">time
+        <input type="month">month
+        <input type="week">week
+        <input type="range">range
+        <input type="color">color
+        <input type="image">image -->
+        
+        <input type="submit">submit
+        <input type="reset">reset
+
+    </form>
+    
+
+
+    
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>텍스트 정렬</title>
+  </head>
+  <body>
+    <ol>
+      <li>
+        text-align
+        <ul style="width: 200px;">
+          <li>text0align: start | end | left | right | center | justif | match-parent</li>
+          <li style="text-align: left;">왼쪽정렬 left</li>
+          <li style="text-align: right;">오른쪽정렬 right</li>
+          <li style="text-align: center;">중앙정렬 center</li>
+          <li style="text-align: justify;">양쪽정렬 justify</li>
+        </ul>
+      </li>
+      <li>line-height
+        <ul  style="width: 300px;">
+          <li>문단의 줄 간격 지정</li>
+          <li>숫자 : 현재 font-size 값에 숫자를 곱한 값</li>
+          <li>백분율 : 부모 요소 기준</li>
+          <li>크기 : 입력한 크기</li>
+        </ul>
+        <p style="width: 100%; height:80px; background-color: #333; color: #ffffff; text-align: center; line-height:80px;">HTML  linehight 속성</p>
+      </li>
+      <li> text-decoration 속성
+        <ul>
+          <li>텍스트에 밑줄/윗줄/취소선</li>
+          <li>none : 표시안함</li>
+          <li>underline : 밑줄</li>
+          <li>overline : 윗줄</li>
+          <li>line-through : 취소선</li>
+        </ul> 
+        <p style="text-decoration: none;">표시안함</p>
+        <p style="text-decoration: underline;">밑줄</p>
+        <p style="text-decoration: overline;">윗줄</p>
+        <p style="text-decoration: line-through;">취소선</p>
+      </li>
+      <li>
+        text-shadow 속성
+        <ul>
+          <li>text-shadow : none | <가로거리> <세로거리> <번짐정도> <색상></li>
+          <li>가로거리 : 텍스트로부터 그림자의 가로거리, 필수 속성</li>
+          <li>세로거리 : 텍스트로부터 그림자의 세로거리, 필수 속성</li>
+          <li>번짐정도 : 그림자가 번져 보이는 정도, 기본값 0</li>
+          <li>색상 : 그림자의 색상 지정, 여러가지 색상 지정 가능</li>
+        </ul>
+        <p style="font-size: 90px; color: coral; text-shadow: 5px 5px 3px rgb(151, 79, 66);">HTML</p>
+        <p style="font-size: 90px; color:skyblue; text-shadow: 7px 7px 3px violet;">CSS</p>
+      </li>
+      <li>
+        letter-spacing
+        <ul>
+          <li>letter-spacing: normal | <크기></li>
+          <li>글자 간격</li>
+        </ul>
+        <p>HTML</p>
+        <p style="letter-spacing: 0.2em;">HTML</p>
+        <p style="letter-spacing: 0.5em;">HTML</p>
+      </li>
+      <li>
+        word-spacing
+        <ul>
+          <li>word-spacing: normal | <크기></li>
+          <li>단어간 간격</li>
+        </ul>
+        <p>HTML HTML</p>
+        <p style="word-spacing: 0.2em;">HTML HTML</p>
+        <p style="word-spacing: 0.5em;">HTML HTML</p>
+        <p style="word-spacing: 1em;">HTML HTML</p>
+      </li>
+    </ol>
+  </body>
+</html>

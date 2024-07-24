@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>contact</title>
+  </head>
+  <body>
+    <header>
+
+      <nav>
+        <h5><a href="home.html">my(강경민)블로그</a></h5>
+        <div id="topMenu">
+          <ul>
+            <li>
+              <a href="home.html"> home </a>
+            </li>
+            <li>
+              <a href="about.html"> about </a>
+            </li>
+            <li>
+              <a href="posts.html"> posts </a>
+            </li>
+            <li>
+              <a href="contact.html"> contact </a>
+            </li>
+            <li>
+              <a href="login.html"> login </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <h1>Contact Me</h1>
+      <br />
+      <h4>Have questions? I have answers</h4>
+      <hr/>
+    </header>
+    <main>
+      <h3>
+        아래 양식을 작성하여 메시지를 보내주시면 최대한 빨리 연락드리겠습니다.
+      </h3>
+      <form action="#">
+        <div id="contactinfo">
+          <ul>
+            <li>
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Name"
+                required
+              /><br />
+            </li>
+            <li>
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email"
+                required
+              />
+            </li>
+            <li>
+              <label for="telnum">Phone Number</label>
+              <input
+                type="tel"
+                id="telnum"
+                name="telnum"
+                placeholder="Phone Number"
+                required
+              />
+            </li>
+            <li>
+              <label for="message">Message</label>
+              <textarea id="message" name="message"></textarea>
+            </li>
+          </ul>
+        </div>
+        <div id="sendcontact">
+          <input type="submit" value="send" />
+          <input type="reset" value="reset" />
+        </div>
+      </form>
+    </main>
+    <hr />
+    <footer>
+      <div id="bottonMenu">
+        <ul>
+          <li>
+            <a href="email.html" target="_blank">
+              <img src="images/email.png" width="40px"  alt="이메일">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/?locale=ko_KR" target="_blank">
+              <img src="images/facebook.png" width="40" alt="페이스북">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/gye.ng_min/" target="_blank">
+              <img src="images/insta.png" width="40" alt="인스타그램">
+            </a>
+          </li>
+          <li>
+            <a href="personal.html" target="_blank">
+              <img src="images/resume.png" width="40" alt="이력서">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

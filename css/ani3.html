@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .divc {
+        width: 100px;
+        height: 100px;
+      }
+      #div2 {
+        animation-name: bgc;
+        animation-duration: 1s;
+        animation-fill-mode: both;
+        animation-delay: 4s;
+        animation-iteration-count: 3;
+        border-radius: 50%;
+      }
+      @keyframes bgc {
+        0% {
+          background-color: red;
+        }
+        50% {
+          background-color: yellow;
+        }
+        100% {
+          background-color: green;
+        }
+      }
+      @keyframes adiv0 {
+        from{
+          border:1px solid transparent;
+        }to{
+          border:1px solid #000;
+          border-radius: 50%;
+        }
+      }
+      @keyframes adiv1 {
+        from{
+          transform: rotate(0deg);
+        }to{
+          transform: rotate(50deg);
+        }
+      }
+      #div0{
+        float: left;
+        margin: 50px;
+        background-color: chartreuse;
+        border :1px solid transparent;
+        animation-name: adiv0;
+        animation-duration: 3 s;
+        animation-iteration-count: infinite;
+      }
+      #div1{
+        background-color: violet;
+        border: 1px solid transparent;
+        animation-name: adiv1;
+        animation-duration: 3 s;
+        animation-iteration-count: infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>iteration-count</h1>
+    <div id="container">
+      <div class="divc" id="div0"></div>
+      <div class="divc" id="div1"></div>
+      <div class="divc" id="div2"></div>
+    </div>
+  </body>
+</html>

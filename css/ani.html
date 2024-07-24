@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .imp{
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>애니매이션 속성</h1>
+  <ol>
+    <li>웹 요소에 애니매이션 속성을 추가</li>
+    <li>애니매이션을 시작해서 끝나는 동안 원하는 곳에 스타일을 바꾸어 애니매이션</li>
+    <li>키프레임(kyframe) → 애니매이션 중간에 스타일이 바뀌는 지점.</li>
+    <li>애니매이션 속성
+      <ul>
+        <li>@keyframe → 애니매이션이 바뀌는 지점 정의.
+          <ul>
+            <li><div class="imp">형식 → @keyframe 이름(키프레임명) </div> {
+              0% {/*CSS 코드*/}
+              n% {/*CSS 코드*/}
+              100% {/*CSS 코드*/}
+            }
+            </li>
+            <li>이름으로 애니메이션 구분</li>
+            <li>시작점 0%, 끝점 100%로 놓고 지정</li>
+            <li>if 시작,끝만 사용시 from, to 키워드 사용가능</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><div class="imp">animation-name 속성</div>
+      <ul>
+        <li>애니매이션을 지정할 키프레임명 지정</li>
+        <li>애니매이션을 구분하는 역할</li>
+        <li>@keyframe에서 지정한 이름을 사용</li>
+        <li>형식 → animation-name: 이름 | none</li>
+      </ul>
+    </li>
+    <li>
+      animation-duration 속성
+      <ul>
+        <li>애니매이션의 지속시간 지정</li>
+        <li>설정 값은 초(s) 혹은 밀리초(ms)</li>
+      </ul>
+    </li>
+    <li>
+      animation-delay 속성
+      <ul>
+        <li>애니매이션의 지연 시간 설정</li>
+        <li>형식 → animation-delay:지연시간</li>
+      </ul>
+    </li>
+    <li>
+      <div class="imp">animation-derection 속성</div>
+      <ul>
+        <li>애니매이션의 진행 방향을 지정</li>
+        <li>형식 → animation-direction:속성값</li>
+        <li>normal → 애니매이션의 진행 방향을 키프레임에 정의된 시간 순서대로 진형 (to→form)</li>
+        <li>reverse → 애니매이션의 진행 방향을 키프레임에 역순으로 진행 (from→to)</li>
+        <li>alternate → 1회이상 실행시에는 홀수번째는 normal, 짝수번째는 reverse실행</li>
+        <li>alternate-reverse → 홀수번째는 reverse 짝수번째는 normal실행</li>
+      </ul>
+    </li>
+    <li>
+      animation-iteration-count 속성
+      <ul>
+        <li>애니매이션에 반복 횟수 지정</li>
+        <li>형식 → animation-iteration-count:횟수</li>
+        <li>숫자 → 반복 횟수 지정</li>
+        <li>infinite → 무한반복</li>
+      </ul>
+    </li>
+    <li>
+      animation-timing-function 속성
+      <ul>
+        <li>애니매이션의 속도 지정</li>
+      </ul>
+    </li>
+    <li>
+      animation-play-state 속성
+      <ul>
+        <li>애니매이션의 진행/정지 상태 정의</li>
+        <li>형식 → animation-play-state:속성값</li>
+        <li>paused → 일시정지</li>
+        <li>running → 실행</li>
+      </ul>
+    </li>
+    <li>
+      animation 속성
+      <ul>
+        <li>모든 애니매이션 속성 지정</li>
+        <li>형식 → animation: name duration timing-function delay 
+          iteration-count direction fill-mode play-state
+        </li>
+        <li>지정하지 않은 속성은 기본값 사용</li>
+        <li>animation-duration 값은 필수.</li>
+      </ul>
+    </li>
+  </ol>
+</body>
+</html>

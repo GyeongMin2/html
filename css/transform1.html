@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      width: 100px;
+      height: 100px;
+      background-color:coral;
+      margin: 100px;
+      display: inline-block;
+    }
+    .div0:hover{
+      /* transform: scale(2); */
+      /* transform: scale(0,2); */
+      transform: scaleX(2);
+    }
+    .div1:hover{
+      transform: skew(10deg,10deg);
+    }
+    .div2:hover{
+      transform: rotate(-50deg);
+    }
+    .div3:hover{
+      transform: skew(10deg) rotate(50deg);
+    }
+    .div4:hover{
+      transform: rotate(100deg);
+      transform-origin: bottom;
+    }
+    .div3d:hover:hover{
+      transform: rotate(40deg);
+      transform-origin: bottom;
+    }
+
+    .div3d >div{
+      float: left;
+      width: 100px;
+      height: 100px;
+      margin: 40px;
+      border: 1px solid red;
+    }
+    div{
+      clear: left;
+    }
+    /* .scale3d:hover{
+
+    } */
+    
+  </style>
+</head>
+<body>
+  <div class="div0"></div>
+  <div class="div1"></div>
+  <div class="div2"></div>
+  <div class="div3"></div>
+  <div class="div4"></div>
+  <div class="div3d">
+    <div></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
+      body {
+        font-family: "Do Hyeon", sans-serif,"맑은 고딕", 돋움, 굴림;;
+        font-weight: 400;
+        font-size: x-large;
+      }
+      ul,
+      li {
+        list-style: decimal;
+      }
+      .font-styleitalic {
+        font-style: italic;
+      }
+      .font-weight1 {
+        font-weight: normal;
+      }
+      .font-weight2 {
+        font-weight: bold;
+      }
+      .font-weightbolder {
+        font-weight: bolder;
+      }
+      .font-weight3 {
+        font-weight: lighter;
+      }
+      .font-weight900 {
+        font-weight: 900;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="ulul">
+      <li>
+        font-fmaily 속성
+        <ul>
+          <li>웹 문서에서 사용할 글꼴 지정</li>
+          <li>
+            &lt;body&gt;태그를 비롯해 p 태그나,hn 태그처럼 텍스트를 사용하는데
+            사용하는 요소
+          </li>
+          <li>
+            지정한 글꼴이 없을경우, 두 번째, 세 번째 지정할 글꼴 순서로 적용,
+            없을 경우 시스템 기본 폰트가 적용됨
+          </li>
+          <li>둘 이상의 글꼴 이름을 지정할 경우 쉼표(,)로 구분</li>
+          <li>body 태그 스타일에서 한번 정의하면 문서 전체에 적용</li>
+        </ul>
+      </li>
+      <li>
+        font-size 속성
+        <ul>
+          <li>font-size: {<절대크기>|<상대크기>|<크기>|<백분률>}</li>
+          <li>절대크기 : 브라우저에서 지정한 크기</li>
+          <li>상대크기 : 부모 요소 기준</li>
+          <li>크기 : 브라우저 상관없이 글자 크기 직접 지정</li>
+          <li>백분율 : 부모 요소의 글자 크기 기준 백분율로 지정</li>
+        </ul>
+      </li>
+      <li>
+        키워드를 사용한 글자 크기 지정
+        <ul>
+          <li>
+            xx-small &lt; x-small &lt; small &lt; medium &lt; large &lt; x-large
+            &lt; xx-large
+          </li>
+        </ul>
+      </li>
+      <li>
+        font-style 속성
+        <ol>
+          <li>font-style : normal | italic | oblique</li>
+          <li class="font-stylenomal">
+            normal : 기본값으로 일반적인 형태로 표시
+          </li>
+          <li class="font-styleitalic">italic : 이텔릭체로 표시</li>
+        </ol>
+      </li>
+      <li>
+        font-weight 속성
+        <ul>
+          <li class="font-weight1">
+            font-weigth : normal | bold | bolder | lighter | 100 | ~~ | 900
+          </li>
+          <li class="font-weight1">글자 굵기를 조절하는 속성</li>
+          <li class="font-weight1">normal : 기본값</li>
+          <li class="font-weight2">bold : 굵게</li>
+          <li class="font-weightbolder">bolder : 원래보다 더 굵게</li>
+          <li class="font-weight3">lighter : 원래보다 가늘게</li>
+          <li class="font-weight900">100~900 : 가늘게~가장 굵게</li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>

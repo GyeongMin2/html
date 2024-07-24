@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>속성선택자</title>
+  <style>
+    a[href]{
+      color:red;
+      display:block;
+    }
+    a[target="_blank"]{
+      color:blue;
+      display: block;
+      font-weight: bold;
+    }
+    a[target="naver"]{
+      color: plum;
+    }
+
+    ul{
+      list-style-type: none;
+    }
+    ul li{
+      width:120px;
+      display: inline-block;
+      margin: 4px;
+      text-align: center;
+    }
+    li a[href]{
+      padding : 4px 20px;
+      font-size: 16px;
+      text-decoration: none;
+      font-weight: bold;
+      color: aquamarine;
+      background-color: violet;
+      border:1px solid#000;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>[속성] 선택자</h1>
+  <a href="#">기본 a태그</a>
+  <a href="#" target="_blank">새창이동</a>
+  <a href="https://www.naver.com" target="naver">네이버로 이동</a>
+  <a href="https://www.daum.net" target="naver">다음</a>
+  <hr>
+
+  <ul>
+    <li><a>메뉴</a></li>
+    <li><a href="#">메뉴1</a></li>
+    <li><a href="#">메뉴2</a></li>    
+    <li><a href="#">메뉴3</a></li>    
+    <li><a href="#">메뉴4</a></li>
+  </ul>
+</body>
+</html>

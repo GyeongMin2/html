@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가상 클래스 요소 사용</title>
+    <style>
+      .container {
+        width: 100px;
+        margin: auto;
+      }
+      .top_navi {
+        width: 960px;
+        height: 60px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #0f0f0f;
+      }
+      .top_navi >ul li {
+        list-style: none;
+        display: inline-block;
+        width: 150px;
+        padding: 4px;
+      }
+      .top_navi a:link,
+      .top_navi a:visited {
+        font-size: 16px;
+        padding: 10px;
+        text-decoration: none;
+      }
+      .top_navi a:hover,.top_navi a:focus {
+        background-color: #333;
+        color: #fff;
+      }
+      .top_navi a:active {
+        background-color: red;
+      }
+      #frm{
+        width:400px;
+        background-color: #fff;
+        border: 1px solid slateblue;
+        border-radius: 4px;
+        padding: 50px;
+      }
+      #frm fieldset{
+        border: 1px solid #ccc;
+        margin-bottom: 30px; 
+      }
+      #frm legend{
+        font-size: 19px;
+        font-weight: bold;
+        padding-left: 4px;
+        padding-bottom: 10px;
+      }
+      #frm ul li{
+        line-height: 30px;
+        list-style: none;
+        padding: 4px 10px;
+        margin-bottom: 2px;
+      }
+      #frm fieldset:first-of-type label{
+        float:left;
+        font-size: 14px;
+        width: 80px;
+      }
+      /* #frm input:not([type=radio]){
+        
+      } */
+      /*#frm ul>li:first-of-type{
+        width:80px ;
+        border:1px solid red;
+      }*/
+      #frm input[type="text"],input[type="password"],input[type="tel"]{
+        width: 180px;
+
+      }
+    </style>
+  </head>
+  <body>
+    <h1>가상 클래스와 가상 요소</h1>
+    <div id="container" class="container">
+      <nav class="top_navi">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">ContacUs</a></li>
+        </ul>
+
+        <form id="frm" method="post">
+          <fieldset>
+            <legend>개인정보</legend>
+            <ul>
+              <li>
+                <label for="name">이름</label>
+                <input type="text" id="name" name="name" value="" required />
+              </li>
+              <li>
+                <label for="pwd">비밀번호</label>
+                <input type="password" id="pwd" name="pwd" value="" required />
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>선택정보</legend>
+            <ul>
+              <li>
+                <label for="phone">연락처</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  value=""
+                  maxlength="14"
+                />
+              </li>
+              <li>
+                <label for="addr1">주소1</label>
+                <input
+                  type="text"
+                  id="addr1"
+                  name="addr1"
+                  value=""
+                  maxlength="100"
+                />
+              </li>
+              <li>
+                <label for="addr2">주소2</label>
+                <input
+                  type="text"
+                  id="addr2"
+                  name="addr2"
+                  value=""
+                  maxlength="100"
+                />
+              </li>
+              <li>
+                <label for="hobby">취미</label>
+                <input
+                  type="checkbox"
+                  id="hobby_0"
+                  name="hobby"
+                  value="골프"
+                  maxlength="100"
+                >
+                <label for="hobby_0">골프</label>
+              </input>
+              <input
+              type="checkbox"
+              id="hobby_1"
+              name="hobby"
+              value="축구"
+              maxlength="100"
+            >
+            <label for="hobby_1">축구</label>
+          </input>
+          <input
+          type="checkbox"
+          id="hobby_2"
+          name="hobby"
+          value="야구"
+          maxlength="100"
+        >
+        <label for="hobby_2">야구</label>
+      </input>
+              </li>
+            </ul>
+          </fieldset>
+          <button>회원가입</button>
+        </form>
+      </nav>
+    </div>
+  </body>
+</html>

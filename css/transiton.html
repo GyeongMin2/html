@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .ed{
+      width: 100px; height: 100px;
+      background-color: rebeccapurple;
+      transition-property:background-color, color, width ;
+      transition-duration: 0.3s;
+      transition-delay: 0.3s;
+    }
+    .ed:hover{
+      background-color: aqua;
+    }
+  </style>
+</head>
+<body>
+  <h1>트랜지션</h1>
+  <div class="ed"></div>
+  <ol>
+    <li>웹 요소의 스타일 속서을 시간차를 두고 조금씩 바뀌게 설정하는 것</li>
+    <li>어떤 요소의 속성값을 다른 값으로 변경하는 것</li>
+    <li>
+      transition-property 속성
+      <ul>
+        <li>트랜지션의 대상을 지정</li>
+        <li>전화 효과의 해당 속성명을 값을 지정</li>
+        <li>형식 : transition-property:<속성값></li>
+        <li>none : 전환 효과 속성을 지정 안함</li>
+        <li>all : 모든 속성을 전환 효과 대상으로 지정</li>
+        <li>속성 이름 : 트랜지션 효과를 적용할 속성이름, 쉼표(,)로 구분</li>
+      </ul>
+    </li>
+    <li>transition-duration 속성값
+      <ul>
+        <li>트랜지션 진행시간 설정</li>
+        <li>어떤 요소에 전환 효과를 적용시 반드시 property, duration을 함께 사용</li>
+        <li>여러개 일 경우, 쉼표(,)로 구분하여 적용</li>
+      </ul>
+    </li>
+    <li>
+      transition-delay 속성값
+      <ul>
+        <li>전환 효과가 지연되는 시간을 지정</li>
+        <li>형식 : transition-delay:<시간></li>
+      </ul>
+    </li>
+    <li>
+      transition-timing-function 속성
+      <ul>
+        <li>트랜지션의 선환 효과 속도를 지정</li>
+        <li>트랜지션의 시작, 중간, 끝 지점의 속도를 지정</li>
+        <li>형식 : transition-timing-function:<속성값></li>
+        <li>linear : 처음, 마지막 속도 일정</li>
+        <li>ease : 처음에는 빨리 진행하다가 중간지점부터 점점 느려짐</li>
+        <li>ease-in : 처음에는 느리다가 점점 빨라짐</li>
+        <li>ease-out : 처음에는 빠르다가 점점 느려짐</li>
+        <li>ease-in-out : 처음에는 느리다가 점점 빨라지다가 다시 느려짐</li>
+        <li>cubic-bezier(n,n,n,n) 베지에 함수를 이용하여 정의, n값은 0~</li>
+      </ul>
+    </li>
+    <li>
+      transition 속성
+      <ul>
+        <li>위의 속성값을 한꺼번에 지정 가능</li>
+        <li>형식 : transition:&lt;property>, &lt;duration>, &lt;timing-function>, &lt;delay></li>
+        <li>시간속성을 앞에것은 duration</li>
+      </ul>
+    </li>
+  </ol>
+</body>
+</html>

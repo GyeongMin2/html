@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .navi{
+      width: 960px;
+      height: 80px;
+      border-bottom: 2px solid #ddd;
+    }
+    .navi ul{
+      list-style: none;
+      padding-top: 10px;
+      padding-bottom: 4px;
+    }
+    .navi ul li{
+      display: inline-block;
+      width: 150px;
+      padding: 8px;
+    }
+    .navi a:link, .navi a:visited{
+      font-size: 18px;
+      padding : 10px;
+      text-decoration: none;
+      color: black;
+      font-weight: bolder;
+    }
+    .navi a:hover, .navi a:focus{
+      background-color: #333;
+      color: #fff;
+    }
+    .navi a:active{
+      background-color: red;
+    }
+    .contents{
+      margin: 20px auto;
+      width:400px;
+      padding: 20px;
+      border:1px solid #333;
+      border-radius: 5px;
+    }
+    #home:target{
+      background-color : blue;
+      color: #fff;
+    }
+    #about:target{
+      background-color: orange;
+    }
+    #contact:target{
+      background-color: burlywood;
+    }
+  </style>
+</head>
+<body>
+  <h1>가상 클래스</h1>
+  <div class="container">
+    <nav class="navi">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">ContacUs</a></li>
+      </ul>
+    </nav>
+    <div id="home" class="contents">
+      <h2>Home</h2>
+      <p>안녕하세요~~</p>
+    </div>
+    <div id="about" class="contents">
+      <h2>About Me</h2>
+      <p>저는요~~</p>
+    </div>
+    <div id="contact" class="contents">
+      <h2>ContacUs</h2>
+      <p>도와주세요~ 계좌:xxxx</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>select tag</title>
+  </head>
+  <body>
+    <form method="post" action="#">
+      <fieldset>
+        <legend>시/도</legend>
+        <label for="sido">시/도 : </label>
+        <select id="sido" name="sido">
+            <option value="">선택</option>
+          <optgroup label="경기도 성남시">
+            <option value="분당구">분당구</option>
+            <option value="중원구">중원구</option>
+          </optgroup>
+          <optgroup label="경기도 수원시">
+            <option label="장안구">장안구</option>
+            <option label="팔달구">팔달구</option>
+            <option label="권선구">권선구</option>
+            <option label="영통구">영통구</option>
+          </optgroup>
+        </select>
+      </fieldset>
+      <fieldset>
+        <legend>개인 정보 입력</legend>
+        <label for="gu">지역 : </label>
+        <select id="gu" name="gu">
+          <option value="" selected>선택</option>
+          <option value="강북구">강북구</option>
+          <option value="강남구">강남구</option>
+          <option value="강서구">강서구</option>
+          <option value="강동구">강동구</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>다중 선택</legend>
+        <select name="fruits" id="fruits" multiple>
+            <option value="">선택</option>
+            <option value="사과">사과</option>
+            <option value="배">배</option>
+            <option value="복숭아">복숭아</option>
+            <option value="딸기">딸기</option>
+            <option value="바나나">바나나</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>사이즈 변경</legend>
+        <select id="size" name="size" size="5">
+            <option value="">선택</option>
+            <option value="220">220</option>
+            <option value="225">225</option>
+            <option value="230">230</option>
+            <option value="235">235</option>
+            <option value="240">240</option>
+            <option value="245">245</option>
+            <option value="250">250</option>
+            <option value="255">255</option>
+            <option value="260">260</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <legend>사용금지</legend>
+        <select id="disable" name="disable" disabled>
+            <option value="">선택</option>
+            <option value="값1" selected>값1</option>
+        </select>
+        <input type="text" id="name" name="name" value="홍길동" readonly>
+        <!--   
+            disable과 readonly의 차이
+            disable은 서버로 데이터의 전송이 되지않음.
+            하지만 javascript로 컨트롤 가능.
+
+            disable을 사용하는 이유
+            > 특정조건에서의 활성화를 이용하게 하기위해 (사용자 경험)
+            
+        -->
+      </fieldset>
+      <input type="submit" value="등록" />
+    </form>
+
+  </body>
+</html>

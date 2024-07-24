@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>qwer</title>
+    <style>
+      .subMenu {
+        text-align: center;
+        padding: 0;
+      }
+      .mainMenu {
+        border: 1px solid black;
+        display: inline-block;
+        cursor: pointer;
+        text-align: center;
+        position: relative;
+        width: 150px;
+        margin-right: 50px;
+      }
+      .subMenu {
+        position: absolute;
+        opacity: 0;
+        list-style-type: none;
+        width: 150px;
+        color: black;
+        border: 1px solid black;
+        bottom: 50px;
+      }
+      .mainMenu:hover > .subMenu {
+        color: black;
+        border: 1px solid black;
+        transform: translateY(120px);
+        transition-duration: 0.5s;
+        animation-name: light;
+        animation-duration: 0.5s;
+      }
+      @keyframes light {
+        0% {
+          opacity: 0;
+        }
+        25% {
+          opacity: 0;
+        }
+        80% {
+          opacity: 0.5;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <ul>
+        <li class="mainMenu">
+          메뉴1
+          <ul class="subMenu">
+            <li>서브메뉴1</li>
+            <li>서브메뉴2</li>
+            <li>서브메뉴3</li>
+          </ul>
+        </li>
+        <li class="mainMenu">
+          메뉴2
+          <ul class="subMenu">
+            <li>서브메뉴1</li>
+            <li>서브메뉴2</li>
+            <li>서브메뉴3</li>
+          </ul>
+        </li>
+        <li class="mainMenu">
+          메뉴3
+          <ul class="subMenu">
+            <li>서브메뉴1</li>
+            <li>서브메뉴2</li>
+            <li>서브메뉴3</li>
+          </ul>
+        </li>
+        <li class="mainMenu">
+          메뉴4
+          <ul class="subMenu">
+            <li>서브메뉴1</li>
+            <li>서브메뉴2</li>
+            <li>서브메뉴3</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>텍스트 관련 스타일일</title>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>색상 이름 표기법</legend>
+        <ul>
+          <li>잘 알려진 색상 이름을 표시, 기본색상 16가지</li>
+          <li>
+            웹 안전 색상
+            <ul>
+              <li>모든 브라우저에서 표현할 수 있는 색상</li>
+              <li>기본 색상 포함 216가지</li>
+            </ul>
+          </li>
+          <li></li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>RGB표기법</legend>
+        <ul>
+          <li>rgb/rgba 표기</li>
+          <li>color:rgb(255,255.255)형태</li>
+          <li>빨강, 초록, 파랑 순서</li>
+          <li>
+            color:rgba(255,255,255,투명도), 투명도:0~1 사용, 0:투명 1:불투명
+          </li>
+          <li>0~255 로 표현</li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>16진수 표기법</legend>
+        <ul>
+          <li>#ffffff 처럼 #숫자, 영문6자리로 표현</li>
+          <li>앞에서부터 2자리 단위, 빨,초,파</li>
+          <li>0은 검정,f는 투명</li>
+          <li>두자리가 동일할 경우 축약 가능 if #ff0011 > #f01</li>
+        </ul>
+      </fieldset>
+    </form>
+
+    <ol>
+      <li>
+        색상표기법
+        <ul>
+          <li style="color: red">color:red - 색상명을 직접 지정</li>
+        </ul>
+      </li>
+      <li>
+        RGB표기법
+        <ul>
+          <li style="color: rgb(0, 255, 0)">color:rgb(n,n,n)으로 표기</li>
+        </ul>
+      </li>
+      <li>
+        16진수 표기법
+        <ul>
+          <li style="color: #0000ff">color:#0000ff 으로 표기</li>
+        </ul>
+      </li>
+    </ol>
+  </body>
+</html>

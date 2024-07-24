@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>그룹 선택자</title>
+    <style>
+      *{
+        font-weight: bold;
+      }
+      p, #title, .red{
+        color: red;
+      }
+      .box > p{
+        color: blue;
+      }
+      div > p { /*우선순위 때문에 적용 불가*/
+        color: purple;
+      }
+
+      div p {
+        color: red
+      }
+
+    </style>
+  </head>
+  <body>
+    <p>red</p>
+    <p>blue</p>
+    <p>red + blue</p>
+    <div class="box">
+      <p>자식1 p태그</p>
+      <div>자식2 div태그</div>
+      <p>자식3 p태그</p>
+    </div>
+
+
+    <h1>하위 선택자</h1>
+    <div>
+      <p>자식1 p태그</p>
+      <div>
+        자식2 div 태그 > p태그
+      </div>
+    </div>
+  </body>
+</html>

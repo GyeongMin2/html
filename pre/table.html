@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .tr,
+      td {
+        border: 1px solid #000000;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="ttable">
+      <thead>
+        <tr id="thead">
+          <td>번호</td>
+          <td>상품명</td>
+          <td>가격</td>
+          <td>개수</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="main">
+          <td>1번</td>
+          <td>사이다</td>
+          <td rowspan="2">1000</td>
+          <td>1</td>
+        </tr>
+        <tr class="main">
+          <td>2번</td>
+          <td>환타</td>
+          <td>1</td>
+        </tr>
+        <tr class="main">
+          <td>3번</td>
+          <td>콜라</td>
+          <td>1500</td>
+          <td>2</td>
+        </tr>
+      </tbody>
+      <tr>
+        <td>총금액</td>
+        <td colspan="3">5000</td>
+      </tr>
+    </table>
+    <hr />
+    <table>
+      <tr>
+        <td>구분</td>
+        <td>중간</td>
+        <td>기말</td>
+      </tr>
+      <tr>
+        <td>전공</td>
+        <td>A+</td>
+        <td>B+</td>
+      </tr>
+      <tr>
+        <td>교양</td>
+        <td>C</td>
+        <td>B</td>
+      </tr>
+    </table>
+    <hr>
+    <table>
+        <tr id="thead">
+            <td rowspan="3">개인정보</td>
+            <td>이름</td>
+            <td></td>
+          </tr>
+        <tr>
+            <td>학과/학번</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>연락처</td>
+            <td>            
+                <form action="tel.php">
+                    <input type="text" id="telnum">
+                </form>
+            </td>
+        </tr>
+          <tr>
+            <td>지원분야</td>
+            <form action="register.php" autocomplete="off">
+                <td colspan="2">
+                    <input type="text" id="aa">
+                </td>
+            </form>
+          </tr>
+    </table>
+  </body>
+</html>

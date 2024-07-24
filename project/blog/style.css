@@ -1,0 +1,78 @@
+/*css 주석*/
+@font-face {
+    font-family: 'mainfont';
+    src: url(resource/BMHANNA_11yrs_ttf.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'subfont';
+    src: url(resource/BMHANNAAir_ttf.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'NEXON Gothic';
+    src: url(https://rs.nxfs.nexon.com/home/fonts/NEXON%20Lv1%20Gothic%20OTF.eot);
+    src: url(https://rs.nxfs.nexon.com/home/fonts/NEXON%20Lv1%20Gothic%20OTF.eot#iefix) format("embedded-opentype"), 
+         url(https://rs.nxfs.nexon.com/home/fonts/NEXON%20Lv1%20Gothic%20OTF.woff) format("woff");
+}
+
+    * {
+        text-align: center;
+        font-family: 'Nexon Gothic';
+        background-color: #F7F7F7;
+    }
+
+    h1 {
+        font-size: 55px;
+        text-align: center;
+        font-family: 'mainfont';
+    }
+
+    h5 {
+        margin-left: 50px;
+        text-align: left;
+    }
+
+    h6 {
+        color: #999999;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    article {
+        margin: 110px;
+        font-size: 22px;
+    }
+
+    #topMenu {        
+        text-align: right;
+        font-size: 25px;
+
+        ul {
+            display: inline;
+        }
+
+        li {
+            font-family: 'mainfont';
+            display: inline;
+        }
+    }
+
+    #bottonMenu {
+        margin-top: 30px;
+
+        ul {
+            list-style: none;
+            display: inline;
+        }
+
+        li {
+            display: inline;
+        }
+    }

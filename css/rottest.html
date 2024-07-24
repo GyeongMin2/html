@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .container {
+        width: 550px;
+        height: 349px;
+        transition:all 0.5s;
+        border: 1px solid black;
+        transform: rotateY();
+      }
+      .pic {
+        width: 550px;
+        height: 349px;
+        background: url(./20210712314686.jpg);
+      }
+    </style>
+    <div class="container">
+      <div class="pic">
+      </div>
+    </div>
+    <script>
+      var container=document.querySelector('.container')
+      container.addEventListener('mousemove',function(e){
+        var x = e.offsetX
+        var y = e.offsetY
+        console.log(x,y)
+        var rotateY = -1/5 * x + 20
+        container.style = 'transform : rotateY(${rotateY}deg)'
+      })
+    </script>
+  </body>
+</html>

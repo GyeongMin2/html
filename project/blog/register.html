@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>register</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h5><a href="home.html">my(강경민)블로그</a></h5>
+        <div id="topMenu">
+          <ul>
+            <li>
+              <a href="home.html"> home </a>
+            </li>
+            <li>
+              <a href="about.html"> about </a>
+            </li>
+            <li>
+              <a href="posts.html"> posts </a>
+            </li>
+            <li>
+              <a href="contact.html"> contact </a>
+            </li>
+            <li>
+              <a href="login.html"> login </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <h1>Register</h1>
+      <br />
+      <h4>회원가입</h4>
+    </header>
+    <main>
+      <h3>회원가입 페이지 입니다.</h3>
+      <form action="#">
+        <div id="registerdata">
+          <ul>
+            <li>
+              <label for="r_email">Email</label>
+              <input
+                type="email"
+                id="r_email"
+                name="r_email"
+                placeholder="Email"
+                required
+              />
+            </li>
+            <li>
+              <label for="r_emailcheck">Email 확인</label>
+              <input
+                type="email"
+                id="r_emailcheck"
+                name="r_emailcheck"
+                placeholder="Email 확인"
+                required
+              />
+            </li>
+            <li>
+              <label for="r_telnum">Phone Number</label>
+              <input
+                type="tel"
+                id="r_telnum"
+                name="r_telnum"
+                placeholder="Phone Number"
+                required
+              />
+            </li>
+            <li>
+              <label for="r_pw">Password</label>
+              <input
+                type="password"
+                id="r_pw"
+                name="r_pw"
+                placeholder="Password"
+                required
+              />
+            </li>
+            <li>
+              <label for="r_pwcheck">Password 확인</label>
+              <input
+                type="password"
+                id="r_pwcheck"
+                name="r_pwcheck"
+                placeholder="Password 확인"
+                required
+              />
+            </li>
+          </ul>
+        </div>
+        <div id="sendcontact">
+          <input type="submit" value="send" />
+          <input type="reset" value="reset" />
+        </div>
+      </form>
+    </main>
+    <hr />
+    <footer>
+      <div id="bottonMenu">
+        <ul>
+          <li>
+            <a href="email.html" target="_blank">
+              <img src="images/email.png" width="40px"  alt="이메일">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/?locale=ko_KR" target="_blank">
+              <img src="images/facebook.png" width="40" alt="페이스북">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/gye.ng_min/" target="_blank">
+              <img src="images/insta.png" width="40" alt="인스타그램">
+            </a>
+          </li>
+          <li>
+            <a href="personal.html" target="_blank">
+              <img src="images/resume.png" width="40" alt="이력서">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .aa {
+        color: #fff;
+        background-color: gray;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>변형(transform)</h1>
+    <ol>
+      <li>
+        변형(transform) : 특정 요소의 크기나 형태, 스타일 등이 바뀌는것.
+        <ul>
+          <li>
+            2차원 변형
+            <ul>
+              <li>수평/ 수직으로 웹 요소를 변형</li>
+              <li>크기/각도만 지정</li>
+              <li>2차원 좌표 사용</li>
+              <li>
+                확대/ 축소
+                <ul class="aa">
+                  <li>scale(x, y) → 요소를 x,y만큼 확대/축소</li>
+                  <li>scaleX(n) → 요소를 n만큼 x축으로 확대/축소</li>
+                  <li>scaleY(n) → 요소를 n만큼 y축으로 확대/축소</li>
+                  <li>scale3d(x, y, z) → 요소를 x,y,z만큼 확대/축소</li>
+                </ul>
+              </li>
+              <li>
+                기울이기
+                <ul class="aa">
+                  <li>
+                    skew(xdeg, ydeg) → 요소를 x축, y축으로 xdeg, ydeg만큼 기울임
+                  </li>
+                  <li>skewX(xdeg) → 요소를 x축으로 xdeg만큼 기울임</li>
+                  <li>skewY(ydeg) → 요소를 y축으로 ydeg만큼 기울임</li>
+                </ul>
+              </li>
+              <li>
+                회전
+                <ul class="aa">
+                  <li>rotate(deg) → 요소를 deg만큼 회전</li>
+                </ul>
+              </li>
+            </ul>
+            <ul>
+              <li>translate 함수 → 지정한 방향으로 이동할 거리 지정 후 이동
+                  
+                  <ul class="aa">
+                    <li>
+                      transform:translate(tx,ty) → x축 방향으로 tx만큼, y축
+                      방향으로 ty만큼 이동 ,ty 값을 주지 않으면 0으로 간주.
+                    </li>
+                    <li>
+                      transform:translate3d(tx,ty,tz) → x축 방향으로 tx만큼, y축
+                      방향으로 ty만큼 이동 ,ty 값을 주지 않으면 0으로 간주.
+                    </li>
+                    <li>translate(tx) → x축방향으로</li>
+                    <li>translate(ty) → y축방향으로</li>
+                    <li>translate(tz) → z축방향으로</li>
+                    
+                  </ul>
+              </li>
+              <li></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ol>
+  </body>
+</html>

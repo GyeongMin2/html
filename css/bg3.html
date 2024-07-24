@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>backgroundPosition</title>
+    <style>
+      ul {
+        list-style-type: none;
+        margin-left: -30px;
+      }
+
+      ul > li {
+        background-image: url(apple.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: left center;
+        margin: 4px 4px 4px 50px;
+        padding-left: 100px;
+        line-height: 40px;
+        width: 60px;
+        border: 1px solid red;
+      }
+
+      .bg-img {
+        background-image: url(apple.png);
+        margin: 10px;
+        padding: auto;
+        border: 2px dashed red;
+        width: 520px;
+        height: 520px;
+        background-size: contain;
+      }
+
+      .box-origin {
+        background-origin: border-box;
+      }
+      .box-padding {
+        background-origin: padding-box;
+      }
+      .box-content {
+        background-origin: content-box;
+      }
+    </style>
+  </head>
+  <body>
+    <ol>
+      <li>
+        background-position
+        <ol>
+          <li>background-position: <수평위치> <수직위치></li>
+          <li>수평위치 : left | center | right | 백분율 | <길이값></li>
+          <li>수직위치 : top | center | bottom | 백분율 | 길이값</li>
+          <li>백분율 : 배경 이미지의 해당 영역의 가로/세로의 위치</li>
+          <li>길이 : 배경 이미지의 위치를 길이로 지정</li>
+          <li>
+            수평 위치는 영역 왼쪽 -> 중앙 -> 오른쪽, right : 오른쪽 -> 왼쪽
+          </li>
+        </ol>
+      </li>
+    </ol>
+    <h1>메뉴</h1>
+    <ul>
+      <li>애플</li>
+      <li
+        style="
+          background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT0uEf5kQuc8p6nFeC9Z5fbGjQ8VmZa2GzTw&s);
+        "
+      >
+        SK
+      </li>
+      <li
+        style="
+          background-image: url(https://cdn-icons-png.flaticon.com/512/5969/5969254.png);
+        "
+      >
+        삼성
+      </li>
+      <li
+        style="
+          background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZdxNpsqxS1HTHXRksSEyGHsFw_qFGprr2pA&s);
+        "
+      >
+        LG
+      </li>
+    </ul>
+    <ol>
+      <li>background-origin : border-box | padding-box | content-box</li>
+      <li>배경 이미지를 배치하기 위한 기준 설정</li>
+      <li>border-box : 박스모델의 테두리 기준</li>
+      <li>padding-box : 박스의 테두리를 제외한 패딩이 기준</li>
+      <li>content-box : 내용이 기준</li>
+    </ol>
+    <div class="bg-img box-origin"></div>
+    <div class="bg-img box-padding"></div>
+    <div class="bg-img box-content"></div>
+  </body>
+</html>
