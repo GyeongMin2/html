@@ -1,0 +1,52 @@
+/*css 주석*/
+@font-face {
+    font-family: 'mainfont';
+    src: url(resource/BMHANNA_11yrs_ttf.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'subfont';
+    src: url(resource/BMHANNAAir_ttf.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'NEXON Gothic';
+    src: url(https://rs.nxfs.nexon.com/home/fonts/NEXON%20Lv1%20Gothic%20OTF.eot);
+    src: url(https://rs.nxfs.nexon.com/home/fonts/NEXON%20Lv1%20Gothic%20OTF.eot#iefix) format("embedded-opentype"),
+        url(https://rs.nxfs.nexon.com/home/fonts/NEXON%20Lv1%20Gothic%20OTF.woff) format("woff");
+}
+
+* {
+    font-family: 'Nexon Gothic';
+    background-color: #F7F7F7;
+}
+
+a {
+    text-decoration-line: none;
+}
+
+#header {
+    display: flex;
+    height: 100px;
+}
+
+#head_nav {
+    display: flex;
+    margin-left: auto;
+    margin-right: 20px;
+    list-style: none;
+}
+
+#head_nav>ul>li {
+    display: inline-block;
+}
+
+.head_item {
+    color: gray;
+}
+
+.head_item:hover {
+    color: black;
+    font-weight: bold;
+}
+
