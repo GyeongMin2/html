@@ -7,31 +7,7 @@
   <title>basic</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    #maincont{
-      display: flex;
-      background-color: rgb(231, 255, 253);
-      flex-direction: column;
-      box-shadow: 0px 10px 5px -2px gray;
-      margin: 0 10%;
-    }
-    .mainarti{
-      background-color: white;
-      margin: 3%;
-      padding: 3%;
-      box-shadow: 0px 10px 5px -2px gray;
-    }
 
-    .artitle{
-      margin-bottom: 1%;
-      font-weight: bold;
-      font-size: large;
-    }
-    .artfoot{
-      margin-top: 2%;
-      font-size: smaller;
-      font-style: italic;
-      color: gray;
-    }
     input[type=text],input[type=email],input[type=tel], select, textarea {
       width: 90%;
       padding: 12px;
@@ -47,26 +23,26 @@
     #continfo>ul>li{
       margin: 40px;
     }
+    
     #sendcontact{
-      display: inline-flex;
-      margin: 3%;
+      display: flex;
+      margin: 15px;
+      justify-content: center;
+      height: 30px;
     }
-    .contbtn{
-      font-size: large;
-      margin: 5px;
-    }
-    .contbtn:active{
-      background-color: black;
-      color: white;
-      border: 1px solid white;
-    }
-    input[type=submit],input[type=reset] {
+    input[type=submit],input[type=reset]{
       background-color: white;
       color: black;
       border: 1px solid gray;
       border-radius: 4px;
+      width: 60%;
+      margin-left: 10px;
+      margin-right: 10px;
     }
-
+    input[type=submit]:hover,input[type=reset]:hover{
+      font-weight: bold;
+      border: 2px solid black;
+    }
   </style>
 </head>
 <body>
@@ -97,7 +73,7 @@
   <div class="container">
     <div class="homeimg">
       <div id="hometitle">Contact</div>
-      <div id="homesubtitle">질문있으시면 답장 드리겠습니다</div>
+      <div id="homesubtitle">질문이있으시면 답장 드리겠습니다</div>
     </div>
     <div id="maincont">
       <div>

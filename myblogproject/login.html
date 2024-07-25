@@ -7,17 +7,37 @@
   <title>basic</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-
-    .artitle{
-      margin-bottom: 1%;
-      font-weight: bold;
-      font-size: large;
+    input[type=text],input[type=Password]{
+      width: 90%;
+      padding: 12px;
+      border: 1px solid gray;
+      border-radius: 4px;
+      resize:none;
     }
-    .artfoot{
-      margin-top: 2%;
-      font-size: smaller;
-      font-style: italic;
-      color: gray;
+    #contlogin>ul{
+      padding-left: 0;
+      list-style: none;
+      
+    }
+    #contlogin>ul>li{
+      margin: 40px;
+    }
+    #sendid{
+      display: flex;
+      margin: 3%;
+      justify-content: center;
+      height: 30px;
+    }
+    input[type=submit]{
+      background-color: white;
+      color: black;
+      border: 1px solid gray;
+      border-radius: 4px;
+      width: 70%;
+    }
+    input[type=submit]:hover{
+      font-weight: bold;
+      border: 2px solid black;
     }
   </style>
 </head>
@@ -48,22 +68,48 @@
   
   <div class="container">
     <div class="homeimg">
-      <div id="hometitle">About</div>
-      <div id="homesubtitle">어떻게 살아왔는가!</div>
+      <div id="hometitle">Login</div>
+      <div id="homesubtitle">로그인 페이지입니다</div>
     </div>
     <div id="maincont">
-      <div class="mainarti">
-        <div class="artitle">강경민은 어떻게 살아왔는가...</div>
-        제가 어떻게 자라왔는지 또 어떤곳에 살았었는지를 적어보았습니다.
-        저는 2001년 9월 서울에서 태어나 5살까지 서울에서 살다 경기도 부천으로 이사를 갔습니다. 그 후 아직까지 부천시 상동에서
-        계속 거주중이고,
-        부모님과 할머니 와함께 살고있습니다. 현재는 자취중인 여동생도 있습니다!
-        취미로는 게임하기, 독서하기입니다. 최근 가장 재미있게 읽었던 책은 류츠신작가의 SF소설 삼체입니다.
-        또 mbti는 istp이고 열심히 코딩공부중입니다. 읽어주셔서 감사합니다 자세한 정보는 하단 이력서를 참조해주세요.
-        <div class="artfoot">2024년 7월 어느 무더운여름날</div>
+      <div>
+        <form action="#" class="contfrm" method="post">
+          <div id="contlogin">
+            <ul>
+              <li>
+                <label for="id">ID</label>
+                <input
+                  type="text"
+                  id="ID"
+                  name="ID"
+                  placeholder="ID또는Email을 입력해주세요"
+                  required
+                />
+              </li>
+              <li>
+                <label for="Password">Password</label>
+                <input
+                  type="Password"
+                  id="Password"
+                  name="Password"
+                  placeholder="비밀번호를 입력해주세요"
+                  required
+                />
+              </li>
+              </ul>
+          </div>
+          <div id="sendid">
+            <!-- 
+            <button type="submit" class="contbtn">send</button>
+            <button type="reset" class="contbtn">reset</button>
+            -->
+            <input type="submit" value="login" class="loginbtn"/>
+          </div>
+        </form>
       </div>
     </div>
-  </div>
+
+  
   <div id="bottomMenu">
     <ul>
       <li>
