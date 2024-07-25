@@ -123,7 +123,23 @@ body{
     font-size: large;
 }
 
+
 /* 헤더 */
+.ctrlbar{
+    color:black;
+    margin-top:5%;
+    padding: 15px 30px;
+    border: 1px;
+    border-radius: 3%;
+    background-color: rgba(0, 255, 255,0.3);
+    box-shadow: 0px 10px 5px -2px gray;
+  }
+  .denav{
+    display: flex;
+    margin: 3%;
+    justify-content: center;
+    height: 30px;
+  }
 
 /* 메인 컨테이너 */
 
