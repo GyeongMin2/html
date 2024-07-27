@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>personal</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .pcontainer {
+      margin-top: 2%;
+      display: grid;
+      grid-template-columns: 2% 5% 1fr 5% 2%;
+    }
+
+    #psnalcon {
+      display: flex;
+      background-color: #fff;
+      flex-direction: column;
+      box-shadow: 0px 10px 5px -2px gray;
+      padding: 5%;
+      /* grid-template-columns: 10% 1fr 1fr;
+      grid-template-rows: 1fr ; */
+    }
+
+    #psnalnev>ul {
+      list-style-type: none;
+      padding-left: 0%;
+    }
+
+    #psnalnev>ul>li {
+      padding: 10% 0;
+      line-height: 100%;
+      width: 100px;
+      height: auto;
+      background-color: white;
+      margin: 5px 0px;
+      border: 2px solid gray;
+      border-left: 0px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      box-shadow: 2px 1px 4px -2px gray;
+      padding-left: 5%;
+    }
+
+    #psnalnev>ul>li:nth-child(2) {
+      background-color: rgba(106, 255, 255, 0.3);
+    }
+
+    #psnalnev>ul>li>a {
+      color: gray;
+    }
+
+    #psnalnev>ul>li>a:hover {
+      color: black;
+      text-shadow: 1px 2px 5px rgb(43, 43, 43);
+    }
+
+    #gmpicdiv {
+      height: 180px;
+      width: 150px;
+      object-fit: contain;
+      background-position: center;
+      background-image: url(./images/gmpic.jpeg);
+      background-size: cover;
+    }
+
+    #psnalcon>table {
+      margin: 2% 0%;
+      border-collapse: collapse;
+    }
+
+    #psnalcon>table,
+    th,
+    td,
+    tr {
+      border: 1px solid black;
+      padding: 1%;
+    }
+
+    /* #educate,
+    #license {
+      text-align: center;
+    } */
+
+    /* info
+    educate
+    license */
+    .psnmain{
+      margin-bottom: 2%;
+    }
+    .psntitle{
+      margin: 5px 0%;
+      font-weight: bold;
+      font-size: large;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="header">
+    <div id="gotomain" class="gotomain"><a href="home.html" class="gotomain" id="gotomaina">Gyeongmin's blog</a></div>
+    <nav class="head_nav" id="head_nav">
+      <ul>
+        <li>
+          <a href="home.html" class="head_item"> Home </a>
+        </li>
+        <li>
+          <a href="about.html" class="head_item"> About </a>
+        </li>
+        <li>
+          <a href="posts.html" class="head_item"> Posts </a>
+        </li>
+        <li>
+          <a href="contact.html" class="head_item"> Contact </a>
+        </li>
+        <li>
+          <a href="login.html" class="head_item"> Login </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="pcontainer">
+    <div>
+      <!-- 가장 왼쪽 -->
+    </div>
+    <div>
+      <!-- 그옆 -->
+    </div>
+    <div id="psnalcon">
+      <div id="psnmain1" class="psnmain">
+        <div class="psntitle">지원동기</div>
+        <div class="psnartic">
+          저는 어렸을 때부터 프로그래머로 일하시는 아버지를 통하여 컴퓨터를 접하게 되었습니다. <br>
+          다른 아이들보다 일찍 컴퓨터와 친숙해 지면서, 자연스럽게 컴퓨터를 남들보다 잘 다루게 되었고,
+          잘 다루게 되니 컴퓨터가 좋아지게 되었습니다. <br>
+          그래서 대학도 관련 과로 진학하였고, 이러한 경험들을
+          통해 컴퓨터와 프로그램에 대한 깊은 흥미와 열정을 가지게 되었고, 프로그래머가 되기로 결심하여 지원하게 되었습니다.
+        </div>
+      </div>
+      <div id="psnmain2" class="psnmain">
+        <div class="psntitle">성격의 장점 및 단점</div>
+        <div class="psnartic">
+          저는 어렸을 때부터 프로그래머로 일하시는 아버지를 통하여 컴퓨터를 접하게 되었습니다. <br>
+          다른 아이들보다 일찍 컴퓨터와 친숙해 지면서, 자연스럽게 컴퓨터를 남들보다 잘 다루게 되었고,
+          잘 다루게 되니 컴퓨터가 좋아지게 되었습니다. <br>
+          그래서 대학도 관련 과로 진학하였고, 이러한 경험들을
+          통해 컴퓨터와 프로그램에 대한 깊은 흥미와 열정을 가지게 되었고, 프로그래머가 되기로 결심하여 지원하게 되었습니다.
+        </div>
+      </div>
+      <div id="psnmain3" class="psnmain">
+        <div class="psntitle">입사 후 포부</div>
+        <div class="psnartic">
+          제가 생각하는 가장 중요한 단기적인 목표는 기업에 또 팀에 융화되는 것 입니다. <br>
+          그 이유는 개인과 기업의 성장에 있어 가장 중요한 부분은 같이 가는 것 입니다. <br>
+          빨리 가려면 혼자 가고 멀리 가려면 함께 가라 라는 말이 있듯, 입사 직후에는 융화되는 것이 목표 입니다. <br>
+          또 주어진 업무에 대한 철저한 이해와 수행을 통해 회사의 목표 달성에 기여하고자 합니다. <br>
+          이를 위해 선배 및 동료들과의 협업을 통해 실무 능력을 빠르게 향상시킬 계획입니다. <br>
+        </div>
+      </div>
+    </div>
+    <div id="psnalnev">
+      <ul>
+        <li><a href="personal.html" id="per1">개인정보</a></li>
+        <li><a href="personal1.html" id="per2">자기소개서</a></li>
+        <li><a href="personal2.html" id="per3">직무역량</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="bottomMenu">
+    <ul>
+      <li>
+        <a href="mailto:kgmksw@naver.com" target="_blank">
+          <img src="images/email.png" width="40px" alt="이메일">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.facebook.com/?locale=ko_KR" target="_blank">
+          <img src="images/facebook.png" width="40" alt="페이스북">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/gye.ng_min/" target="_blank">
+          <img src="images/insta.png" width="40" alt="인스타그램">
+        </a>
+      </li>
+      <li>
+        <a href="personal.html" target="_blank">
+          <img src="images/resume.png" width="40" alt="이력서">
+        </a>
+      </li>
+    </ul>
+  </div>
+  </div>
+  <div id="copyright">
+    2024. Gyeongmin
+  </div>
+</body>
+
+</html>
