@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+
   <body>
     <h1>반복문의 구조</h1>
     <!-- <code>
@@ -12,18 +13,163 @@
       실행문5 }
     </code>
     <q> if(조건문){ 실행문1; } </q> -->
+    <code>
+      3항 연산자 : ? > (조건) ? 참일 때 처리로직 : 거짓일 때 처리 로직;
+    </code>
+
     <script>
-      while (num != 0) {
-        var num = prompt("숫자 입력: ");
-        if (num == 0) {
-          alert(num + "은 홀수 또는 짝수가 아닙니다.");
-        } else if (num % 2) {
-          alert(num + "은(는) 2의 배수가 아닙니다.");
-        } else {
-          alert(num + "은(는) 2의 배수입니다.");
-        }
+      // var b = new Array();
+      // b[0] = 100;
+      // b[1] = "100";
+      // b[2] = 100;
+      // var c = 0;
+      // for (var i = 0; i < 3; i++) {
+      //   c = c + b[i];
+      // }
+      // console.log(c);
+      /*테스트*/
+      // var b = new Array();
+      // b[0] = 100;
+      // b[1] = "100";
+      // b[2] = 100;
+      // console.log(b[0] + b[1] + b[2]);
+
+      // console.log(100 + "100" + 100);
+
+      // var c = 100;
+      // var d = "100";
+      // var e = 100.0;
+      // var f = c + d + e;
+
+      // console.log(f);
+
+      // var num1 = prompt("숫자 1 : ");
+      // var num2 = prompt("숫자 2 : ");
+
+      // if (num1 < 10 || num2 > 20) {
+      //   alert("숫자 1 : " + num1 + ", 숫자 2 :" + num2);
+      // } else {
+      //   alert("else");
+      // }
+      //if 문
+
+      // var a = 10;
+      // var b = 0.1;
+      // console.log(a + b);
+
+      // var num3 = 10;
+      // var num4 = "abc";
+      // var num5 = "100";
+      // var num6 = "20abc";
+      // var num7 = "abc20";
+      // var num8 = "ab20c";
+
+      // console.log(num3 + num4);
+      // console.log(num3 + num5);
+      // console.log(num3 + num6);
+      // console.log(num3 + parseInt(num6));
+      // console.log(parseInt("abc"));
+      // console.log(parseInt(num7));
+
+      // var b1 = true;
+      // var b2 = false;
+      // var b3 = 1;
+      // var b4 = 0;
+
+      // console.log(b1);
+      // console.log(b2);
+      // console.log(b3);
+      // console.log(b4);
+      // console.log(b1 && b3);
+      // console.log(b1 && b4);
+
+      // var b5 = "";
+      // if (b1 && b3) {
+      //   b5 = true;
+      // }
+
+      // console.log(b5);
+
+      // if (!null != null) {
+      //   console.log("!null != null");
+      // }
+      // if (null == null) {
+      //   console.log("null == null");
+      // }//null 연산
+
+      // var a = 5;
+      // var b = 2;
+      // if(a<b){
+      //   console.log("a는 b보다 작습니다");
+      // }else{
+      //   console.log("b는 a보다 작습니다");
+      // }
+      // a < b ? console.log("a는 b보다 작습니다") : console.log("b는 a보다 작습니다");
+      // //3항연산자 사용
+
+      //        var arrNum = new Array();
+      //        arrNum[0] = 80;
+      //        arrNum[1] = 90;
+      //        arrNum[2] = 100;
+      //        console.log(arrNum[1]);
+      //
+      //        var arrNum2 = [
+      //            [10, 20, 30],
+      //            [40, 50, 60],
+      //            [70, 80, 90],
+      //        ];
+      //        console.log(arrNum2[2][2]);
+      //
+      //        var month = prompt("");
+      //
+      //        switch (month) {
+      //            case "1":
+      //                console.log("봄");
+      //                break;
+      //            case "2":
+      //                console.log("여름");
+      //                break;
+      //            case "3":
+      //                console.log("가을");
+      //                break;
+      //            case "4":
+      //                console.log("겨울");
+      //                break;
+      //            default:
+      //                console.log("ㅇㅇ");
+      //        }
+      // 시험점수 100~90 a ~80 b ~70 c ~60 d ~f
+      var score = prompt("");
+      if (score > 90) {
+        console.log("A");
+      } else if (score > 80) {
+        console.log("B");
+      } else if (score > 70) {
+        console.log("C");
+      } else if (score > 60) {
+        console.log("D");
+      } else {
+        console.log("F");
       }
-      alert("끝~");
+
+      var score2 = prompt("");
+      if (score2 > 90) {
+        console.log("A");
+      } else if (score <= 90 && score2 > 80) {
+        console.log("B");
+      } else if (score <= 80 && score2 > 70) {
+        console.log("C");
+      } else if (score <= 70 && score2 > 60) {
+        console.log("D");
+      } else {
+        console.log("F");
+      }
+
+      var swScore = prompt("");
+      switch(swScore){
+        case swScore
+
+      }
     </script>
   </body>
 </html>
