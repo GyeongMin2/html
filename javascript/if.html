@@ -139,6 +139,7 @@
       //                console.log("ㅇㅇ");
       //        }
       // 시험점수 100~90 a ~80 b ~70 c ~60 d ~f
+
       var score = prompt("");
       if (score > 90) {
         console.log("A");
@@ -164,12 +165,58 @@
       } else {
         console.log("F");
       }
-
-      var swScore = prompt("");
-      switch(swScore){
-        case swScore
-
+      /*아래는 parseInt 사용*/
+      var s = prompt();
+      s = parseInt(s / 10);
+      console.log(s);
+      if (0<= s <= 10) {
+        switch (s) {
+          case 10:
+          case 9:
+            console.log("a");
+            break;
+          case 8:
+            console.log("b");
+            break;
+          case 7:
+            console.log("c");
+            break;
+          case 6:
+            console.log("d");
+            break;
+          default:
+            console.log("f");
+        }
+      } else {
+        console.log("정확한 점수를 입력해주세요");
       }
+      /*아래는 10으로 나누고 나머지를 빼기*/
+      var sS = prompt();
+      var n = (s % 10) / 10;
+      s = s / 10 - n;
+      console.log(s);
+      if (s <= 10) {
+        switch (s) {
+          case 10:
+          case 9:
+            console.log("a");
+            break;
+          case 8:
+            console.log("b");
+            break;
+          case 7:
+            console.log("c");
+            break;
+          case 6:
+            console.log("d");
+            break;
+          default:
+            console.log("f");
+        }
+      } else {
+        console.log("정확한 점수를 입력해주세요");
+      }
+
     </script>
   </body>
 </html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var arr = ["banana", "apple", "strawberry", "peach"];
+      for (var i = 0; i < arr.length; i++) {
+        document.write(`${arr[i]}<br>`);
+      }
+      document.write("<hr>");
+
+      for (var els in arr) {
+        document.write(`${els}<br>`);
+      }
+      document.write("<hr>");
+      for (var els in arr) {
+        document.write(`${els}:${arr[els]}<br>`);
+      }
+      document.write("<hr>");
+      for (var item of arr) {
+        document.write(`${item}<br>`);
+      }
+
+      var obj = {
+        student : [
+          {name : "철수", age : 20},
+          {name : "경민", age : 24},
+          {name : "민수", age : 10},
+          {name : "영희", age : 21}
+        ]
+        // ,
+        // school : [
+        //   {locate : "서울"},
+        //   {locate : "경기"}
+        // ]
+      };
+      for (var key in obj) {
+        // document.write(`키 : ${key}, 값 : ${obj[key]} <br>`);
+        for(var item of obj[key]){
+          for(var ele in item){
+            
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
