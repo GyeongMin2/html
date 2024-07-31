@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>표준 내장 객체</h1>
+    <ul>
+      <li>자바 스크립트에 기본으로 내장된 객체</li>
+      <li>문자열 객체, 문자(char = ''), 문자열(string = "")</li>
+      <li>
+        Array 객체
+        <ul>
+          <li>배열과 관련된 속성, 메서드가 미리 정의되어 있음</li>
+          <li>
+            파괴적 메서드 : 기본 메서드를 사용했을 때, 원본 데이터를 변경.
+          </li>
+          <li>
+            비 파괴적 메서드 : 기본 메서드를 사용했을 때, 원본 데이터가 영향을
+            받지 않는 메서드
+          </li>
+          <li>let 변수명 = [초기화]</li>
+          <li>let 변수명 = new Array(초기화)</li>
+        </ul>
+      </li>
+      <li>
+        날짜,시간
+        <ul>
+          <li>날짜와 시간을 다루는 Date 객체</li>
+          <li>get : 메서드 : 날짜와 시간 정보를 가져오는 메서드</li>
+          <li>set : 메서드 : 날짜와 시간 정보를 설정하는 메서드</li>
+          <li>let 변수명 = new Date()</li>
+        </ul>
+      </li>
+      <li>
+        수학 연산
+        <ul>
+          <li>수학 연산과 관련있는 속성과 메서드가 정의된 객체, Math</li>
+          <li>random() 메서드 : 0 ~ 1 사이의 난수를 반환</li>
+        </ul>
+      </li>
+    </ul>
+
+    <script>
+      // const email = "dasd@naver.com";
+      // if (email.includes("@") === false) {
+      //   alert("올바른 이메일 형식이 아닙니다.");
+      // }
+
+      // const arrEmail = email.split("@");
+      // const ALLOW_STRING =
+      //   "abcdefghijklnmopqrstuvwxyzABCDEFGHIJKLNMOPQRSTUVWXYZ-_.";
+      // let checkFlag = true;
+
+      // alert(arrEmail[0] + " :: " + arrEmail[1]);
+      // // for (let i = 0; i < arrEmail[0].length; i++) {
+      // //   arrEmail[0].charAt[i];
+      // // }
+      // for (let arr in arrEmail) {
+      //   console.log(arr);
+      //   // console.log(arrEmail[arr]);
+      //   console.log(arrEmail[arr] + " :: " + arrEmail[arr]);
+      //   // for (let i = 0; i < arrEmail[arr].length; i++) {
+      //   //   console.log(arrEmail[arr].substring(i, i + 1));
+      //   // }
+      //   checkFlag = checkChar(ALLOW_STRING, arrEmail[arr]);
+      //   if (checkFlag) {
+      //     checkFlag;
+      //   }
+      //   if (!checkFlag) {
+      //     break;
+      //   }
+      // }
+
+      // function checkChar(allowStr, str) {
+      //   if (!allowStr) {
+      //     allowStr = "abcdefghijklnmopqrstuvwxyzABCDEFGHIJKLNMOPQRSTUVWXYZ-_,";
+      //   }
+      //   if (!str) return false;
+
+      //   let checkFlag = false;
+      //   for (let i = 0; i < str.length; i++) {
+      //     for (let j = 0; j < allowStr.length; j++) {
+      //       if (str[i] === allowStr[j]) {
+      //         checkFlag = true;
+      //         break;
+      //       }
+      //     }
+      //     if (checkFlag == false) {
+      //       break;
+      //     }
+      //   }
+      // }
+      // function checkLength(minLen = 1, maxLen = 20, strLen) {
+      //   if (strLen <= minLen || strLen > maxLen) {
+      //     return false;
+      //   } else {
+      //     return true;
+      //   }
+      // }
+
+      // for (let arr of arrEmail) {
+      // }
+      // for (let i = 0; i < arrEmail.length; i++) {}
+
+      let now = new Date();
+      document.write(`현재 시각은 ${now} 입니당 <br/>`);
+      document.write(`현재 시각은 ${now.toLocaleString()} 입니당 <br/>`);
+      document.write(`${now.getHours()} :: ${now.getMinutes()} <br/>`);
+      if (now.getHours() > 14 || now.getMinutes()) {
+        document.write("이벤트 응모 시간은 14시까지 입니다~ <br/>");
+      }
+      let randNum = Math.random();
+      document.write(`random : ${randNum} <br>`);
+
+      function getRandNo(min, max) {
+        return Math.floor(Math.random() * (max - min)) + 1;
+      }
+
+      const rndNo = getRandNo(1, 45);
+      document.write(`random : ${rndNo}`);
+
+      function getLottoNo() {
+        let arrLottoNo = [0, 0, 0, 0, 0, 0];
+        let tmpNo = 0;
+        let checkFlag = false;
+        let lottoCnt = 0;
+        while (true) {
+          if (lottoCnt > 5) {
+            break;
+          }
+          tmpNo = getRandNo(1, 45);
+          for (let i = 0; i < arrLottoNo.length; i++) {
+            if (arrLottoNo[i] == tmpNo) {
+              checkFlang = true;
+              break;
+            }
+          }
+          if (!checkFlag) {
+            arrLottoNo[lottoCnt] = tmpNo;
+            lottoCnt++;
+          } else checkFlag = false;
+        }
+        return arrLottoNo;
+      }
+      console.log(getLottoNo());
+    </script>
+  </body>
+</html>

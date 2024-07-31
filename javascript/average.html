@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arrScore = [30, 50, 70, 80, 90];
+      let sum = 0;
+      for (let i = 0; i < arrScore.length; i++) {
+        sum += arrScore[i];
+      }
+      sum = sum / arrScore.length;
+
+      let sum1 = 0;
+      let aa = 0;
+      for (let index in arrScore) {
+        sum += arrScore[aa];
+        aa++;
+      }
+      sum1 = sum1 / arrScore.length;
+    </script>
+  </body>
+</html>

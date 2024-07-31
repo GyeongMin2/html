@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let lottoArr = new Array();
+      function getRandNo(max) {
+        return Math.floor(Math.random() * max) + 1;
+      }
+
+      // while (lottoArr.length < 6) {
+      //   let randNo = getRandNo(44);
+      //   if (lottoArr.includes(randNo)) {
+      //     continue;
+      //   } else {
+      //     lottoArr.push(randNo);
+      //   }
+      // }
+      //push
+
+      // for (let lottoLen = 0; lottoLen < 6; ) {
+      //   let randNo = getRandNo(44);
+      //   if (lottoArr.includes(randNo)) {
+      //     continue;
+      //   } else {
+      //     lottoArr.unshift(randNo);
+      //   }
+      //   lottoLen = lottoArr.length;
+      // }
+      // console.log(lottoArr);
+      //unshift
+      
+      let lottoLen = 0;
+      while (lottoLen < 6) {
+        let randNo = getRandNo(44);
+        if (lottoArr.includes(randNo)) {
+          continue;
+        } else {
+          lottoArr[lottoLen] = randNo;
+          for (let i = 0; i < lottoLen; i++) {
+            lottoArr[lottoLen] = lottoArr[lottoLen];
+          }
+          lottoArr.shift();
+          lottoLen++;
+        }
+      }
+      console.log(lottoArr);
+
+      let testArr = new Array();
+      for (let i = 0; i < 6; i++) {
+        testArr[i] = i;
+      }
+      console.log(testArr);
+      testArr.unshift(0);
+      console.log(testArr);
+
+      let testArr1 = new Array();
+      for (let i = 0; i < 6; i++) {
+        testArr1[i] = i;
+      }
+      console.log(testArr1);
+      testArr1.shift(0);
+      console.log(testArr1);
+    </script>
+  </body>
+</html>
