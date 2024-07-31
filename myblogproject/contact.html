@@ -1,163 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>contact</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      select,
+      textarea {
+        width: 90%;
+        padding: 12px;
+        border: 1px solid gray;
+        border-radius: 4px;
+        resize: none;
+      }
+      #continfo > ul {
+        padding-left: 0;
+        list-style: none;
+      }
+      #continfo > ul > li {
+        margin: 40px;
+      }
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>contact</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-
-    input[type=text],input[type=email],input[type=tel], select, textarea {
-      width: 90%;
-      padding: 12px;
-      border: 1px solid gray;
-      border-radius: 4px;
-      resize:none;
-    }
-    #continfo>ul{
-      padding-left: 0;
-      list-style: none;
-      
-    }
-    #continfo>ul>li{
-      margin: 40px;
-    }
-    
-    #sendcontact{
-      display: flex;
-      margin: 15px;
-      margin-bottom: 10%; 
-      justify-content: center;
-      height: 30px;
-    }
-    input[type=submit],input[type=reset]{
-      background-color: white;
-      color: black;
-      border: 1px solid gray;
-      border-radius: 4px;
-      width: 60%;
-      margin-left: 10px;
-      margin-right: 10px;
-    }
-    input[type=submit]:hover,input[type=reset]:hover{
-      font-weight: bold;
-      border: 2px solid black;
-    }
-  </style>
-</head>
-<body>
-  
-  <div id="header">
-    <div id="gotomain" class="gotomain"><a href="home.html" class="gotomain" id="gotomaina">Gyeongmin's blog</a></div>
-    <nav class="head_nav" id="head_nav">
-      <ul>
-        <li>
-          <a href="home.html" class="head_item"> Home </a>
-        </li>
-        <li>
-          <a href="about.html" class="head_item"> About </a>
-        </li>
-        <li>
-          <a href="posts.html" class="head_item"> Posts </a>
-        </li>
-        <li>
-          <a href="contact.html" class="head_item"> Contact </a>
-        </li>
-        <li>
-          <a href="login.html" class="head_item"> Login </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-  
-  <div class="container">
-    <div class="homeimg">
-      <div id="hometitle">Contact</div>
-      <div id="homesubtitle">질문이있으시면 답장 드리겠습니다</div>
+      #sendcontact {
+        display: flex;
+        margin: 15px;
+        margin-bottom: 10%;
+        justify-content: center;
+        height: 30px;
+      }
+      input[type="submit"],
+      input[type="reset"] {
+        background-color: white;
+        color: black;
+        border: 1px solid gray;
+        border-radius: 4px;
+        width: 60%;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      input[type="submit"]:hover,
+      input[type="reset"]:hover {
+        font-weight: bold;
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <div id="gotomain" class="gotomain">
+        <a href="home.html" class="gotomain" id="gotomaina">Gyeongmin's blog</a>
+      </div>
+      <nav class="head_nav" id="head_nav">
+        <ul>
+          <li>
+            <a href="home.html" class="head_item"> Home </a>
+          </li>
+          <li>
+            <a href="about.html" class="head_item"> About </a>
+          </li>
+          <li>
+            <a href="posts.html" class="head_item"> Posts </a>
+          </li>
+          <li>
+            <a href="contact.html" class="head_item"> Contact </a>
+          </li>
+          <li>
+            <a href="login.html" class="head_item"> Login </a>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <div id="maincont">
-      <div>
-        <form action="#" class="contfrm">
-          <div id="continfo">
-            <ul>
-              <li>
-                <label for="name">Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Name"
-                  required
-                />
-              </li>
-              <li>
-                <label for="email">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Email"
-                  required
-                />
-              </li>
-              <li>
-                <label for="telnum">Phone</label>
-                <input
-                  type="tel"
-                  id="telnum"
-                  name="telnum"
-                  placeholder="Phone Number"
-                  required
-                />
-              </li>
-              <li>
-                <label for="message">Message</label>
-                <textarea id="message" name="message"></textarea>
-              </li>
-            </ul>
-          </div>
-          <div id="sendcontact">
-            <!-- 
+
+    <div class="container">
+      <div class="homeimg">
+        <div id="hometitle">Contact</div>
+        <div id="homesubtitle">질문이있으시면 답장 드리겠습니다</div>
+      </div>
+      <div id="maincont">
+        <div>
+          <form action="#" class="contfrm">
+            <div id="continfo">
+              <ul>
+                <li>
+                  <label for="name">Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Name"
+                    required
+                  />
+                </li>
+                <li>
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Email"
+                    required
+                  />
+                </li>
+                <li>
+                  <label for="telnum">Phone</label>
+                  <input
+                    type="tel"
+                    id="telnum"
+                    name="telnum"
+                    placeholder="Phone Number"
+                    required
+                  />
+                </li>
+                <li>
+                  <label for="message">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    maxlength="50"
+                  ></textarea>
+                </li>
+              </ul>
+            </div>
+            <div id="sendcontact">
+              <!-- 
             <button type="submit" class="contbtn">send</button>
             <button type="reset" class="contbtn">reset</button>
             -->
-            <input type="submit" value="submit" class="contbtn"/>
-            <input type="reset" value="reset" class="contbtn"/>
-          </div>
-        </form>
+              <input type="submit" value="submit" class="contbtn" />
+              <input type="reset" value="reset" class="contbtn" />
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div id="bottomMenu">
+        <ul>
+          <li>
+            <a href="mailto:kgmksw@naver.com" target="_blank">
+              <img src="images/email.png" width="40px" alt="이메일" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/?locale=ko_KR" target="_blank">
+              <img src="images/facebook.png" width="40" alt="페이스북" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/gye.ng_min/" target="_blank">
+              <img src="images/insta.png" width="40" alt="인스타그램" />
+            </a>
+          </li>
+          <li>
+            <a href="personal.html" target="_blank">
+              <img src="images/resume.png" width="40" alt="이력서" />
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
-
-  
-  <div id="bottomMenu">
-    <ul>
-      <li>
-        <a href="mailto:kgmksw@naver.com" target="_blank">
-          <img src="images/email.png" width="40px" alt="이메일">
-        </a>
-      </li>
-      <li>
-        <a href="https://www.facebook.com/?locale=ko_KR" target="_blank">
-          <img src="images/facebook.png" width="40" alt="페이스북">
-        </a>
-      </li>
-      <li>
-        <a href="https://www.instagram.com/gye.ng_min/" target="_blank">
-          <img src="images/insta.png" width="40" alt="인스타그램">
-        </a>
-      </li>
-      <li>
-        <a href="personal.html" target="_blank">
-          <img src="images/resume.png" width="40" alt="이력서">
-        </a>
-      </li>
-    </ul>
-  </div>
-  </div>
-  <div id="copyright">
-    2024. Gyeongmin
-  </div>
-</body>
-
+    <div id="copyright">2024. Gyeongmin</div>
+  </body>
 </html>

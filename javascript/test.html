@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <script>
+      document.write("<div id='div1'>");
+      document.write("<p>자바스크립트로 출력합니다~");
+      document.write("</div>");
+      document.getElementById("div1").style.backgroundColor="#000";
+    </script> -->
+    <style>
+      /* #div1 {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      } */
+    </style>
+  </head>
+  <body>
+    <script>
+      // alert("단방향 메시지 출력");
+      // var reply = "회원가입 약간에 동의 하십니까?";
+      // alert(reply);
+
+      // var msg = prompt("주문하실 음료를 입력하세요. : ex)아메리카노\n");
+      // alert(msg);
+      // if (msg == "아메리카노") {
+      //   document.write("<p>아메리카노 드시는구나!</p>");
+      // } else {
+      //   document.write("<p>아메리카노 안드시는구나..</p>");
+      // }
+      // console.log("음료:" + msg);
+      var nowYear = 2024;
+      var birthYear;
+      var age;
+
+      birthYear = prompt("태어난해를 입력하세요 : ");
+      age = nowYear - birthYear + 1;
+      document.writeln("태어난 해 :" + birthYear);
+      document.write("나이 :" + age);
+
+    </script>
+  </body>
+</html>

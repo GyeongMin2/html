@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var a = 10; //전역변수
+      function sum() {
+        console.log(`함수 내부 : ${a}`);
+      }
+      // sum();
+      console.log(`함수 외부 : ${a}`);
+
+      {
+        let b = 20;
+        // var b = 20; 로 하면 지역코드 블럭 외부에도 b 출력
+        console.log(`지역 코드 블럭 내부 : ${a}`);
+        console.log(`지역 코드 블럭 내부 : ${b}`);
+      }
+      console.log(`지역 코드 블럭 외부 : ${a}`);
+      // console.log(`지역 코드 블럭 외부 : ${b}`); // let일시 오류, var일시 지역밖임에도 20출력
+
+      const c = 40;
+      function sum2() {
+        let a = 50;
+        const c = 70;
+        console.log(`지역 코드 블럭 내부 : ${a}`);
+        console.log(`지역 코드 블럭 내부 : ${c}`);
+      }
+      sum2();
+      console.log(`지역 코드 블럭 외부 : ${a}`);
+      console.log(`지역 코드 블럭 외부 : ${c}`);
+
+      console.log(numx);
+      var numx = 10;
+
+      printX();
+
+      function printX() {
+        console.log(`hello`);
+      }
+    </script>
+  </body>
+</html>

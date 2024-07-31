@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var int = 0;
+      // function sum() {
+      //   var s = 10 + 20;
+      //   return s;
+      // }
+      // int = sum();
+      // console.log(int);
+
+      // var s = 0;
+      // function sum(s) {
+      //   var s = 10 + 20;
+      // }
+
+      // sum();
+
+      // console.log(s);
+
+      // var b;
+      // function gugu() {
+      //   for (var i = 2; i <= 9; i++) {
+      //     for (var j = 1; j <= 9; j++) {
+      //       console.log(`${i} * ${j} = ${i * j}`);
+      //     }
+      //   }
+      //   console.log(`지역변수 : ${i},${j}`);
+      //   console.log(`전역변수 : ${b}`);
+      // }
+      // b = "xxx";
+      // gugu();
+      // // console.log(`지역변수 : ${i},${j}`);
+
+      // var x = 10;
+      // function print() {
+      //   console.log(`x : ${x}`);
+      //   console.log(`y : ${y}`);
+      //   var y = 20;
+      // }
+      // print();
+
+      // let y = 1;
+      // const d = 40;
+      // y = 50;
+      // // d = 150;
+      // console.log(y);
+      // console.log(d);
+
+      //let 은 재할당 가능 재선언 불가능 < 반복문 등 바뀌는값에 let
+      //const 는 재할당 불가능 재선언 불가능 < 객체일때 const
+      //var 재할당 가능 재선언 가능 
+
+      let a = 10;
+      let b = 15;
+      function sum(a, b) {
+        return a + b;
+      }
+      console.log(sum(1, 2));
+
+      (function (a, b) {
+        console.log(a + b);
+      })();
+    </script>
+  </body>
+</html>

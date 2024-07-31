@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      tr,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        height: 45px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      var c = 0;
+      function a(i, c) {
+        var j = 0;
+        while (j < 5) {
+          if (j == c) {
+            document.write(
+              "<td colspan='2'> (" + (i + 1) + " , " + (j + 1) + ") </td>"
+            );
+            j++;
+          } else if (j < 5) {
+            td(i, j);
+          }
+          j++;
+        }
+      }//홀짝 로직
+      
+      function td(i, j) {
+        document.write("<td> (" + (i + 1) + " , " + (j + 1) + ") </td>");
+      }//td 찍기
+
+      document.write("<table>");
+      var i = 0;
+      while (i < 10) {
+        document.write("<tr>");
+        if (i == 0) {
+          var j = 0;
+          while (j < 6) {
+            td(i, j);
+            j++;
+          }
+        } else if (i == 1) {
+          a(i, (c = 1));
+          document.write(
+            "<td rowspan='" + (i - 1) + "'> (" + (i + 1) + " , " + j + ") </td>"
+          );
+        } else if (i % 2 == 0) {
+          a(i, (c = 2));
+        } else {
+          a(i, (c = 1));
+        }
+        document.write("</tr>");
+        i++;
+      }
+      document.write("</table>");
+    </script>
+  </body>
+</html>
