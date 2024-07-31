@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div class="alert-box" id="alert">
+    <p id="content">알림창</p>
+    <button onclick="ocAlert('none')">닫기</button>
+  </div>
+  <button onclick="getIdPw('block','아이디 입력')">버튼1</button>
+  <button onclick="getIdPw('block','비번 입력')">버튼2</button>
+  <script>
+    function ocAlert(a){
+      document.getElementById('alert').style.display=a;
+    }
+    function getIdPw(a,b){
+      document.getElementById('alert').style.display=a;
+      document.getElementById('content').innerText=b;
+    }
+  </script>
+</body>
+</html>
