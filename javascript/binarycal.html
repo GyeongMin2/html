@@ -11,9 +11,9 @@
   <script>
     /*처음짠거
     let binaryArr = []; 질문할거 위에거랑 뭐가다른가? 
-    재귀함수랑 while for 랑 뭐가다른가? 다 반복 아닌가?
+    재귀함수랑 while for 랑 
     */
-    // let binaryArr = new Array;
+    // let binaryArr = new Array();
     // let bArrLength = 0;
     // function binaryCal(num) {
     //   binaryArr[bArrLength] = parseInt(num % 2);
@@ -29,21 +29,20 @@
     // console.log(binaryCal(a))
 
     /*두번째
-    parseInt랑 Math.floor랑 둘다 정수형으로 바꾸는거 아닌가?
-    바꿔도 똑같이 동작하는거같은데
+    parseInt랑 Math.floor랑 둘다 정수형으로 바꾸는거 아닌가
     */
-    // function binaryCal(num) {
-    //   let binaryArr = new Array;
-    //   let bArrLength = 0;
-    //   while(num>0){
-    //     binaryArr[bArrLength]=Math.floor(num % 2);
-    //     num = Math.floor(num / 2);
-    //     bArrLength++
-    //   }
-    //   return binaryArr.reverse();
-    // };
-    // let a = prompt();
-    // console.log(binaryCal(a))
+    function binaryCal(num) {
+      let binaryArr = new Array;
+      let bArrLength = 0;
+      while(num>0){
+        binaryArr[bArrLength]=Math.floor(num % 2);
+        num = Math.floor(num / 2);
+        bArrLength++
+      }
+      return binaryArr.reverse();
+    };
+    let a = prompt();
+    console.log(binaryCal(a))
 
     /*세번째*/
     // function binaryCal(num) {
@@ -57,7 +56,7 @@
     // let a = prompt();
     // console.log(binaryCal(a))
 
-    /*네번째 더이상은 능력부족*/
+    /*네번째
     // function binaryCal(num) {
     //   let binaryArr = new Array;
     //   while(num>0){
@@ -92,7 +91,6 @@
       return String.fromCharCode([65+a]);
     }
     //아스키코드로 변환하는 함수 근데 그냥 10-(num%16)이 음수일때만
-    //실행하면될거같은데 이거 자바로는 어떻게 구현하지?
 
     /*
     function hexaCal(num) {

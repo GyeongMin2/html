@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 본인의 초등학교~고등학교까지
+      //학교명 입학년도~졸업년도
+      //소재지
+      //arrSchoolInfo = ""; 설정
+      //for 문으로 출력
+      // const arrSchoolInfo = {
+      //   school: ["석천초", "석천중", "상원고"],
+      //   a: ["2008.03", "2014.03", "2017.03"],
+      //   b: ["2013.12", "2016.12", "2020.1"],
+      //   locate: "부천",
+      // };
+      // for (let i = 0; i < arrSchoolInfo.school.length; i++) {
+      //   console.log(
+      //     arrSchoolInfo.school[i],
+      //     arrSchoolInfo.a[i],
+      //     arrSchoolInfo.b[i],
+      //     arrSchoolInfo.locate
+      //   );
+      // }
+
+      // let schoolInfoArr = [
+      //   ["석천초등학교", "2008.03~2013.12", "부천"],
+      //   ["석천중학교", "2014.03~2016.12", "부천"],
+      //   ["상원고학교", "2017.03~2019.12", "부천"],
+      // ];
+      // let full = schoolInfoArr.join(" ");
+      // console.log(full);
+
+      // let schoolInfoArrT = [
+      //   ["석천초등학교", "2008.03~2013.12", "부천"],
+      //   ["석천중학교", "2014.03~2016.12", "부천"],
+      //   ["상원고학교", "2017.03~2019.12", "부천"],
+      // ];
+
+      // function getSchoolInfoT(info) {
+      //   for (let s of info) {
+      //     for (let j = 0; j < s.length; j++) {
+      //       console.log(`학교명 : ${s[0]} ${asdf(s[1])} 지역 : ${s[2]}`);
+      //     }
+      //   }
+      // }
+
+      /*밑에는 document.write*/
+
+      // let objSchoolInfo2 = {
+      //   eleSchool: ["석천초등학교", "2008.03~2013.12", "부천"],
+      //   midlSchool: ["석천중학교", "2014.03~2016.12", "부천"],
+      //   higSchool: ["상원고등학교", "2017.03~2019.12", "부천"],
+      //   // cal: ["명지전문대", "2020.03~2024.08", "서울"],
+      // };
+      // function aa(obj) {
+      //   let i = 0;
+      //   for (let [school, value] of Object.entries(obj)) {
+      //     document.write(value[0] + "<br>");
+      //     date(value[1]);
+      //     document.write(value[2] + "<br><hr>");
+      //   }
+      // }
+      // function date(i) {
+      //   let dateInfo = i.split("~");
+      //   let aYear = 0;
+      //   for (let a = 0; a <= 1; a++) {
+      //     aYear = dateInfo[a].split(".");
+      //     a
+      //       ? document.write(`졸업년도 : ${aYear[0]}년 ${aYear[1]}일 <br>`)
+      //       : document.write(`입학년도 : ${aYear[0]}년 ${aYear[1]}일 <br>`);
+      //   }
+      // }
+      // aa(objSchoolInfo2);
+
+      // let objSchoolInfo2 = {
+      //   eSchool: ["석천초등학교", "2008.03~2013.12", "부천"],
+      //   mSchool: ["석천중학교", "2014.03~2016.12", "부천"],
+      //   hSchool: ["상원고등학교", "2017.03~2019.12", "부천"],
+      //   // cal: ["명지전문대", "2020.03~2024.08", "서울"],
+      //   // chunjae: ["자바풀스택7기", "2024.07~2025.01", "서울"],
+      // };
+      // function aa(obj) {
+      //   for (let [school, value] of Object.entries(obj)) {
+      //     console.log(value[0]);
+      //     date(value[1]); //날짜 분리
+      //     console.log(value[2]);
+      //   }
+      // }
+      // function date(i) {
+      //   let dateInfo = i.split("~");
+      //   let year = 0;
+      //   for (let a = 0; a <= 1; a++) {
+      //     year = dateInfo[a].split("."); // "." 기준으로나눔  year[0]은 년 year[1]은 월
+      //     a ? console.log(`졸업년도 : `) : console.log(`입학년도 : `); //a == false(0)입학년도 , a == true (1) 졸업년도
+      //     console.log(`${year[0]}년 ${year[1]}월`);
+      //   }
+      // }
+      // aa(objSchoolInfo2);
+
+      //초등학교 정보 입력.. :
+      //학교명 , 입학년도~졸업년도 , 지역
+
+      // let scInfo = {
+      //   eS: [],
+      //   mS: [],
+      //   hS: [],
+      // };
+      // let a = prompt("초등학교 정보 입력 : ");
+      // let scArr = a.split(",");
+      // scInfo.eS = scArr;
+      // console.log(scInfo.eS);
+
+      // a = prompt("중학교 정보 입력 : ");
+      // scArr = a.split(",");
+      // scInfo.mS = scArr;
+      // console.log(scInfo.mS);
+
+      // a = prompt("고등학교 정보 입력 : ");
+      // scArr = a.split(",");
+      // scInfo.hS = scArr;
+      // console.log(scInfo.hS);
+
+      // function aa(obj) {
+      //   for (let [school, value] of Object.entries(obj)) {
+      //     document.write(value[0] + "<br/>");
+      //     date(value[1]); //날짜 분리
+      //     document.write(value[2] + "<br/>");
+      //   }
+      // }
+      // function date(i) {
+      //   let dateInfo = i.split("~");
+      //   let year = 0;
+      //   for (let a = 0; a <= 1; a++) {
+      //     year = dateInfo[a].split("."); // "." 기준으로나눔  year[0]은 년 year[1]은 월
+      //     a ? document.write(`졸업년도 : `) : document.write(`입학년도 : `); //a == false(0)입학년도 , a == true (1) 졸업년도
+      //     document.write(`${year[0]}년 ${year[1]}월 <br/>`);
+      //   }
+      // }
+
+      // aa(scInfo);
+
+      // let membObj = {
+      //   memInfo: [
+      //     {name:"홍길동0", id:"1234"},
+      //     {name:"홍길동1", id:"456"},
+      //     {name:"홍길동2", id:"dfas234"},
+      //     {name:"홍길동3", id:"1asd123"},
+      //     {name:"홍길동4", id:"11231234"},
+      //     {name:"홍길동5", id:"12asdfa4"},
+      //     {name:"홍길동6", id:"1acvz2134"},
+      //     {name:"홍길동7", id:"1123d34"},
+      //     {name:"홍길동8", id:"1213cvc4"},
+      //     {name:"홍길동9", id:"213dvc34"},
+      //   ]
+      // };
+      // 추첨4명 뽑기
+      //출력 홍*동0(1234), 홍*동2(dfas234), ...
+
+      let lottoArr = new Array();
+      function getRandNo(max) {
+        return Math.floor(Math.random() * max);
+      }
+      let membObj = {
+        memInfo: [
+          { name: "홍길동0", id: "1234" },
+          { name: "강경민1", id: "456" },
+          { name: "홍동동2", id: "dfas234" },
+          { name: "강길동3", id: "1asd123" },
+          { name: "경길동4", id: "11231234" },
+          { name: "민길동5", id: "12asdfa4" },
+          { name: "곽길동6", id: "1acvz2134" },
+          { name: "김동길7", id: "1123d34" },
+          { name: "이길동8", id: "1213cvc4" },
+          { name: "홍홍동9", id: "213dvc34" },
+        ],
+        memb: [
+          // { name : xxx ,
+          //  id : x } ... membObj.memb[1].name == xxx, membObj.memb[1].id ==x
+          // { name : yyy,
+          //  id : y} ... membObj.memb[2].name == xxx, membObj.memb[2].id ==x
+        ],
+      };
+      while (lottoArr.length < 4) {
+        let randNo = getRandNo(membObj.memInfo.length);
+        if (!lottoArr.includes(randNo)) {
+          lottoArr.push(randNo);
+        }
+      }
+      let i = 0;
+      for (let a of lottoArr) {
+        membObj.memb[i] = membObj.memInfo[a];
+        i++;
+      } //당첨자 정보를 값으로 뽑아와서 membObj.memb[i번째]에 저장
+      function aa(obj) {
+        //j가 멤버.length 보다 적을때계속 반복
+        for (let j = 0; j < membObj.memb.length; j++) {
+          document.write(
+            `${name(membObj.memb[j].name)}, (${membObj.memb[j].id})<br/>` //membObj.memb[j].name <= memb배의 j번째가 name일때 name 함수 호출, id부분은 () 로만 싸서 출력
+          );
+        }
+      }
+      function name(getName) {
+        //이름중 두번째 글자를 *로 변환하여 리턴
+        let nameArr = Array.from(getName);
+        nameArr[1] = "*";
+        nameArr[2] = "*";
+        return nameArr.join("");
+      }
+
+      aa(membObj.memb); // 실행
+    </script>
+  </body>
+</html>

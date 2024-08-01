@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*미완성*/
+      let scInfo = {};
+      let eS = prompt("초등학교 정보 입력 : ");
+      ddd(eS, "eS");
+
+      let mS = prompt("중학교 정보 입력 : ");
+      ddd(mS, "mS");
+
+      let hS = prompt("고등학교 정보 입력 : ");
+      ddd(hS, "hs");
+
+      function ddd(x, y) {
+        let scArr = x.split(",");
+        scInfo[y] = scArr;
+      }
+
+      function aa(obj) {
+        for (let [school, value] of Object.entries(obj)) {
+          document.write(value[0] + "<br/>");
+          date(value[1]); //날짜 분리
+          document.write(value[2] + "<br/>");
+        }
+      }
+      function date(i) {
+        let dateInfo = i.split("~");
+        let year = 0;
+        for (let a = 0; a <= 1; a++) {
+          year = dateInfo[a].split("."); // "." 기준으로나눔  year[0]은 년 year[1]은 월
+          a ? document.write(`졸업년도 : `) : document.write(`입학년도 : `); //a == false(0)입학년도 , a == true (1) 졸업년도
+          document.write(`${year[0]}년 ${year[1]}월 <br/>`);
+        }
+      }
+      aa(scInfo);
+    </script>
+  </body>
+</html>

@@ -22,6 +22,15 @@
       // }
       //push
 
+      while (lottoArr.length < 6) {
+        let randNo = getRandNo(44);
+        if (!lottoArr.includes(randNo)) {
+          lottoArr.push(randNo);
+        }
+      }
+      console.log(lottoArr);
+      // push더 짧게
+
       // for (let lottoLen = 0; lottoLen < 6; ) {
       //   let randNo = getRandNo(44);
       //   if (lottoArr.includes(randNo)) {
@@ -33,38 +42,21 @@
       // }
       // console.log(lottoArr);
       //unshift
-      
-      let lottoLen = 0;
-      while (lottoLen < 6) {
-        let randNo = getRandNo(44);
-        if (lottoArr.includes(randNo)) {
-          continue;
-        } else {
-          lottoArr[lottoLen] = randNo;
-          for (let i = 0; i < lottoLen; i++) {
-            lottoArr[lottoLen] = lottoArr[lottoLen];
-          }
-          lottoArr.shift();
-          lottoLen++;
-        }
-      }
-      console.log(lottoArr);
 
-      let testArr = new Array();
-      for (let i = 0; i < 6; i++) {
-        testArr[i] = i;
-      }
-      console.log(testArr);
-      testArr.unshift(0);
-      console.log(testArr);
+      // for (let lottoLen = 0; lottoLen < 6; ) {
+      //   let randNo = getRandNo(44);
+      //   if (lottoArr.indexOf(randNo) != -1) {
+      //     continue;
+      //   } else {
+      //     lottoArr.unshift(randNo);
+      //   }
+      //   lottoLen = lottoArr.length;
+      // }
+      // console.log(lottoArr);
 
-      let testArr1 = new Array();
-      for (let i = 0; i < 6; i++) {
-        testArr1[i] = i;
-      }
-      console.log(testArr1);
-      testArr1.shift(0);
-      console.log(testArr1);
+      // let testArr = [0, 1, 2, 3, 0, 1];
+      // console.log(testArr.indexOf(1)); // 1반환
+      //indexOf는 배열에서 요소를 찾을 수 있는 가장 빠른 인덱스 반환 없으면 -1
     </script>
   </body>
 </html>

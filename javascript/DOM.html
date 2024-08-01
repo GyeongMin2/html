@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>문서 객체 모델 (DOM, Document Object Model)</h1>
+    <ul>
+      <li>
+        <h2>DOM트리</h2>
+        <ul>
+          <li>
+            웹 문서에 있는 요소들 간의 부모, 자식 관계를 계층 구조로 표시한 것
+          </li>
+          <li>JavaScript가 이해 할 수 있도록 객체화 한 모델 구조 => DOM</li>
+          <li>나무 형태로 표현이 되기 때문에 'DOM 트리'라고 함.</li>
+          <li>node : DOM 트리에서 가지가 갈라져 나간 항목</li>
+          <li>root node : DOM 트리의 시작 부분 => html</li>
+          <li>모든 HTML 태그는 element(요소) node</li>
+          <li>웹 문서의 텍스트 내용은 요소 node의 자식 node인 text node</li>
+          <li>태그의 속성 : element node의 자식 node인 attribute(속성)node</li>
+          <li>주석 : 주석(comment) node</li>
+        </ul>
+      </li>
+      <li>
+        <h2>노드의 타입</h2>
+        <ul>
+          <li>
+            문서 노드 (Node.DOCUMENT_NODE) : 최상위 DOCUMENT의 객체의 node type
+          </li>
+          <li>
+            요소 노드 (Node.ELEMENT_NODE) : 요소의 node type => h1, p tag ,,,,
+          </li>
+          <li>
+            속성 노드 (Node.ATTRIBUTE-NODE) : 속성의 node type => href , src
+            ,,,,
+          </li>
+          <li>텍스트 노드 (Node.TEXT_NODE) : 텍스트에 해당하는 node type</li>
+          <li>주석 노드 (Node.COMMENT_NODE) : 주석에 해당하는 node type</li>
+        </ul>
+      </li>
+      <li>
+        <h2>DOM 요소에 접근 방법 documet.</h2>
+        <ul>
+          <li id="id1">
+            getElementById() 메소드
+            <ul>
+              <li>형식 : 요소명.getElementById("id 이름")</li>
+            </ul>
+          </li>
+          <li>
+            getElementByClassName() 메소드
+            <ul>
+              <li>형식 : 요소명.getElementByClassName("class이름")</li>
+            </ul>
+          </li>
+          <li>
+            getElementByName() 메소드
+            <ul>
+              <li>형식 : 요소명.getElementByName("tag명")</li>
+            </ul>
+          </li>
+          <li>
+            querySelector() 메소드
+            <ul>
+              <li>형식 : 요소명.querySelector("선택자(id,class)")</li>
+              <li>형식 : 요소명.querySelector("#id명")</li>
+              <li>형식 : 요소명.querySelector(".class명")</li>
+              <li>형식 : 요소명.querySelector("태그명")</li>
+            </ul>
+          </li>
+          <li>
+            querySelectorAll() 메소드
+            <ul>
+              <li>형식 : 요소명.querySelectorAll("선택자or태그")</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>
