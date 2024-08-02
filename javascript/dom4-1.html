@@ -1,0 +1,38 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    .asd {
+      color: #ffffff;
+      font-size: 50px;
+      background-color: #000000;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box-1" id="div1">
+    <p class="text">1111</p>
+    <p class="text">2222</p>
+  </div>
+  <div class="box-2" id="div2">
+    <p class="text">3333</p>
+    <p class="text">4444</p>
+  </div>
+  <button id="cngCol">버어튼</button>
+  <script>
+    let c = 0;
+    document.querySelector("#cngCol").addEventListener("click", () => {
+      document.querySelector('.box-1').classList.toggle('asd');
+      if (c !== 0) {
+        document.querySelector('.box-2').classList.toggle('asd');
+      }
+      c++;
+    });
+  </script>
+</body>
+
+</html>
