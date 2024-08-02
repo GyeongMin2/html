@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <h1 id="title">title</h1>
+    <p class="text">text-1</p>
+    <p class="text">text-2</p> -->
+
+    <div class="box1" id="div1">
+      <p class="text" id="p1">text1</p>
+      <p class="text">text2</p>
+    </div>
+    <div class="box2">
+      <p class="text">text3</p>
+      <p class="text">text4</p>
+    </div>
+  </body>
+  <script>
+    const qel = document.querySelector(".box1");
+    const qel1 = document.querySelector(".text");
+    const qel2 = document.querySelector("#div1");
+    const qel3 = document.querySelector("#p1");
+    const qel4 = document.querySelectorAll("div");
+    document.write(`${qel}<br>`);
+    document.write(`${qel1}<br>`);
+    document.write(`${qel2}<br>`);
+    document.write(`${qel3}<br>`);
+    document.write(`${qel4}<br>`);
+    for (let el of qel4) {
+      document.write(`${el}<br>`);
+    }
+    for (let el of qel4) {
+      document.write(`${el.className}<br>`);
+    }
+    // document.write(qel3.textContent);
+    // const el = document.getElementById("title");
+    // document.write(`${el}<br>`);
+    // const qs = document.querySelector("#title");
+    // document.write(`${qs}<br>`);
+    // el.textContent = "ㅋㅋㅋ";
+    // const classEl = document.getElementsByClassName("text");
+    // document.write(`${classEl} <br>`);
+    // const qqs = document.querySelector(".text");
+    // document.write(`${qqs} <br>`);
+
+    // const tagEls = document.getElementsByTagName("p");
+    // document.write(`${tagEls}<br>`);
+  </script>
+</html>

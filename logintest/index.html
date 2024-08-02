@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="id" name="id" value="" />
+    <input type="password" id="pw" name="pw" value="" />
+    <!-- <input type="submit" /> -->
+    <button id="submit">submit</button>
+    <script>
+      const idValue = {
+        idInfo: [
+          { name: "홍길동", id: "1234", pw: "4321" },
+          { name: "강경민", id: "456", pw: "654" },
+          { name: "홍동동", id: "dfas234", pw: "124xcz" },
+          { name: "강길동", id: "1asd123", pw: "4124xcv" },
+          { name: "경길동", id: "11231234", pw: "412rxc1" },
+          { name: "민길동", id: "12asdfa4", pw: "zxc1221" },
+          { name: "곽길동", id: "1acvz2134", pw: "tuio54" },
+          { name: "김동길", id: "1123d34", pw: "3tgf90" },
+          { name: "이길동", id: "1213cvc4", pw: "12214xcvz1" },
+          { name: "찐경민", id: "kgmksw", pw: "kgmksw" },
+        ],
+      };
+      let checkBtn = document.querySelector("#submit");
+      checkBtn.addEventListener("click", getId);
+      function getId() {
+        let userId = document.querySelector("#id").value;
+        let userPw = document.querySelector("#pw").value;
+        if (loginCheck(userId, userPw) == true) {
+          console.log("로그인 성공");
+        } else {
+          console.log("실패!");
+        }
+      }
+      function loginCheck(아이디, 비번) {
+        console.log(아이디, 비번);
+        for (let a of Object.values(idValue.idInfo)) {
+          // console.log(a.name, a.id, a.pw);
+          if (a.id == 아이디) {
+            if (a.pw == 비번) {
+              return true;
+            } else return false;
+          } else return false;
+        }
+      }
+
+      // console.log(idValue.idInfo[0]);
+      //key로 아이디만 불러와서 includes 써서 비교 ㅇㅇ
+    </script>
+  </body>
+</html>

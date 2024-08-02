@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .red-color {
+        color: red;
+      }
+      .blue-color {
+        color: blue;
+      }
+      .font-sz {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box-1" id="div1">
+      <p class="text">1111</p>
+      <p class="text">2222</p>
+    </div>
+    <div class="box-2">
+      <p class="text">3333</p>
+      <p class="text">4444</p>
+    </div>
+    <div>
+      <a href="https://naver.com" id="aTag">네이바~</a>
+    </div>
+    <button id="cngCol">버어튼</button>
+    <button id="cngClass" onclick="cngClass()">뻐어튼</button>
+    <button id="atrBtn" onclick="addAttr()">네이버튼 attribute 솏</button>
+    <script>
+      // const el = document.querySelector(".box-2");
+      // const elel = document.querySelectorAll(".text");
+      // // console.log(elel.length);
+      // console.log(el);
+      // // let a = 0;
+      // for (let a in elel) {
+      //   console.log(elel[a].textContent);
+      //   elel[a].innerHTML = `${elel[a].textContent}는 ${
+      //     parseInt(a) + 1
+      //   }번째 글`; //질문
+      //   // console.log(a);
+      // }
+      // let cngBtn = document.querySelector("#cngCol");
+      // cngBtn.addEventListener("click", changeBg(c));
+      let cngBtn = document.querySelector("#cngCol");
+      let c = 0;
+      cngBtn.addEventListener("click", changeBg);
+      function changeBg() {
+        if (c % 2 == 0) {
+          cng(document.querySelector(`.box-${1}`));
+          reset(document.querySelector(`.box-${2}`));
+        } else {
+          cng(document.querySelector(`.box-${2}`));
+          reset(document.querySelector(`.box-${1}`));
+        }
+        c++;
+        console.log(c);
+      }
+      function cng(gg) {
+        gg.style.color = "#ffffff";
+        gg.style.fontSize = "50px";
+        gg.style.backgroundColor = "#000000";
+      }
+      function reset(dd) {
+        dd.style.color = "#000000";
+        dd.style.fontSize = "15px";
+        dd.style.backgroundColor = "#ffffff";
+      }
+
+      // function cngClass() {
+      //   let a = document.querySelectorAll(".text");
+      //   console.log(a);
+      // }
+
+      function cngClass() {
+        let a = document.querySelectorAll(".text");
+        console.log(a);
+        for (let xx = 0; xx < a.length; xx++) {
+          if (a[xx].classList.contains("red-color")) {
+            a[xx].classList.remove("red-color");
+            a[xx].classList.add("blue-color");
+            // console.log(a[xx].classList);
+          } else {
+            a[xx].classList.add("red-color");
+            a[xx].classList.remove("blue-color");
+          }
+          if (a[xx].classList.contains("font-sz")) {
+            a[xx].classList.remove("font-sz");
+          } else {
+            a[xx].classList.add("font-sz");
+          }
+        }
+      }
+      function addAttr() {
+        let aEl = document.querySelector("#aTag");
+        console.log(aEl);
+        aEl.setAttribute("class", "red-color");
+        aEl.setAttribute("data-link", "naver");
+        aEl.setAttribute("class", "red-color");
+        aEl.setAttribute("href", "https://www.google.com");
+        aEl.setAttribute("target", "_blank");
+        aEl.removeAttribute;
+        
+      }
+    </script>
+  </body>
+</html>

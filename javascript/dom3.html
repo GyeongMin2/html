@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM 조작</title>
+  </head>
+  <body>
+    <h1>DOM 값 변경하기</h1>
+    <div>
+      <p id="textContent">textContent</p>
+      <p id="innerText">innerText</p>
+      <p id="innerHtml">innerHtml</p>
+      <button id="cngColor">버튼</button>
+    </div>
+    <script>
+      // let cngBtn = document.querySelector("#cngColor");
+      // cngBtn.addEventListener("click", cngCol);
+      // let content = document.getElementsByTagName("p")
+      // function cngCol() {
+      //   let colorArr = ["red", "blue", "yellow"];
+      // content[random(content.length)].style.color =
+      //   colorArr[random(colorArr.length)];
+      // }
+      // function random(aa) {
+      //   return Math.floor(Math.random() * aa);
+      // }
+      let c = 0;
+      let cngBtn = document.querySelector("#cngColor");
+      cngBtn.addEventListener("click", cngCol);
+      // let ex = document.getElementsByTagNameNS()
+
+      let content = document.getElementsByTagName("p");
+      let colorArr = [
+        "red",
+        "blue",
+        "yellow",
+        "beige",
+        "aqua",
+        "aquamarine",
+        "chocolate",
+        "coral",
+        "chartreuse",
+        "darkred",
+      ];
+      function cngCol() {
+        let colorNum = [];
+        while (colorNum.length < 3) {
+          let randNo = random(colorArr.length);
+          if (!colorNum.includes(randNo)) {
+            colorNum.push(randNo);
+            // content[colorNum.length - 1].style.color = colorArr[randNo];
+            content[colorNum.length - 1].innerHTML = `<span style="color: ${
+              colorArr[randNo]
+            };">${content[colorNum.length - 1].textContent}</span>`;
+          }
+        }
+      }
+
+      function random(aa) {
+        return Math.floor(Math.random() * aa);
+      }
+    </script>
+  </body>
+</html>

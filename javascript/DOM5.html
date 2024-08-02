@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>요소 노드 추가</h1>
+    <div id="pDiv"></div>
+    <div>
+      <input type="text" id="goUrl" value="" />
+      <button id="btn">뿅!!</button>
+    </div>
+    <div>
+      <ul id="aUl">
+        <li>네이버</li>
+        <li>다음</li>
+      </ul>
+    </div>
+    <button id="plusBtn">추가!</button>
+    <script>
+      let btn = document.querySelector("#btn");
+      btn.addEventListener("click", create);
+
+      function create() {
+        const pDiv = document.querySelector("#pDiv");
+        const aEl = document.createElement("a");
+        let goUrl = document.querySelector("#goUrl").value;
+        pDiv.appendChild(aEl);
+        aEl.setAttribute("href", goUrl);
+        aEl.setAttribute("target", "_blank");
+
+        const b = document.createTextNode("고고 다른링크 " + goUrl + " ");
+        aEl.appendChild(b);
+        console.log(aEl);
+        console.log(b);
+      }
+
+      let plusBtn = document.querySelector("#plusBtn");
+      btn.addEventListener("click", newNode);
+      function newNode() {
+        let aUl = document.querySelector("#aUl");
+        console.log(aUl);
+      }
+    </script>
+  </body>
+</html>

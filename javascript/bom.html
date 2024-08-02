@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="testButton">버튼</button>
+    <button id="testButton2">팝업</button>
+    <button id="testButton3">버든</button>
+    <textarea id="url1">강경민</textarea>
+    <script>
+      function printInfo() {
+        document.write(`웹 브라우저 너비 : ${window.innerWidth} <br>`);
+        document.write(`웹 브라우저 높이 : ${window.innerHeight} <br>`);
+        document.write(`웹 브라우저 창의 너비 : ${window.outerWidth} <br>`);
+        document.write(`웹 브라우저 창의 높이 : ${window.outerHeight} <br>`);
+        document.write(
+          `웹 브라우저 창과 모니터 사이 간격 윗부분 : ${window.screenTop} : ${window.screenY}<br>`
+        );
+        document.write(
+          `웹 브라우저 창과 모니터 사이 간격 윗부분 : ${window.screenLeft} : ${window.screenX}<br>`
+        );
+        document.write(`웹 브라우저 스크린 가로 위치 : ${window.scrollX} <br>`);
+        document.write(`웹 브라우저 스크린 세로 위치 : ${window.scrollY} <br>`);
+      }
+      function popup() {}
+      let tBtn = document.querySelector("#testButton");
+      tBtn.addEventListener("click", printInfo);
+      let tBtn2 = document.getElementById("testButton2");
+      tBtn2.addEventListener("click", popup);
+      let url = document.getElementById("url1");
+      console.log(url);
+      // url = Node.TEXT_NODE;
+      // console.log(url);
+    </script>
+  </body>
+</html>
