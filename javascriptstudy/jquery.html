@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <style>
+    .block {
+      display: block;
+    }
+
+    .none {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <p class="hello">하위</p>
+  <p class="hello">하위</p>
+  <p class="hello">하위</p>
+  <p class="hello">하위</p>
+  <p class="hello">하위</p>
+  <p class="hello">하위</p>
+  <p class="hello">하위</p>
+  <p class="hello">하위</p>
+  <p class="hello">하위</p>
+
+  <button class="noneBtn">버튼</button>
+  <script>
+
+    // $('.noneBtn').on(
+    //   {
+    //     click: function(){
+    //       $('.hello').html('바보');
+    //       console.log($('.hello'))
+    //     }
+    //   }
+    // )
+    /*구분점*/
+    // document.querySelector('.noneBtn').addEventListener("click", () => {
+    //   for (let i = 0; i <= document.querySelectorAll('.hello').length; i++) {
+    //     document.querySelectorAll('.hello')[i].innerHTML = "바보";
+    //   }
+    // })
+    /*구분점*/
+    $('.noneBtn').on('click',()=>{
+      $('.hello').slideUp();
+    })
+
+
+  </script>
+</body>
+
+</html>

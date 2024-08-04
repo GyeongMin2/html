@@ -1,0 +1,191 @@
+@font-face {
+  font-family: 'NEXON Gothic';
+  src: url(https://rs.nxfs.nexon.com/home/fonts/NEXON%20Lv1%20Gothic%20OTF.eot);
+  src: url(https://rs.nxfs.nexon.com/home/fonts/NEXON%20Lv1%20Gothic%20OTF.eot#iefix) format("embedded-opentype"),
+      url(https://rs.nxfs.nexon.com/home/fonts/NEXON%20Lv1%20Gothic%20OTF.woff) format("woff");
+}
+@keyframes bgchange {
+  0%{
+    background-size: 100%
+  }
+  1%{
+    background-size: 120%
+  }
+  100%{
+    background-size: 120%
+  }
+}
+*{
+  font-family: 'NEXON Gothic';
+}
+
+a {
+  text-decoration-line: none;
+}
+
+body{
+  min-width: 375px;
+}
+.navbar-brand{
+  font-weight: bold;
+}
+.hide{
+  display: none;
+}
+.showMobile{
+  height: 50px;
+  display: flex;
+  position: fixed;
+  bottom: 3%;
+  left: 50%;
+  background-color: aquamarine;
+  border-radius: 10px;
+  max-width: 350px;
+  padding:0px 30px;
+  align-items: center;
+  transform: translate(-50%, -50%);
+}
+.mobileA:nth-child(1){
+  text-align: center;
+  color: black;
+  font-weight: bolder;
+}
+.artitle{
+  margin-bottom: 1%;
+  font-weight: bold;
+  font-size: large;
+}
+.artfoot{
+  margin-top: 2%;
+  font-size: smaller;
+  font-style: italic;
+  color: gray;
+}
+.mainarti{
+  margin: 1%;
+  margin-top: 30px;
+  padding: 5px;
+  border-bottom: 2px solid rgba(0, 0, 0,0.3);
+}
+#bottomMenu {
+  display: flex;
+  margin: 3%;
+  /* border: 1px solid black; */
+  justify-content: center;
+}
+
+#bottomMenu>ul {
+  margin-top: 10%;
+  align-items: center;
+  /* border: 1px solid black; */
+  padding: 0px;
+}
+
+#bottomMenu>ul>li {
+  list-style-type: none;
+  display: inline-flex;
+  
+  /* align-items: center;
+  justify-content: center; */
+  margin: 3px;
+}
+.footImg{
+  width: 50px
+}
+.footImg:hover {
+  border-radius: 100%;
+  box-shadow: 1px 2px 5px rgb(43, 43, 43);
+}
+#copyright {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+}
+.aboutArtitle{
+  font-size: large;
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+/*----------------posts css----------------*/
+.postCont{
+  margin: 3% 3%;
+  background-color: rgb(231, 255, 253);
+  align-items: center;
+  justify-content: center;
+  padding: 1%;
+  box-shadow: 0px 10px 5px -2px gray;
+  
+}
+.gotopost{
+  max-height: 150px;
+  margin: 15px;
+  display: flex;
+  /* border: 1px solid black; */
+  background-color: white;
+  box-shadow: 0px 10px 5px -2px gray;
+}
+.defaultimg{
+  width: 150px;
+  min-width:150px;
+  height: 150px;
+  float: left;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border-right: 1px solid rgb(207, 207, 207);
+}
+.gotoa:hover .defaultimg{
+  animation-name: bgchange;
+  animation-duration: 100s;
+  animation-iteration-count: 1;
+  animation-iteration-count: infinite;
+}
+.gotoex{
+  /* max-width: ; */
+  padding: 5%;
+  max-width: 315px;
+  font-weight: 500;
+  font-size: small;
+  text-align:left
+}
+.gotoa{
+  align-items: center;
+  color: black;
+}
+#postimg1{
+  background-image: url(../images/java.png);
+}
+#postimg2{
+  background-image: url(../images/java_javascript.png);
+}
+#postimg3{
+  background-image: url(../images/google.png);
+}
+#postimg4{
+  background-image: url(../images/russian.png);
+}
+#postimg5{
+  background-image: url(../images/star2.png);
+}
+#postimg6{
+  background-image: url(../images/star1.png);
+}
+.pageui {
+  display: flex;
+  justify-content: center; 
+  align-items: center;   
+  margin-top: 20px;
+}
+.ctrlbar {
+  color: black;
+  margin-top: 5%;
+  padding: 1% 2%;
+  border-radius: 3%;
+  background-color: rgba(0, 255, 255, 0.3);
+  box-shadow: 0px 10px 5px -2px gray;
+  margin: 1%;
+}
+.nomore{
+  padding: 50px;
+  font-size: x-large;
+  color: rgba(0, 0, 0,0.4);
+}

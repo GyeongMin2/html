@@ -8,12 +8,62 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <link href="./main.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <style>
+    .openModal {
+      position: absolute;
+    }
+
+    .black-bg {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 5;
+      padding: 30px;
+      /* display: none; */
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.5s;
+    }
+
+    .white-bg {
+      background: white;
+      border-radius: 5px;
+      padding: 30px;
+    }
+
+    .show {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
 </head>
 
 <body>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script> -->
+
+  <div class="black-bg">
+    <div class="white-bg">
+      <h4>로그인하세요</h4>
+      <form action="success.html">
+        <div class="my-3">
+          <input type="text" class="form-control">
+        </div>
+        <div class="my-3">
+          <input type="password" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">전송</button>
+        <button type="button" class="btn btn-danger" id="close">닫기</button>
+      </form>
+    </div>
+  </div>
+
+
   <nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
       <span class="navbar-brand">Navbar</span>
@@ -29,13 +79,23 @@
     <li class="list-group-item">A fourth item</li>
     <li class="list-group-item">And a fifth one</li>
   </ul>
+  <button class="openModal">모달 슈웃</button>
   <script>
-    document.getElementsByClassName('navbar-toggler')[0].addEventListener('click',addShow)
-    function addShow(){
-      console.log(document.querySelector(".list-group"));
-      document.querySelector(".list-group").classList.toggle("show");
-    }
+    $('.navbar-toggler').on('click', () => {
+      $(".list-group").toggleClass("show");
+    })
+    $('.openModal').on('click', () => {
+      $('.black-bg').addClass('show');
+    })
+
+    $('#close').on('click', () => {
+      $('.black-bg').removeClass('show');
+    })
+
+    // 전송버튼 누르면 input에 입력값이 공백이면 알림창 띄우기
+    
   </script>
+
 </body>
 
 </html>

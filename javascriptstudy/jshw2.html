@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <style>
+    .openModal {
+      position: absolute;
+    }
+
+    .black-bg {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 5;
+      padding: 30px;
+      /* display: none; */
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.5s;
+    }
+
+    .white-bg {
+      background: white;
+      border-radius: 5px;
+      padding: 30px;
+    }
+
+    .show {
+      visibility:visible;
+      opacity: 1;
+    }
+
+    
+
+  </style>
+</head>
+
+<body>
+  <button class="openModal">모달 슈웃</button>
+  <div class="black-bg">
+    <div class="white-bg">
+      <h4>로그인하세요</h4>
+      <button class="btn btn-danger" id="close">닫기</button>
+    </div>
+  </div>
+  <script>
+    $('.openModal').on('click', () => {
+      $('.black-bg').addClass('show');
+    })
+
+    $('.btn').on('click', () => {
+      $('.black-bg').removeClass('show');
+    })
+  </script>
+</body>
+
+</html>
