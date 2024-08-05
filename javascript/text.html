@@ -1,0 +1,63 @@
+<script>
+  function validateUserName(userName) {
+  if (userName.length >= 2 && userName.length <= 10) {
+    console.log("이름 합격");
+    return true;
+  } else {
+    console.log("이름을 2글자 이상 10글자 이하로 입력하세요");
+    return false;
+  }
+}
+
+function validateUserId(userId) {
+  if (userId.length >= 8 && userId.length <= 20) {
+    console.log("아이디 합격");
+    return true;
+  } else {
+    console.log("아이디를 8글자 이상 20글자 이하로 입력하세요");
+    return false;
+  }
+}
+
+function validateUserSex(userSexMale, userSexFemale) {
+  if (userSexMale || userSexFemale) {
+    console.log("성별 선택됨");
+    console.log("남자: " + userSexMale);
+    console.log("여자: " + userSexFemale);
+    return true;
+  } else {
+    console.log("성별은 필수 입력란입니다.");
+    return false;
+  }
+}
+
+function validateUserEmail(userEmail) {
+  if (userEmail.length >= 10 && userEmail.length <= 200) {
+    console.log("이메일 합격");
+    return true;
+  } else {
+    console.log("이메일은 10자리 이상 200자리 이내로 입력해주세요");
+    return false;
+  }
+}
+
+function validateUserIntro(userIntro) {
+  if (userIntro.length >= 1 && userIntro.length <= 1000) {
+    console.log("자기소개 합격");
+    return true;
+  } else {
+    console.log("자기소개는 1글자 이상 1000자 이내로 작성해주세요");
+    return false;
+  }
+}
+
+function checkObj(obj) {
+  if (validateUserName(obj.userName) &&
+      validateUserId(obj.userId) &&
+      validateUserSex(obj.userSexMale, obj.userSexFemale) &&
+      validateUserEmail(obj.userEmail) &&
+      validateUserIntro(obj.userIntro)) {
+    console.log(obj);
+  }
+}
+</script>

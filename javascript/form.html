@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      table tr td th {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <form name="frm" id="frm" action="#" method="">
+        <fieldset>
+          <div>
+            <legend>회원가입</legend>
+            <label for="name">이름</label>
+            <input
+              type="text"
+              id="name"
+              value=""
+              maxlength="20"
+              placeholder="이름을 입력하세요"
+            />
+          </div>
+          <div>
+            <label for="id">아이디</label>
+            <input
+              type="text"
+              id="id"
+              value=""
+              maxlength=""
+              placeholder="아이디를 입력하세요"
+            />
+            <br />
+          </div>
+          <div>
+            <label for="sex_0">성별</label>
+            <input type="radio" id="sex_0" name="sex" value="남자" />남자
+            <input type="radio" id="sex_1" name="sex" value="여자" />여자
+          </div>
+          <br />
+          <div>
+            <label for="email">이메일</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value=""
+              maxlength="200"
+              placeholder="이메일을입력하세요"
+            />
+          </div>
+          <div>
+            <label for="hobby_0">취미</label>
+            <input type="checkbox" id="hobby_0" name="hobby" id="여행" />여행
+            <input type="checkbox" id="hobby_1" name="hobby" id="축구" />축구
+            <input type="checkbox" id="hobby_2" name="hobby" id="농구" />농구
+            <input type="checkbox" id="hobby_3" name="hobby" id="야구" />야구
+          </div>
+          <div>
+            <label for="area1">지역</label>
+            <select id="area1">
+              <option value="">선택</option>
+              <option value="서울">서울</option>
+              <option value="부산">부산</option>
+              <option value="광주">광주</option>
+              <option value="제주">제주</option>
+              <option value="기타">기타</option>
+            </select>
+          </div>
+          <div>
+            <label for="intro">자기소개</label>
+            <textarea id="intro"></textarea>
+          </div>
+          <br />
+          <button type="submit" id="subBtn">전송</button>
+          <div>
+            <table id="info">
+              <thead>
+                <tr id="tableTitle">
+                  <th>학교</th>
+                  <th>이름</th>
+                  <th>중요한거</th>
+                </tr>
+              </thead>
+              <tbody id="tbody">
+                <tr id="lastTable">
+                  <td><input type="text" /></td>
+                  <td><input type="text" /></td>
+                  <td><input type="text" /></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <button id="plusBtn">추가~</button>
+          <button id="minBtn">빼기~</button>
+          <button class="cansBtn"></button>
+        </fieldset>
+      </form>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./formjs.js"></script>
+  </body>
+</html>

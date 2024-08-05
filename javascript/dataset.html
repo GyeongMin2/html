@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <div>
+        <div id="bag" data-cnt="0">
+          <span>가방</span><br />
+          <button class="bagAddBtn">상품추가+</button>
+          <button class="bagMinBtn">상품삭제-</button>
+        </div>
+        <div id="book" data-cnt="0">
+          <span>도서</span><br />
+          <button class="bookAddBtn">상품추가+</button>
+          <button class="bookMinBtn">상품삭제-</button>
+        </div>
+        <hr />
+        <button class="check">주문~</button>
+      </div>
+    </div>
+    <script>
+      let cnt;
+      $(".bagAddBtn").on("click", () => {
+        add($(".bagAddBtn").parent());
+      });
+      $(".bagMinBtn").on("click", () => {
+        min($(".bagMinBtn").parent());
+      });
+      $(".bookAddBtn").on("click", () => {
+        add($(".bookAddBtn").parent());
+      });
+      $(".bookMinBtn").on("click", () => {
+        min($(".bookMinBtn").parent());
+      });
+      function add(parentDiv) {
+        cnt = parentDiv.data("cnt");
+        parseInt(cnt);
+        cnt = cnt + 1;
+        parentDiv.data("cnt", cnt);
+        parentDiv.attr("data-cnt", cnt);
+        console.log(parentDiv.data("cnt"));
+      }
+
+      function min(parentDiv) {
+        cnt = parentDiv.data("cnt");
+        parseInt(cnt);
+        cnt = cnt - 1;
+        parentDiv.data("cnt", cnt);
+        parentDiv.attr("data-cnt", cnt);
+        console.log(parentDiv.data("cnt"));
+      }
+      $(".check").on("click", () => {
+        console.log(`가방 : ${$("#bag").data("cnt")}`);
+        console.log(`도서 : ${$("#book").data("cnt")}`);
+      });
+    </script>
+  </body>
+</html>
