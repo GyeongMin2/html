@@ -84,7 +84,7 @@ function validateUserIntro(userIntro) {
   }
 }
 let trtd = 1;
-
+let rowNum = 0;
 document.querySelector("#plusBtn").addEventListener("click", () => {
   let row = document.querySelector("#tbody").insertRow(1);
   for (i = 0; i < 3; i++) {
@@ -94,5 +94,7 @@ document.querySelector("#plusBtn").addEventListener("click", () => {
   let btn = row.insertCell(3);
   let make = document.createElement("button");
   let cc = btn.appendChild(make);
-  make.className = "cansBtn";
+  make.className = `cansBtn${rowNum}`;
 });
+
+function checkBtn() {}

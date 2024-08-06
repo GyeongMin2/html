@@ -47,3 +47,28 @@ for (let i = 0; i < getHeadItem.length; i++) {
   getHeadItem[i].setAttribute("href", `./${getHeadName[i]}.html`);
 }
 
+let scrollPosition = 0;
+let c = 0;
+window.addEventListener("scroll", () => {
+  scrollPosition = window.scrollY;
+  console.log(scrollPosition);
+  if (scrollPosition >= 700) {
+    document.querySelector(".pageui").classList.remove("dpNone");
+    document.querySelector(".goNextAlert").classList.remove("dpNone");
+    if (scrollPosition >= 1214) {
+      document.querySelector(".pageui").classList.add("dpNone");
+      document.querySelector(".goNextAlert").classList.add("dpNone");
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  } else if (scrollPosition <= 500) {
+    document.querySelector(".pageui").classList.add("dpNone");
+  }
+});
+let preBtn = document.querySelector("#previousbt");
+let nextBtn = document.querySelector("#nexobt");
+
+//스크롤 다 내리면 다음페이지로 가기 버튼활성화 , 누르면 화면 맨위로 올라가면서
+//다음페이지 보여주기
