@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>personal</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .pcontainer {
+      margin-top: 2%;
+      display: grid;
+      grid-template-columns: 2% 5% 1fr 5% 2%;
+    }
+
+    #psnalcon {
+      display: flex;
+      background-color: #fff;
+      flex-direction: column;
+      box-shadow: 0px 10px 5px -2px gray;
+      padding: 5%;
+      /* grid-template-columns: 10% 1fr 1fr;
+      grid-template-rows: 1fr ; */
+    }
+
+    #psnalnev>ul {
+      list-style-type: none;
+      padding-left: 0%;
+    }
+
+    #psnalnev>ul>li {
+      padding: 10% 0;
+      line-height: 100%;
+      width: 100px;
+      height: auto;
+      background-color: white;
+      margin: 5px 0px;
+      border: 2px solid gray;
+      border-left: 0px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      box-shadow: 2px 1px 4px -2px gray;
+      padding-left: 5%;
+    }
+    #psnalnev>ul>li:nth-child(1){
+      background-color: rgba(106, 255, 255, 0.3);
+    }
+    #psnalnev>ul>li>a{
+      color: gray;
+    }
+    #psnalnev>ul>li>a:hover{
+      color: black;
+      text-shadow: 1px 2px 5px rgb(43, 43, 43);
+    }
+
+    #gmpicdiv {
+      height: 180px;
+      width: 150px;
+      object-fit: contain;
+      background-position: center;
+      background-image: url(./images/gmpic.jpeg);
+      background-size: cover;
+    }
+    #psnalcon>table{
+      margin: 2% 0%;
+      border-collapse: collapse;
+    }
+    #psnalcon>table,th,td,tr{
+      border: 1px solid black;
+      padding: 1%;
+    }
+    #educate, #license{
+      text-align: center;
+    }
+    /* info
+    educate
+    license */
+  </style>
+</head>
+
+<body>
+  <a class="mobileA" ><div class="showMobile hide">모바일 버전으로 보기</div></a>
+  <div id="header">
+    <div id="gotomain" class="gotomain"><a href="home.html" class="gotomain" id="gotomaina">Gyeongmin's blog</a></div>
+    <nav class="head_nav" id="head_nav">
+      <ul>
+        <li>
+          <a href=" " class="head_item" id="goHome"> Home </a>
+        </li>
+        <li>
+          <a href=" " class="head_item" id="goAbout"> About </a>
+        </li>
+        <li>
+          <a href=" " class="head_item" id="goPosts"> Posts </a>
+        </li>
+        <li>
+          <a href=" " class="head_item" id="goContact"> Contact </a>
+        </li>
+        <li>
+          <a href=" " class="head_item" id="goLogin"> Login </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="pcontainer">
+    <div>
+      <!-- 가장 왼쪽 -->
+    </div>
+    <div>
+      <!-- 그옆 -->
+    </div>
+    <div id="psnalcon">
+      <div id="gmpicdiv">
+        <div id="gmpic"></div>
+      </div>
+      <table id="info">
+        <tr>
+          <td>생년월일</td>
+          <td>2001.09.05</td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td>kgmksw@naver.com</td>
+        </tr>
+        <tr>
+          <td>휴대폰</td>
+          <td>010-3053-1360</td>
+        </tr>
+        <tr>
+          <td>주소</td>
+          <td>경기도 부천시 호수로4번길5</td>
+        </tr>
+        <tr>
+          <td>병역사항</td>
+          <td>현역필</td>
+        </tr>
+      </table>
+      <table id="educate">
+        <tr>
+          <th>년/월</th>
+          <th>학교명</th>
+          <th>학과</th>
+          <th>졸업 구분</th>
+        </tr>
+        <tr>
+          <td>2024/8</td>
+          <td>명지전문대학</td>
+          <td>소프트웨어 콘텐츠 학과</td>
+          <td>졸업예정</td>
+        </tr>
+      </table>
+      <table id="license">
+        <tr>
+          <th>교육내용</th>
+          <th>활동기간</th>
+          <th>기관명</th>
+          <th>내용</th>
+        </tr>
+        <tr>
+          <td>Java 풀스택 7기</td>
+          <td>2024.07.10 ~2025.01.08</td>
+          <td>천재IT교육센터</td>
+          <td>에듀테크 풀스택 개발자 양성(Java) 과정 7기</td>
+        </tr>
+      </table>
+    </div>
+    <div id="psnalnev">
+      <ul >
+        <li><a href="personal.html" id="per1">개인정보</a></li>
+        <li><a href="personal1.html" id="per2">자기소개서</a></li>
+        <li><a href="personal2.html" id="per3">직무역량</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="bottomMenu">
+    <ul>
+      <li>
+        <a href="mailto:kgmksw@naver.com" target="_blank">
+          <img src="images/email.png" width="40px" alt="이메일">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.facebook.com/?locale=ko_KR" target="_blank">
+          <img src="images/facebook.png" width="40" alt="페이스북">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/gye.ng_min/" target="_blank">
+          <img src="images/insta.png" width="40" alt="인스타그램">
+        </a>
+      </li>
+      <li>
+        <a href="personal.html" target="_blank">
+          <img src="images/resume.png" width="40" alt="이력서">
+        </a>
+      </li>
+    </ul>
+  </div>
+  </div>
+  <div id="copyright">
+    2024. Gyeongmin
+  </div>
+  <script src="./blogjs.js"></script>
+</body>
+
+</html>

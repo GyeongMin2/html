@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>login</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    input[type=text],input[type=Password]{
+      width: 90%;
+      padding: 12px;
+      border: 1px solid gray;
+      border-radius: 4px;
+      resize:none;
+    }
+    #contlogin>ul{
+      padding-left: 0;
+      list-style: none;
+      
+    }
+    #contlogin>ul>li{
+      margin: 40px;
+    }
+    #sendid{
+      display: flex;
+      margin: 3%;
+      margin-bottom: 10%;
+      justify-content: center;
+      height: 30px;
+    }
+    .loginbtn{
+      background-color: white;
+      color: black;
+      border: 1px solid gray;
+      border-radius: 4px;
+      width: 70%;
+    }
+    .loginbtn:hover{
+      font-weight: bold;
+      border: 2px solid black;
+    }
+    .black-bg {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 30px;
+      /* display: none; */
+      font-size: x-large;
+      
+    }
+    .loginbtn:active{
+      color: rgb(0, 89, 255);
+    }
+    .white-bg {
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+      height: 15%;
+      min-width: 400px;
+      max-width: 500px;
+      min-height: 200px;
+      max-height: 250px;
+      background: white;
+      border-radius: 5px;
+      padding: 1%;
+      position: absolute;
+      align-items: center;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .clsBtn{
+      position:absolute;
+      bottom: 20%;
+      background-color: white;
+      color: black;
+      border: 1px solid gray;
+      border-radius: 4px;
+      width: 50%;
+      height: 15%;
+    }
+    .sucLogin{
+      font-size:85%;
+    }
+  </style>
+</head>
+<body>
+  <a class="mobileA" ><div class="showMobile hide">모바일 버전으로 보기</div></a>
+
+  <div class="black-bg hide">
+    <div class="white-bg">
+      <p class="sucLogin">로그인하세요</p>
+      <button class="clsBtn" id="close">닫기</button>
+    </div>
+  </div>
+  <div id="header">
+    <div id="gotomain" class="gotomain"><a href="home.html" class="gotomain" id="gotomaina">Gyeongmin's blog</a></div>
+    <nav class="head_nav" id="head_nav">
+      <ul>
+        <li>
+          <a href=" " class="head_item" id="goHome"> Home </a>
+        </li>
+        <li>
+          <a href=" " class="head_item" id="goAbout"> About </a>
+        </li>
+        <li>
+          <a href=" " class="head_item" id="goPosts"> Posts </a>
+        </li>
+        <li>
+          <a href=" " class="head_item" id="goContact"> Contact </a>
+        </li>
+        <li>
+          <a href=" " class="head_item" id="goLogin"> Login </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  
+  <div class="container">
+    <div class="homeimg">
+      <div id="hometitle">Login</div>
+      <div id="homesubtitle">로그인 페이지입니다</div>
+    </div>
+    <div id="maincont">
+      <div>
+        <!-- <form  class="contfrm" method="get" > -->
+          <div id="contlogin">
+            <ul>
+              <li>
+                <label for="id">ID</label>
+                <input
+                  type="text"
+                  id="id"
+                  name="id"
+                  placeholder="ID또는Email을 입력해주세요"
+                  value=""
+                  required
+                />
+              </li>
+              <li>
+                <label for="pw">Password</label>
+                <input
+                  type="Password"
+                  id="pw"
+                  name="pw"
+                  placeholder="비밀번호를 입력해주세요"
+                  value=""
+                  required
+                />
+              </li>
+              </ul>
+          </div>
+          <div id="sendid">
+            <!-- 
+            <button type="submit" class="contbtn">send</button>
+            <button type="reset" class="contbtn">reset</button>
+            -->
+            <button class="loginbtn">login</button>
+          </div>
+        <!-- </form> -->
+      </div>
+    </div>
+
+  
+  <div id="bottomMenu">
+    <ul>
+      <li>
+        <a href="mailto:kgmksw@naver.com" target="_blank">
+          <img src="images/email.png" width="40px" alt="이메일">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.facebook.com/?locale=ko_KR" target="_blank">
+          <img src="images/facebook.png" width="40" alt="페이스북">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/gye.ng_min/" target="_blank">
+          <img src="images/insta.png" width="40" alt="인스타그램">
+        </a>
+      </li>
+      <li>
+        <a href="personal.html" target="_blank">
+          <img src="images/resume.png" width="40" alt="이력서">
+        </a>
+      </li>
+    </ul>
+  </div>
+  </div>
+  <div id="copyright">
+    2024. Gyeongmin
+  </div>
+  <script src="./blogjs.js"></script>
+  <script src="./loginform.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>detail</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .artitle{
+      margin: 5% 0%;
+      font-weight: bold;
+      font-size: large;
+    }
+    .artfoot{
+      margin-top: 2%;
+      font-size: smaller;
+      font-style: italic;
+      color: gray;
+    }
+    #detailtilte{
+      font-weight: bolder;
+      font-size:large; 
+      padding: 0% 10%;
+      text-align: center;
+    }
+    #dmaincont{
+    display: flex;
+    background-color: #fff;
+    flex-direction: column;
+    box-shadow: 0px 10px 5px -2px gray;
+    padding: 0 10%;
+    margin: 0 5%;
+    }
+    #stable,td{
+      border:1px solid #000;
+      border-collapse: collapse;
+    }
+
+  </style>
+</head>
+<body>
+  <a class="mobileA" ><div class="showMobile hide">모바일 버전으로 보기</div></a>
+  <div id="header">
+    <div id="gotomain" class="gotomain"><a href="home.html" class="gotomain" id="gotomaina">Gyeongmin's blog</a></div>
+    <nav class="head_nav" id="head_nav">
+      <ul>
+        <li>
+          <a href=" " class="head_item" id="goHome"> Home </a>
+        </li>
+        <li>
+          <a href=" " class="head_item" id="goAbout"> About </a>
+        </li>
+        <li>
+          <a href=" " class="head_item" id="goPosts"> Posts </a>
+        </li>
+        <li>
+          <a href=" " class="head_item" id="goContact"> Contact </a>
+        </li>
+        <li>
+          <a href=" " class="head_item" id="goLogin"> Login </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  
+  <div class="container">
+    <div class="homeimg">
+      <div id="detailtilte">구글 검색을 정확하게 하는법!</div>
+      <div id="homesubtitle">작성자:강경민 작성일:2024/7/16</div>
+    </div>
+    <div id="dmaincont">
+        <div class="artitle">왜 내가 검색하는 내용은 구글에 안나오는걸까?</div>
+        <p>
+          사실 구글의 검색품질이 저하되었다는 이야기들도 많지만 우리는 검색연산자를 이용하지않았으니 안나왔다고 생각하자<br/>
+          과제를 할 때거나 무엇인가 궁금한 내용이 있으면 우리는 네이버보다는 구글 검색을 자주 이용한다.<br/>
+          하지만 구글에 검색하여도 원하는 정보가 잘 나오지않는 상황이면 정말 답답할때가 있다. <br/>
+          이때 구글 검색어 연산자를 사용하여 내가 원하는 정보를 찾아보자! <br/>
+          구글 검색 연산자에는 40여가지가 있는데, 이중 기본 검색 명령어 몇가지를 알아볼 것이다.<br/>
+        </p>
+        <div class="artitle">검색 연산자의 예시 및 상용법을 알아보자</div>
+        <p>
+          <table id="stable">
+            <tr>
+                <td>
+                    " "(따옴표)
+                </td>
+                <td>
+                    따옴표 안에 있는 내용과 동일한 순서로 정확하게 일치하는 문구를 포함하는 콘텐츠를 찾습니다. 대소문자는 무시됩니다.<br>
+                    검색어 예 : "시장 분석"
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    -(빼기)
+                </td>
+                <td>
+                    특정 단어 또는 연산자 검색어를 포함하지 않는 콘텐츠를 찾습니다.<br>
+                    참고: 이 연산자는 검색어나 다른 연산자와 함께 사용하세요. 이 연산자만 사용하면 작동하지 않습니다.<br>
+                    검색어 예 : 급여-보고서
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    AND
+                </td>
+                <td>
+                    기본적으로 검색어를 모두 포함하는 페이지만 반환됩니다. 검색어 사이에는 AND를 포함할 필요가 없습니다.<br>
+                    검색어 예 : 영업 보고서 , 영업 AND 보고서
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    OR
+                </td>
+                <td>
+                    최소 하나의 단어 또는 연산자 검색어를 포함하는 콘텐츠를 찾습니다.<br>
+                    검색어 예 : 영업 OR 마케팅
+                </td>
+            </tr>
+        </table>
+        <br/>
+        이 내용들 말고도 검색을 해보면 더욱 다양한 연산자가 나오니 꼭 검색해보자.
+        </p>
+        <div class="artfoot">2024년 7월 <a href="https://support.google.com/cloudsearch/answer/6172299?hl=ko&co=GENIE.Platform%3DDesktop#zippy=%2C%EA%B8%B0%ED%98%B8-%EB%B0%8F-%ED%91%9C%EC%A4%80-%EC%97%B0%EC%82%B0%EC%9E%90" target="_blank">출처:구글</a></div>
+    </div>
+    <div class="denav">
+      <div id="denavdiv">
+      <a class="ctrlbar" id="previousbt" href="detail_1.html">이전</a>
+      <a class="ctrlbar" id="nextbt" href="detail_3.html">다음</a>
+      </div>
+    </div>
+  </div>
+  <div id="bottomMenu">
+    <ul>
+      <li>
+        <a href="mailto:kgmksw@naver.com" target="_blank">
+          <img src="images/email.png" width="40px" alt="이메일">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.facebook.com/?locale=ko_KR" target="_blank">
+          <img src="images/facebook.png" width="40" alt="페이스북">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/gye.ng_min/" target="_blank">
+          <img src="images/insta.png" width="40" alt="인스타그램">
+        </a>
+      </li>
+      <li>
+        <a href="personal.html" target="_blank">
+          <img src="images/resume.png" width="40" alt="이력서">
+        </a>
+      </li>
+    </ul>
+  </div>
+  </div>
+  <div id="copyright">
+    2024. Gyeongmin
+  </div>
+  <script src="./blogjs.js"></script>
+</body>
+
+</html>
