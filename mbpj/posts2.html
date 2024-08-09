@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>posts</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .gotoa{
+      margin: 5px;
+    }
+  
+    .shortcut{
+      width: 80%;
+      height: auto;
+      background-color: rgb(231, 255, 253);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      flex-flow: row wrap;
+      box-shadow: 0px 10px 5px -2px gray;
+      margin-bottom: 2%;
+    }
+    .gotopost{
+      display: flex;
+      margin: 15px;
+      width: 300px;
+      height: 350px;
+      /* border: 1px solid black; */
+      flex-direction: column;
+      background-color: white;
+      box-shadow: 0px 10px 5px -2px gray;
+    }
+    .defaultimg{
+      width: 100%;
+      height: 70%;
+      background-image: url(./images/default.jpg);
+      background-position: center;
+      background-size: 100%;
+    }
+    .gotoa:hover .defaultimg{
+      animation-name: bgchange;
+      animation-duration: 100s;
+      animation-iteration-count: 1;
+
+    }
+    @keyframes bgchange {
+      0%{
+        background-size: 100%
+      }
+      1%{
+        background-size: 120%
+      }
+      100%{
+        background-size: 120%
+      }
+    }
+    .gotoex{
+      padding: 5%;
+      font-weight: bold;
+    }
+    .gotoa{
+      color: black;
+      
+    }
+    .ctrlbar{
+      color:black;
+      margin-top:5%;
+      padding: 15px 30px;
+      border: 1px;
+      border-radius: 3%;
+      background-color: rgba(0, 255, 255,0.3);
+      box-shadow: 0px 10px 5px -2px gray;
+    }
+    .pageui{
+      margin-top: 20px;
+    }
+    #postimg1{
+      background-image: url(./images/russian.png);
+    }
+    #postimg2{
+      background-image: url(./images/star2.png);
+    }
+    #postimg3{
+      background-image: url(./images/star1.png);
+    }
+  </style>
+</head>
+<body>
+  <a class="mobileA" ><div class="showMobile hide">모바일 버전으로 보기</div></a>
+  <div id="header">
+    <div id="gotomain" class="gotomain"><a href="home.html" class="gotomain" id="gotomaina">Gyeongmin's blog</a></div>
+    <nav class="head_nav" id="head_nav">
+      <ul>
+        <li>
+          <a href=" " class="head_item" id="goHome"> Home </a>
+        </li>
+        <li>
+          <a href=" " class="head_item" id="goAbout"> About </a>
+        </li>
+        <li>
+          <a href=" " class="head_item" id="goPosts"> Posts </a>
+        </li>
+        <li>
+          <a href=" " class="head_item" id="goContact"> Contact </a>
+        </li>
+        <li>
+          <a href=" " class="head_item" id="goLogin"> Login </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  
+  <div class="container">
+    <div class="homeimg">
+      <div id="hometitle">Post</div>
+      <div id="homesubtitle">이것저것 적었습니다 :)</div>
+    </div>
+    <div class="shortcut">
+
+      <a href="detail_3.html" class="gotoa">
+        <div class="gotopost" id="gotopost1">
+          <div class="defaultimg" id="postimg1">
+          </div>
+          <div class="gotoex" id="gotoex1">
+            Java로 러시안 룰렛 구현해보기
+          </div>
+        </div>
+      </a>
+
+      <a href="detail_4.html" class="gotoa">
+        <div class="gotopost" id="gotopost2">
+          <div class="defaultimg" id="postimg2">
+          </div>
+          <div class="gotoex" id="gotoex2">
+            백준 2439번 (별찍기-2) java 문제풀이
+          </div>
+        </div>
+      </a>
+
+      <a href="detail_5.html" class="gotoa">
+        <div class="gotopost" id="gotopost3">
+          <div class="defaultimg" id="postimg3">
+          </div>
+          <div class="gotoex" id="gotoex3">
+            백준 2438번 (별찍기-1) java 문제풀이
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="pageui">
+      <div id="pagediv">
+      <a class="ctrlbar" id="previousbt" href="posts.html">이전</a>
+      <a class="ctrlbar" id="nextbt" href="posts3.html">다음</a>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  <div id="bottomMenu">
+    <ul>
+      <li>
+        <a href="mailto:kgmksw@naver.com" target="_blank">
+          <img src="images/email.png" width="40px" alt="이메일">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.facebook.com/?locale=ko_KR" target="_blank">
+          <img src="images/facebook.png" width="40" alt="페이스북">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/gye.ng_min/" target="_blank">
+          <img src="images/insta.png" width="40" alt="인스타그램">
+        </a>
+      </li>
+      <li>
+        <a href="personal.html" target="_blank">
+          <img src="images/resume.png" width="40" alt="이력서">
+        </a>
+      </li>
+    </ul>
+  </div>
+  </div>
+  <div id="copyright">
+    2024. Gyeongmin
+  </div>
+  <script src="./blogjs.js"></script>
+</body>
+
+</html>

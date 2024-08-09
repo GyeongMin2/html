@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>personal</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .pcontainer {
+      margin-top: 2%;
+      display: grid;
+      grid-template-columns: 2% 5% 1fr 5% 2%;
+    }
+
+    #psnalcon {
+      display: flex;
+      background-color: #fff;
+      flex-direction: column;
+      box-shadow: 0px 10px 5px -2px gray;
+      padding: 5%;
+      /* grid-template-columns: 10% 1fr 1fr;
+      grid-template-rows: 1fr ; */
+    }
+
+    #psnalnev>ul {
+      list-style-type: none;
+      padding-left: 0%;
+    }
+
+    #psnalnev>ul>li {
+      padding: 10% 0;
+      line-height: 100%;
+      width: 100px;
+      height: auto;
+      background-color: white;
+      margin: 5px 0px;
+      border: 2px solid gray;
+      border-left: 0px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      box-shadow: 2px 1px 4px -2px gray;
+      padding-left: 5%;
+    }
+
+    #psnalnev>ul>li:nth-child(3) {
+      background-color: rgba(106, 255, 255, 0.3);
+    }
+
+    #psnalnev>ul>li>a {
+      color: gray;
+    }
+
+    #psnalnev>ul>li>a:hover {
+      color: black;
+      text-shadow: 1px 2px 5px rgb(43, 43, 43);
+    }
+
+    #gmpicdiv {
+      height: 180px;
+      width: 150px;
+      object-fit: contain;
+      background-position: center;
+      background-image: url(./images/gmpic.jpeg);
+      background-size: cover;
+    }
+
+    #psnalcon>table {
+      margin: 2% 0%;
+      border-collapse: collapse;
+    }
+
+    #psnalcon>table,
+    th,
+    td,
+    tr {
+      border: 1px solid black;
+      padding: 1%;
+    }
+
+    /* #educate,
+    #license {
+      text-align: center;
+    } */
+
+    /* info
+    educate
+    license */
+    .psnmain{
+      margin-bottom: 2%;
+    }
+    .psntitle{
+      margin: 5px 0%;
+      font-weight: bold;
+      font-size: large;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="header">
+    <div id="gotomain" class="gotomain"><a href="home.html" class="gotomain" id="gotomaina">Gyeongmin's blog</a></div>
+    <nav class="head_nav" id="head_nav">
+      <ul>
+        <li>
+          <a href=" " class="head_item" id="goHome"> Home </a>
+        </li>
+        <li>
+          <a href=" " class="head_item" id="goAbout"> About </a>
+        </li>
+        <li>
+          <a href=" " class="head_item" id="goPosts"> Posts </a>
+        </li>
+        <li>
+          <a href=" " class="head_item" id="goContact"> Contact </a>
+        </li>
+        <li>
+          <a href=" " class="head_item" id="goLogin"> Login </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="pcontainer">
+    <div>
+      <!-- 가장 왼쪽 -->
+    </div>
+    <div>
+      <!-- 그옆 -->
+    </div>
+    <div id="psnalcon">
+      <div id="psnmain1" class="psnmain">
+        <div class="psntitle">직무역량</div>
+        <div class="psnartic">
+          직무역량으로는 대학 입학 후부터 매 학기 JAVA를 공부하였고 컴퓨터의 하드웨어 적인 부분보다 소프트웨어에 대한 공부를 하는 학과의 특성상 <br>
+          unity를 이용하기 위한 C#, 안드로이드 스튜디오, html, python 등의 다양한 언어를 공부하여 새로운 언어에 대한 거부감이 적고, 위 언어들에 대하여 완벽하게는 아니지만 숙지하고 있습니다. <br>
+          그리고 학과에서 팀 프로젝트의 기획자로서 조원들과 unity를 이용하여 게임을 개발함에 있어 조원들과의 원활한 소통, 의견조율을 통해 프로젝트를 마감기한 내 완성하였습니다. <br>
+        </div>
+      </div>
+    </div>
+    <div id="psnalnev">
+      <ul>
+        <li><a href="personal.html" id="per1">개인정보</a></li>
+        <li><a href="personal1.html" id="per2">자기소개서</a></li>
+        <li><a href="personal2.html" id="per3">직무역량</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="bottomMenu">
+    <ul>
+      <li>
+        <a href="mailto:kgmksw@naver.com" target="_blank">
+          <img src="images/email.png" width="40px" alt="이메일">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.facebook.com/?locale=ko_KR" target="_blank">
+          <img src="images/facebook.png" width="40" alt="페이스북">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/gye.ng_min/" target="_blank">
+          <img src="images/insta.png" width="40" alt="인스타그램">
+        </a>
+      </li>
+      <li>
+        <a href="personal.html" target="_blank">
+          <img src="images/resume.png" width="40" alt="이력서">
+        </a>
+      </li>
+    </ul>
+  </div>
+  </div>
+  <div id="copyright">
+    2024. Gyeongmin
+  </div>
+  <script src="./blogjs.js"></script>
+</body>
+
+</html>

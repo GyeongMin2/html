@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>detail</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .artitle{
+      margin: 5% 0%;
+      font-weight: bold;
+      font-size: large;
+    }
+    .artfoot{
+      margin-top: 2%;
+      font-size: smaller;
+      font-style: italic;
+      color: gray;
+    }
+    #detailtilte{
+      font-weight: bolder;
+      font-size:large; 
+      padding: 0% 10%;
+      text-align: center;
+    }
+    #dmaincont{
+    display: flex;
+    background-color: #fff;
+    flex-direction: column;
+    box-shadow: 0px 10px 5px -2px gray;
+    padding: 0 10%;
+    margin: 0 5%;
+    }
+
+  </style>
+</head>
+<body>
+  <a class="mobileA" ><div class="showMobile hide">모바일 버전으로 보기</div></a>
+  <div id="header">
+    <div id="gotomain" class="gotomain"><a href="home.html" class="gotomain" id="gotomaina">Gyeongmin's blog</a></div>
+    <nav class="head_nav" id="head_nav">
+      <ul>
+        <li>
+          <a href=" " class="head_item" id="goHome"> Home </a>
+        </li>
+        <li>
+          <a href=" " class="head_item" id="goAbout"> About </a>
+        </li>
+        <li>
+          <a href=" " class="head_item" id="goPosts"> Posts </a>
+        </li>
+        <li>
+          <a href=" " class="head_item" id="goContact"> Contact </a>
+        </li>
+        <li>
+          <a href=" " class="head_item" id="goLogin"> Login </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  
+  <div class="container">
+    <div class="homeimg">
+      <div id="detailtilte">Java와 JavaScript는 뭐가 다른걸까?</div>
+      <div id="homesubtitle">작성자:강경민 작성일:2024/7/16</div>
+    </div>
+    <div id="dmaincont">
+        <div class="artitle">Java랑 JavaScript가 어떤점이 다른지 궁금해진 이유</div>
+        <p>
+          처음 학교에서 프로그래밍을 시작했을때 나는 Java와 JavaScript가 유사하거나 같은회사에서 나온 언어인줄로만 알고있었다. <br/>
+          하지만 시간이 지나 Java와 JavaScript를학교에서 동시에 배웠을때 이 두언어는 쓰임새와 문법 아니 사소한것 하나까지도 꽤 많이 다르다는것을 알았다. <br/>
+          검색해보니 자바와 자바스크립트의 관계는 햄과 햄스터의 관계로 많이 비유하는것 같다.<br/>
+          이뒤로 오는 설명은 실제 Java 홈페이지에 적혀있는Java와 JavaScript의 다른 점이다. <br/>
+        </p>
+        <div class="artitle">그래서 무엇이 다른걸까?(오피셜)</div>
+        <p>
+          JavaScript 프로그래밍 언어는 Netscape, Inc.에서 개발했으며, Java 플랫폼의 일부가 아닙니다.<br>
+            JavaScript는 애플릿 또는 독립형 응용 프로그램을 생성하지 않습니다. 일반적으로 JavaScript는 HTML 문서 내에 위치하며,<br>
+            단순 HTML에서는 불가능한 다양한 레벨의 대화식 기능을 웹 페이지에서 구현할 수 있습니다.<br>
+            Java와 JavaScript 사이의 주요 차이점:<br>
+            Java는 OOP 프로그래밍 언어인 반면, Java Script는 OOP 스크립팅 언어입니다.<br>
+            Java는 가상 시스템 또는 브라우저에서 실행되는 응용 프로그램을 작성하는 반면, JavaScript 코드는 브라우저에서만 실행됩니다.<br>
+            Java 코드는 컴파일이 필요하지만, JavaScript 코드는 모두 텍스트입니다.<br>
+            Java 코드와 JavaScript 코드 서로 다른 플러그인을 필요로 합니다.<br>
+            JavaScript에 대한 자세한 내용은 Mozilla.org를 참조하십시오.<br>
+        </p>
+        <div class="artfoot">2024년 7월 <a href="https://www.java.com/ko/download/help/java_javascript.html" target="_blank">출처 https://www.java.com/ko/download/help/java_javascript.html</a></div>
+    </div>
+    <div class="denav">
+      <div id="denavdiv">
+      <a class="ctrlbar" id="previousbt" href="detail_0.html">이전</a>
+      <a class="ctrlbar" id="nextbt" href="detail_2.html">다음</a>
+      </div>
+    </div>
+  </div>
+  <div id="bottomMenu">
+    <ul>
+      <li>
+        <a href="mailto:kgmksw@naver.com" target="_blank">
+          <img src="images/email.png" width="40px" alt="이메일">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.facebook.com/?locale=ko_KR" target="_blank">
+          <img src="images/facebook.png" width="40" alt="페이스북">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/gye.ng_min/" target="_blank">
+          <img src="images/insta.png" width="40" alt="인스타그램">
+        </a>
+      </li>
+      <li>
+        <a href="personal.html" target="_blank">
+          <img src="images/resume.png" width="40" alt="이력서">
+        </a>
+      </li>
+    </ul>
+  </div>
+  </div>
+  <div id="copyright">
+    2024. Gyeongmin
+  </div>
+  <script src="./blogjs.js"></script>
+</body>
+
+</html>
