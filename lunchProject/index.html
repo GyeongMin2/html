@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .changeDate {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="todayDate">오늘 밥</h1>
+    <div class="todayLunch"></div>
+    <div class="todayDinner"></div>
+    <div>
+      <form class="getLunch" action="/getLunchMenu" method="get">
+        <input type="date" class="getDate" />
+        <button type="submit" class="submitBtn">검색</button>
+        <!-- <input type="text" class="changeDate"> -->
+      </form>
+    </div>
+    <script>
+      document
+        .querySelector(".submitBtn").addEventListener("click", (event) => {
+          event.preventDefault();
+          let inputDate = document.querySelector(".getDate").value;
+          if (inputDate == "") {
+            alert("날짜 똑바로 입력해라");
+            return;
+          }
+
+          fetch(`/getLunchMenu?date=${inputDate}`)
+            .then((response) => response.json())
+            .then((data) => {
+              let todayLunchDiv = document.querySelector(".todayLunch");
+              todayLunchDiv.innerHTML = "";
+              if (data.length === 0) {
+                todayLunchDiv.innerHTML = "그날은데이터 없음";
+              } else {
+                data.forEach((item) => {
+                  const menuDiv = document.createElement("div");
+                  menuDiv.innerHTML = `
+                    <p>오늘 날짜: ${item.today_date}</p>
+                    <p>밥: ${item.menu_rice}</p>
+                    <p>국: ${item.menu_soup}</p>
+                    <p>메인 1: ${item.menu_main1}</p>
+                    <p>메인 2: ${item.menu_main2}</p>
+                    <p>사이드 1: ${item.menu_side1}</p>
+                    <p>사이드 2: ${item.menu_side2}</p>
+                    <p>사이드 3: ${item.menu_side3}</p>
+                    <p>사이드 4: ${item.menu_side4}</p>
+                    <p>식사 유형: ${item.type_meal}</p>
+                  `;
+                  todayLunchDiv.appendChild(menuDiv);
+                });
+              }
+            })
+            .catch((error) => {
+              console.error("json 못받아옴", error);
+            });
+        });
+    </script>
+  </body>
+</html>
