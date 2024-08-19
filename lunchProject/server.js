@@ -52,6 +52,6 @@ app.get("/getLunchMenu", (req, res) => {
   });
 });
 // 서버 실행
-app.listen(3000, () => {
+app.listen(8080, () => {
   console.log("3000포트");
 });
