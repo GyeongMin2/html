@@ -1,3 +1,4 @@
+require('dotenv').config(); 
 const express = require("express");
 const mysql = require("mysql2");
 const bodyParser = require("body-parser");
@@ -9,11 +10,11 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname)));
 
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "kgm101",
-  database: "todaylunch",
-  port: 3306,
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+  port: process.env.DB_PORT
 });
 
 db.connect((err) => {
@@ -27,6 +28,7 @@ db.connect((err) => {
 // db 검색
 app.get("/getLunchMenu", (req, res) => {
   let date = req.query.date;
+  let direction = req.query.direction;
   let sql = `SELECT
     today_date,
     menu_rice,
@@ -39,9 +41,9 @@ app.get("/getLunchMenu", (req, res) => {
     menu_side4,
     type_meal
   FROM bap 
-  WHERE today_DATE='${date}';`;
+  WHERE today_date='${date}' and type_meal='${direction}';`;
 
-  db.query(sql, [date], (err, result) => {
+  db.query(sql, (err, result) => {
     if (err) {
       console.log("쿼리에러남", err);
     }
