@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Information</title>
+</head>
+<body>
+    <h1>날씨 정보 조회</h1>
+    <form action="/getWeather" method="post">
+        <label for="date">날짜 (YYYYMMDD):</label>
+        <input type="text" id="date" name="date" required>
+        <br><br>
+        <label for="time">시간 (HHMM):</label>
+        <input type="text" id="time" name="time" required>
+        <br><br>
+        <button type="submit">날씨 정보 가져오기</button>
+    </form>
+</body>
+</html>
