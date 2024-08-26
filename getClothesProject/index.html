@@ -7,23 +7,20 @@
 </head>
 <body>
     <h1>날씨 정보 조회</h1>
-    <form action="/getWeather" method="get">
-        <label for="provinceDropdown">도/광역시:</label>
-        <select id="provinceDropdown">
+    <form id="weatherForm" action="/getWeather" method="get">
+        <label for="location1Dropdown">도/광역시:</label>
+        <select id="location1Dropdown" name="location1">
             <option value="">도/광역시를 선택하세요</option>
         </select>
     
         <label for="cityDropdown" style="margin-left: 20px;">시/군/구:</label>
-        <select id="cityDropdown" disabled>
+        <select id="cityDropdown" disabled name="city">
             <option value="">먼저 도/광역시를 선택하세요</option>
         </select>
         </div>
         <br><br>
-        <label for="date">날짜 (YYYYMMDD):</label>
-        <input type="text" id="date" name="date" required>
-        <br><br>
-        <label for="time">시간 (HHMM):</label>
-        <input type="text" id="time" name="time" required>
+        <label for="getDate">날짜 (YYYYMMDD):</label>
+        <input type="date" class="getDate" name="date"/>
         <br><br>
         <button type="submit">날씨 정보 가져오기</button>
     </form>
@@ -48,29 +45,54 @@
             "충청북도": ["괴산군", "단양군", "보은군", "영동군", "옥천군", "음성군", "제천시", "증평군", "진천군", "청주시상당구", "청주시서원구", "청주시청원구", "청주시흥덕구", "충주시"]
         };
 
-        const provinceDropdown = document.getElementById('provinceDropdown');
+        const location1Dropdown = document.getElementById('location1Dropdown');
         const cityDropdown = document.getElementById('cityDropdown');
 
-        Object.keys(data).forEach(province => {
+        Object.keys(data).forEach(location1 => {
             const option = document.createElement('option');
-            option.value = province;
-            option.textContent = province;
-            provinceDropdown.appendChild(option);
+            option.value = location1;
+            option.textContent = location1;
+            location1Dropdown.appendChild(option);
         });
 
-        provinceDropdown.addEventListener('change', function() {
-            const selectedProvince = this.value;
+        location1Dropdown.addEventListener('change', function() {
+            const selectedlocation1 = this.value;
             cityDropdown.innerHTML = '<option value="">군/시를 선택하세요</option>';
-            cityDropdown.disabled = !selectedProvince;
+            cityDropdown.disabled = !selectedlocation1;
 
-            if (selectedProvince) {
-                data[selectedProvince].forEach(city => {
+            if (selectedlocation1) {
+                data[selectedlocation1].forEach(city => {
                     const option = document.createElement('option');
                     option.value = city;
                     option.textContent = city;
                     cityDropdown.appendChild(option);
                 });
             }
+        });
+
+        weatherForm.addEventListener('submit', function (event) {
+            event.preventDefault(); // 폼 제출 기본 동작 중지
+
+            const location1 = location1Dropdown.value;
+            const city = cityDropdown.value;
+            const date = document.getElementById('getDate').value;
+
+            // 유효성 검사
+            // if (!location1 || !city || !date) {
+            //     alert('모든 항목 선택하샘');
+            //     return;
+            // }
+
+            // AJAX 요청 생성
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', `/getWeather?location1=${encodeURIComponent(location1)}&city=${encodeURIComponent(city)}&date=${encodeURIComponent(date)}`, true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    alert('날씨 정보를 성공적으로 가져왔습니다.');
+                    console.log(xhr.responseText);
+                }
+            };
+            xhr.send();
         });
     </script>
 </body>
