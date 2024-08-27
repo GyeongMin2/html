@@ -67,7 +67,7 @@ app.get("/getWeather", (req, res) => {
       queryParams +=
         "&" + encodeURIComponent("pageNo") + "=" + encodeURIComponent("1");
       queryParams +=
-        "&" + encodeURIComponent("numOfRows") + "=" + encodeURIComponent("1000");
+        "&" + encodeURIComponent("numOfRows") + "=" + encodeURIComponent("1");
       queryParams +=
         "&" + encodeURIComponent("dataType") + "=" + encodeURIComponent("JSON");
       queryParams +=
@@ -86,11 +86,9 @@ app.get("/getWeather", (req, res) => {
         },
         function (error, response, body) {
           if (error) {
-            console.log("API 호출 중 에러 발생", error);
             res.status(500).json({ error: "API 호출 실패" });
             return;
           }
-
           console.log("기상청 API 응답:", body);
           res.json(JSON.parse(body));
         }

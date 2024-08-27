@@ -84,15 +84,19 @@
             // }
 
             // AJAX 요청 생성
-            const xhr = new XMLHttpRequest();
-            xhr.open('GET', `/getWeather?location1=${encodeURIComponent(location1)}&city=${encodeURIComponent(city)}&date=${encodeURIComponent(date)}`, true);
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    alert('날씨 정보를 성공적으로 가져왔습니다.');
-                    console.log(xhr.responseText);
-                }
-            };
-            xhr.send();
+            // const xhr = new XMLHttpRequest();
+            // xhr.open('GET', `/getWeather?location1=${encodeURIComponent(location1)}&city=${encodeURIComponent(city)}&date=${encodeURIComponent(date)}`, true);
+            // xhr.onreadystatechange = function () {
+            //     if (xhr.readyState === 4 && xhr.status === 200) {
+            //         alert('날씨 정보를 성공적으로 가져왔습니다.');
+            //         console.log(xhr.responseText);
+            //     }
+            // };
+            // xhr.send()
+            /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+            */
+            fetch(`/getWeather?location1=${encodeURIComponent(location1)}&city=${encodeURIComponent(city)}&date=${encodeURIComponent(date)}`)
+            .then()
         });
     </script>
 </body>
