@@ -12,7 +12,7 @@ public class RegisterPage {
             Register reg = new Register(newId,newPwd,newName);
             if(reg.registration()==true){
                 System.out.println("회원가입성공인듯");
-                continue;
+                break;
             }else{
                 System.out.println("회원가입 실패인듯 다시시도하고싶으면 'Y' 다시 하기 싫으면 'N'");
                 String action = sc.next();
