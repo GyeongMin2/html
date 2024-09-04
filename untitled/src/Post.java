@@ -19,10 +19,10 @@ public class Post {
     @Override
     public String toString() {
         return "Post{" +
-                "title='" + title + '\'' +
-                ", userID='" + userID + '\'' +
-                ", regDate='" + regDate + '\'' +
-                ", text='" + text + '\'' +
+                "제목 ='" + title + '\'' +
+                ", 글쓴이 ='" + userID + '\'' +
+                ", 작성일 ='" + regDate + '\'' +
+                ", 내용 ='" + text + '\'' +
                 '}';
     }
 }

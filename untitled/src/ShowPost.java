@@ -5,7 +5,7 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 public class ShowPost {
-    int page = 1; // 페이징
+    int page = 1; // 페이징할때 쓰는거임
     int limitPage = 5; //몇개씩 갖고올건지
     Scanner sc = new Scanner(System.in);
     PostGet postGet = new PostGet();
@@ -48,6 +48,10 @@ public class ShowPost {
                 page = 1;
                 limitPage = 5; // 초기화
                 break;
+            }else {
+                System.out.println("똑바로 입력하샘");
+                Post[] posts = postGet.getPost((page - 1) * limitPage, limitPage); // 페이지 업데이트
+                printPosts(posts);
             }
             getMaxPageNum(page);
         }

@@ -7,8 +7,7 @@ Main {
         PageUi pageui = new PageUi(member);
         ShowPost showPost = new ShowPost();
         WritePost writePost = new WritePost();
-
-
+        DbConnection connection = new DbConnection();
         while (true) {
             if(member.loginStatus){ //로그인 됐으면 afterLoginUi 호출
                 pageui.afterLoginUi();
@@ -39,7 +38,6 @@ Main {
                 }
 
             }else if (action.equals("게시물 목록")||action.equals("postlist")) {
-                //게시글 조회 메서드 추가해야함
                 showPost.showPosting();
             }
             else if (action.equals("글쓰기")||action.equals("write")) {
@@ -65,7 +63,6 @@ Main {
                 pageui.helpUi();
             } else {
                 System.out.println("똑바로 입력하샘");
-
             }
 
 
