@@ -49,4 +49,30 @@ public class WritePost {
             }
         }
     }
+    public void editPost(int postId) {
+        try {
+            System.out.println("수정할 제목");
+            String newTitle = sc.nextLine();
+
+            System.out.println("수정할내용");
+            String newContent = sc.nextLine();
+
+            String sql = "UPDATE tbl_post SET post_title = ?, post_text = ? WHERE idx = ?";
+            PreparedStatement statement = connection.prepareStatement(sql);
+            statement.setString(1, newTitle);
+            statement.setString(2, newContent);
+            statement.setInt(3, postId);
+
+            int rowsUpdated = statement.executeUpdate();
+
+            // 업데이트됐는지 안됐는지
+            if (rowsUpdated > 0) {
+                System.out.println("업데이트됨");
+            } else {
+                System.out.println("업데이트안됨 ㅋㅋ");
+            }
+        } catch (SQLException e) {
+            System.out.println("업데이트 안됨 ㅋㅋ" + e.getMessage());
+        }
+    }
 }

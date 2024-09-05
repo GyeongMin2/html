@@ -13,7 +13,7 @@ public class PageUi{
         System.out.println("├──────────────────────────────────────────────┤");
         System.out.println("│                                              │");
         System.out.println("│   login, '로그인'                             │");
-        System.out.println("│   registger, '회원가입'                       │");
+        System.out.println("│   register, '회원가입'                       │");
         System.out.println("│   postlist, '게시물 목록'                      │");
         System.out.println("│   write, '글쓰기'                             │");
         System.out.println("│   exit, '종료'                                │");
@@ -29,8 +29,9 @@ public class PageUi{
         System.out.println("├─────────────────────────────────────────────────────┤");
         System.out.println("│                                                     │");
         System.out.println("│   'login' 또는 '로그인' 입력시 로그인창 뜰듯             │");
-        System.out.println("│   'registger' 또는 '회원가입' 입력시 회원가입창 뜰듯      │");
+        System.out.println("│   'register' 또는 '회원가입' 입력시 회원가입창 뜰듯       │");
         System.out.println("│   'postlist' 또는 '게시물 목록' 입력시 게시글들 뜰듯      │");
+        System.out.println("│   'write' 또는 '글쓰기' 입력시 글쓰기 뜰듯               │");
         System.out.println("│   'write' 또는 '글쓰기' 입력시 글쓰기 뜰듯               │");
         System.out.println("│   'exit' 또는 '종료' 입력시 종료                       │");
         System.out.println("│   'help' 또는 '도움말' 입력시 지금 보고있는 창 뜸         │");
@@ -60,7 +61,7 @@ public class PageUi{
         System.out.println("│                                                     │");
         System.out.println("├─────────────────────────────────────────────────────┤");
         System.out.println("│                                                     │");
-        System.out.println(String.format("│         %s                                │",writeInfo));
+        System.out.println(String.format("│         %s                              │",writeInfo));
         System.out.println("│                                                     │");
         System.out.println("│   이전                                               │");
         System.out.println("└─────────────────────────────────────────────────────┘");

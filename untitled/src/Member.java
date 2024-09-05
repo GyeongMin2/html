@@ -6,8 +6,8 @@ public class Member{
     };
 
     public void updateStatus(){
-        System.out.println(userId);
-        System.out.println(userName);
+//        System.out.println(userId);
+//        System.out.println(userName);
         loginStatus = true;
     }
     public void logout(){
@@ -30,4 +30,5 @@ public class Member{
     public void setUserName(String userName) {
         this.userName = userName;
     }
+
 }
