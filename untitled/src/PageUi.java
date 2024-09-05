@@ -13,7 +13,7 @@ public class PageUi{
         System.out.println("├──────────────────────────────────────────────┤");
         System.out.println("│                                              │");
         System.out.println("│   login, '로그인'                             │");
-        System.out.println("│   register, '회원가입'                       │");
+        System.out.println("│   register, '회원가입'                        │");
         System.out.println("│   postlist, '게시물 목록'                      │");
         System.out.println("│   write, '글쓰기'                             │");
         System.out.println("│   exit, '종료'                                │");
