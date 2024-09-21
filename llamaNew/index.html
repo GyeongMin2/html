@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat</title>
+    <style>
+        /* 간단한 채팅 UI 스타일 */
+        .chat-container {
+            width: 500px;
+            height: 600px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            overflow-y: scroll;
+        }
+
+        .message {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .user-message {
+            background-color: #daf1da;
+            text-align: right;
+        }
+
+        .llama-message {
+            background-color: #f1dada;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container" id="chat-container">
+        <!-- 기존 메시지 -->
+        <div class="message llama-message">LLAMA 답변</div>
+        <div class="message user-message">내가 보낸 채팅</div>
+    </div>
+
+    <form id="chat-form">
+        <input type="text" id="user-input" placeholder="메시지 입력" />
+        <button type="submit">보내기</button>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $('#chat-form').on('submit', function(e) {
+            e.preventDefault();
+            var message = $('#user-input').val();
+            if (message.trim() === "") return;
+
+            // 사용자가 보낸 메시지를 화면에 추가
+            $('#chat-container').append('<div class="message user-message">' + message + '</div>');
+
+            // 서버에 메시지 전송 (Ajax 요청)
+            $.ajax({
+                url: '/chat', // 서버의 엔드포인트 (Node.js 서버가 될 수도 있음)
+                method: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({ message: message }),
+                success: function(response) {
+                    // 서버에서 받은 응답 메시지를 화면에 추가
+                    $('#chat-container').append('<div class="message llama-message">' + response.answer + '</div>');
+                },
+                error: function() {
+                    alert('오류가 발생했습니다.');
+                }
+            });
+
+            $('#user-input').val(''); // 입력 필드 초기화
+        });
+    </script>
+</body>
+</html>
