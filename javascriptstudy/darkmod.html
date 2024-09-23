@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <title>darkmod</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <span class="navbar-brand">JSShop</span>
+        <span class="badge bg-dark" id="darkmodBtn">Dark 🌙</span>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+    <script>
+      let getDarkmodStatus = 0; // 홀수면 다크모드 짝수면 라이트모드
+      //badge 클릭시 변경
+      const darkmodBtn = document.querySelector("#darkmodBtn");
+      darkmodBtn.addEventListener("click", () => {
+        getDarkmodStatus++;
+        // getDarkmodStatus%2 ? darkmodBtn.classList.remove('bg-black'): darkmodBtn.classList.add('bg-black')
+        if (getDarkmodStatus % 2) {
+          darkmodBtn.classList.remove("bg-dark");
+          darkmodBtn.classList.add("bg-light");
+          darkmodBtn.setAttribute("style", "color: black;");
+          getDarkmodStatus = 1;
+        } else {
+          darkmodBtn.classList.remove("bg-light");
+          darkmodBtn.classList.add("bg-dark");
+          darkmodBtn.setAttribute("style", "color: white;");
+        }
+      });
+      function 삼육구(a) {
+        if (!(a % 3)) {
+          if (!(a % 9)) {
+            console.log("짜작");
+          } else console.log("짝");
+        } else console.log(a);
+      }
+      //과목2개 120점이상 합격 , 하나라도 40미만이면 불합
+      function 합격여부(개론, 민법) {
+        if (개론 + 민법 >= 120 && 개론 > 40 && 민법 > 40) {
+          console.log("합격");
+        } else console.log("불합 ㅅㄱ");
+      }
+
+      function 삼육구진짜(a) {
+        const str = a.toString();
+        let clapCount = 0;
+
+        for (let char of str) {
+          if (char === "3" || char === "6" || char === "9") {
+            clapCount++;
+          }
+        }
+
+        if (clapCount > 0) {
+          console.log("짝".repeat(clapCount));
+        } else {
+          console.log(a);
+        }
+      }
+
+      function 합격판독기(a){
+        if(a>0&&a<=100){
+          console.log("합격");
+        }else console.log("장난 ㄴ");
+      }
+
+      합격판독기(150);
+      합격판독기(0);
+      합격판독기(100);
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
