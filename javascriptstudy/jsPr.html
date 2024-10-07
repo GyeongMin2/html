@@ -6,22 +6,22 @@
     <title>Document</title>
   </head>
   <body>
-    <p>태조 이성계가 태어난 년도는?</p>
+    <!-- <p>태조 이성계가 태어난 년도는?</p>
     <input type="text" id="answer" />
-    <button id="send-answer">제출</button>
+    <button id="send-answer">제출</button> -->
 
     <script>
-      let answerChance = 0;
-      document.querySelector('#send-answer').addEventListener('click',()=>{
-        if(document.querySelector('#answer').value.toString() == '1335'){
-          alert("정답 ㄷㄷ")
-        }else if(answerChance<3){
-          answerChance++;
-          alert("오답ㅋㅋ")
-        }else{
-          alert("멍청아 ㅋㅋ")
-        }
-      })
+      // let answerChance = 0;
+      // document.querySelector('#send-answer').addEventListener('click',()=>{
+      //   if(document.querySelector('#answer').value.toString() == '1335'){
+      //     alert("정답 ㄷㄷ")
+      //   }else if(answerChance<3){
+      //     answerChance++;
+      //     alert("오답ㅋㅋ")
+      //   }else{
+      //     alert("멍청아 ㅋㅋ")
+      //   }
+      // })
     </script>
     <script>
       let amount = 60000;
@@ -40,7 +40,7 @@
       futureAmount2 = bankAcount(10000, 2);
       console.log(futureAmount2);
 
-      function strangeCafé(amount) {
+      function strangeCafe(amount) {
         let amountCoffe = amount;
         let refilled = amount;
         for (let i = 0; i < 2; i++) {
@@ -49,8 +49,53 @@
         }
         return refilled;
       }
-      console.log(strangeCafé(360));
-      //360 240 160
+
+      let arr1 = [5,2,7,1,8,0,24];
+      arr1.sort((a,b)=>{
+        return a-b
+      })
+      console.log(arr1);
+
+      let arr2 = ['가','a','c','하','깋','힣','z','A'];
+      arr2.sort((a,b)=>{
+        if(a<b){
+          return -1;
+        }else return 1;
+      })
+      console.log(arr2)
+      arr2.sort((a,b)=>{
+        return(a<b)?1:-1;
+      })
+      console.log(arr2)
+
+      arr3 = arr2.map(a=>a+"ㅎㅇ");
+      console.log(arr3);
+      arr4 = arr1.filter(a => a%2 === 0&&a).map(a=>a*2);
+      console.log(arr4);
+      
+      function addTen(a){
+        return a.map(a=>a+10);
+      }
+      console.log(addTen(arr1))
+      function filterEven(b){
+        return b.filter(b=>b%2===0);
+      }
+      console.log(filterEven(arr1));
+
+
+      const product = {
+        name : "Laptop",
+        price : 1000
+      }
+
+      function getPirce(obj){
+        return {
+          ...obj,
+          price : obj.price * 0.9
+        }
+      }
+      console.log(getPirce(product),product)
+      
     </script>
   </body>
 </html>
